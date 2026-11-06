@@ -1,0 +1,111 @@
+name: Release
+
+# Version tags build one self-contained aarch64 AppImage, including Parakeet/ggml and MapLibre.
+# Native arm64 is the default. Set RELEASE_RUNNER=qemu to build on x86_64 through an arm64 Ubuntu 22.04 container.
+# Required secrets: MINISIGN_KEY and, when encrypted, MINISIGN_PASSWORD.
+# Required variable: MINISIGN_PUBLIC_KEY (published with the release so users can verify the signatures).
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build aarch64 AppImage
+    runs-on: ${{ vars.RELEASE_RUNNER == 'qemu' && 'ubuntu-22.04' || 'ubuntu-22.04-arm' }}
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build on a native arm64 runner
+        if: ${{ vars.RELEASE_RUNNER != 'qemu' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends curl ca-certificates sudo git cmake build-essential
+          VERSION="${GITHUB_REF_NAME#v}" scripts/build_appimage.sh
+
+      - name: Set up QEMU
+        if: ${{ vars.RELEASE_RUNNER == 'qemu' }}
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+
+      - name: Build under QEMU (arm64 Ubuntu 22.04)
+        if: ${{ vars.RELEASE_RUNNER == 'qemu' }}
+        run: VERSION="${GITHUB_REF_NAME#v}" scripts/build_appimage.sh --in-container
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-files
+          path: |
+            dist/DriveOS-*.AppImage
+            dist/DriveOS-*.AppImage.sha256
+          if-no-files-found: error
+
+  publish:
+    name: Sign and publish
+    needs: build
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-files
+          path: dist
+
+      - name: Checksums
+        working-directory: dist
+        run: sha256sum DriveOS-*.AppImage > SHA256SUMS
+
+      - name: Sign with minisign
+        env:
+          MINISIGN_KEY: ${{ secrets.MINISIGN_KEY }}
+          MINISIGN_PASSWORD: ${{ secrets.MINISIGN_PASSWORD }}
+          MINISIGN_PUBLIC_KEY: ${{ vars.MINISIGN_PUBLIC_KEY }}
+        working-directory: dist
+        run: |
+          if [ -z "$MINISIGN_KEY" ]; then
+            echo "::error::MINISIGN_KEY is required for a release"
+            exit 1
+          fi
+          if [ -z "$MINISIGN_PUBLIC_KEY" ]; then
+            echo "::error::MINISIGN_PUBLIC_KEY is required for signature verification"
+            exit 1
+          fi
+          sudo apt-get update && sudo apt-get install -y --no-install-recommends minisign
+          umask 077
+          printf '%s\n' "$MINISIGN_KEY" > "$RUNNER_TEMP/minisign.key"
+          for f in DriveOS-*.AppImage SHA256SUMS; do
+            printf '%s\n' "$MINISIGN_PASSWORD" | minisign -S -s "$RUNNER_TEMP/minisign.key" -m "$f"
+          done
+          rm -f "$RUNNER_TEMP/minisign.key"
+          printf '%s\n' "$MINISIGN_PUBLIC_KEY" > driveos-minisign.pub
+
+      - name: Release notes from CHANGELOG.md
+        run: |
+          VER="${GITHUB_REF_NAME#v}"
+          BASE_VERSION="${VER%%-*}"
+          awk -v v="$BASE_VERSION" '/^## /{p = (index($0, v) == 4); next} p' CHANGELOG.md > notes.md
+          test -s notes.md || { echo "CHANGELOG.md has no section for $BASE_VERSION" >&2; exit 1; }
+          {
+            echo
+            echo "Verify with \`sha256sum -c SHA256SUMS\` and minisign using \`driveos-minisign.pub\`."
+          } >> notes.md
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          prerelease=()
+          if [[ "$GITHUB_REF_NAME" == *-* ]]; then prerelease=(--prerelease); fi
+          gh release create "$GITHUB_REF_NAME" \
+            --title "DriveOS ${GITHUB_REF_NAME#v}" \
+            --notes-file notes.md \
+            --verify-tag \
+            "${prerelease[@]}" \
+            dist/*

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=DriveOS
+GenericName=In-vehicle voice assistant
+Comment=Hands-free, voice-first ordering and payments
+Exec=AppRun
+Icon=drive-os
+Categories=Utility;
+Terminal=false
+StartupNotify=false
+X-AppImage-Name=DriveOS

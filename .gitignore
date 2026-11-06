@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# CMake / HMI build
+build/
+build-*/
+hmi_lvgl/build*/
+hmi_lvgl/.deps/
+.deps/
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
+*.o
+*.a
+
+# secrets and local state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite3*
+.data/
+
+# models and caches (downloaded with `driveos fetch-models`)
+*.gguf
+*.safetensors
+*.pth
+models/**/*.onnx
+!models/silero_vad.onnx
+!models/smart-turn-v3.2-cpu.onnx
+.cache/
+models-cache/
+
+# packaging outputs
+*.AppImage
+*.AppImage.*
+*.sha256
+*.minisig
+SHA256SUMS
+*.zsync
+appimage-build/
+AppDir/
+DriveOS.AppDir/
+packaging/appimage/out/
+src/driveos/_version.py
+
+# generated screenshots and logs
+screenshots/
+*.log
+.DS_Store

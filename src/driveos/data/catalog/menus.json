@@ -1,0 +1,2673 @@
+{
+  "r1-shangri-la-chinese-restaurant": {
+    "brand": "SHANGRI-LA CHINESE RESTAURANT",
+    "address": "784 Blossom Hill Rd, Los Gatos, CA",
+    "unitToken": "LGNF7V8G9NBNN",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_AVAILABLE_LATER",
+      "hoursFormatted": "11:00 AM-3:00 PM",
+      "nextAvailableFormatted": "Weekdays 11AM - 3PM, 4-8:30PM; Sat 11:30AM - 3PM, 4-8:30PM"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGFpWS09JWDcyRVZUVlBXMjZUV0JaN1BFNA",
+        "name": "Appetizer",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/99ec56b8c75f65597b5974709126b8844cd3c359/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEJJM0tNV01MV1lWWVlWTFFXQUlSNDZDQQ",
+            "name": "Chinese Chicken Salad-S",
+            "description": "Crispy shredded fried chicken with lettuce, cilantro, carrots, sesame seeds, and peanuts, topped with a crowd-favorite signature dressing. Refreshing and flavorful.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/77302d47b310baa279db2b6b624f13b370ddea44/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 925,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFBBUjRPWTM0TFpUSEI2WlJYSEFBQTRVMg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFZUkI3WEpaQ0FBUzdGNlNZUENWU0FWVw",
+            "name": "Pot Stickers(3)",
+            "description": "Crispy bottom with juicy pork filling. 3 pieces per order.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/06f19d4a36d3d5ee4619aef1e2c6d14bf2514e3e/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJXM1ZHUklJWFJKNU9JSVNRWFg2TlpYWQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE5WUUNNUFlKUU1HQ0ZZTUpLTEFNUVRYQw",
+            "name": "Beef Skewer(2Pcs)",
+            "description": "seasoned to perfection. 1 skewer per order.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/c42362ce359200a5b8e21ec76837eeda0efa8e5f/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 525,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEZaR0hSNUlRRkVDNDZBWVpSVk9ENFlEVw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFEzNlJLSjJTTzdJVzRFNlFFSkJHRVFESA",
+            "name": "Fried Prawn(4Pcs)",
+            "description": "Crispy on the outside, tender and flavorful inside. 1 piece per order.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e0feac3de1cf371724b7cd19f51f18144e6027b6/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 699,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE5MQkNIQzYyV01GTjMyTzJQVUpOWTJMWQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEtRNUJOUEZIM1pXRlI0UVBTUUs0TFFJSQ",
+            "name": "Chinese Chicken Salad-L",
+            "description": "Crispy shredded fried chicken with lettuce, cilantro, carrots, sesame seeds, and peanuts, topped with a crowd-favorite signature dressing. Refreshing and flavorful.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/77302d47b310baa279db2b6b624f13b370ddea44/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1225,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVSVFhJUDYyNTU0VVhJRE5RSEMyVzZISw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDJVT1FWNllIM0dHV0FHVUwzWDYzWlUyUA",
+            "name": "Fried Chicken Wings(10)",
+            "description": "Crispy on the outside, juicy on the inside. 10 pieces per order.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/db8cc991791e50be9df5b67787cedb1d26dad910/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1400,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJJWERNRk5HWjVWTkM0NUJBT0k1VFhUSw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE1XSFhCRktYVVI2R0FISURCVzdRV1ZVMg",
+            "name": "Lettuce Wraps Chicken",
+            "description": "Finely minced chicken with crushed peanuts, stir-fried to perfection, served with crisp lettuce cups and a flavorful sauce. Light and delicious.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/de62454389ce4ca2101e3c1b0fe81b4566430191/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1400,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFhXUTVaWERXSUFMSFM1T1VYUlVNSTZNSg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEFNRDJCSFJQVzMyUjZaRE82QjMzNUxCVQ",
+            "name": "B.B.Q Pork",
+            "description": "Honey-glazed, roasted to perfection with a caramelized exterior and tender, flavorful interior.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6dd5f638f7df06940f32e009e1f977872356e40b/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 999,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEdPNEJEV1MzNk9SVk9EV01ENklTNzZVUA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEVJUkNKWjZTWjc2UEhXUkcyMklSREdLTQ",
+            "name": "Shangri-La Special 23",
+            "description": "Chicken salad , white rice, accompanied by two crispy fried shrimp and two juicy beef skewers for a satisfying and flavorful meal.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/f48d2c6bac0353635ea400f670f2eae746e2cccd/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1400,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEhIR0xPSUZTU0RVQ01YT0FBTlpSQ01TSg",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGElMVEhISlZIQTdSTkUzVEJSWVVBVE9JVg",
+        "name": "Poultry",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFlUR1RTRFNJNFZGSk9aM0FRQUFEVENCQw",
+            "name": "Honey Walnut Chicken",
+            "description": "Crispy fried chicken breast meat paired with crunchy walnuts, coated in a sweet honey mayo sauce for a delightful and unique",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/b680216b117581f312e6b06d9c224774540cf17e/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElDV1hLUVEyQ0VIMk9GV1hXUEpFNlFYNA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFBMTVQzNDRGS1oyVkpKRzJSTlBVS0o0TQ",
+            "name": "General Chicken",
+            "description": "Crispy fried dark meat chicken tossed in a signature sweet and spicy garlic sauce, perfectly tender with a bold flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEo3QUZISzMyMkxLVUJHQUFHQjYyRDdFSQ",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGFQ1M09XNVIzRUNEVTI0Tk81RlRPTVBDTA",
+            "name": "Almond Chicken",
+            "description": "Juicy chicken thigh stir-fried with zucchini, celery, and crunchy almonds in a savory garlic sauce, full of flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/09e93ed27b40d41e9899feb72a3d78c83a968e61/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVVTkJORVRFWkQ1M1FBRkVaV0hVNk1XNA",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGE9URkFFUTVZUERXREZDNUUzSE9XRElTQQ",
+            "name": "Cashew Chicken",
+            "description": "Juicy chicken thigh stir-fried with zucchini, celery, and crunchy Cashew in a savory garlic sauce, full of flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/1b267089b5957ea1cea813a2092b68f081bd8306/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDZKUENTWFlFR0RWN0tUUkY3SFFFR0pFWg",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGFg1T05TSzVYVlpLQ1BLMkQ1T1FDN1E1TA",
+            "name": "Curry Chicken",
+            "description": "Juicy chicken thigh cooked with mushrooms and onions in a rich curry sauce, bursting with flavor.",
+            "imageUrl": "",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFFaUVdKQkpHS1FNQzRWTlYyVUhJNUhWSQ",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGFRTV0lYNU5XRTdSSTVCNTdEVllTQ0NVUQ",
+            "name": "Garlic Chicken",
+            "description": "Juicy chicken thigh cooked with mushrooms and onions in a rich curry sauce, bursting with flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/0a6aea805f4eeca4755281548f542ac2050ca2d9/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFYySlJRVVRJRkhSUlg3WERLUUJURVc1NQ",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGDZDRU03WVY3RkVYQVk3SEtNUzZBNTZQUw",
+            "name": "KUNG PAO Chicken",
+            "description": "Juicy chicken thigh stir-fried with bell peppers, onions, and peanuts in a spicy garlic sauce, delivering a bold and flavorful kick.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/146eb4b5144720ac7b32538c94ef08228025fed0/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFFCNFpWWFdORDZXTDJRRE5LQUhRQzZKMw",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGEJXVUczVDJLSFIySERSUUJSRE9ESUg0RA",
+            "name": "Broccoli Chicken",
+            "description": "Juicy chicken thigh stir-fried with broccoli in a savory garlic sauce, perfectly flavorful and satisfying.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/285dc7412ed8c5c138aab50c14ce70b2d7f564c4/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEJSUDVBRUdXUTJSTlBVTEs0VEhGUFBLRQ",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGE1NSFRTUEhKQ01MUEZSVFBBSDJUTllQWg",
+            "name": "Orange Chicken",
+            "description": "Crispy fried chicken thigh coated in a signature orange peel sauce, tender inside with a hint of citrus sweetness.",
+            "imageUrl": "",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDdXVlVOQklUNlVLNkIzMlRYSU43NEVGRQ",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGEZOQUlZU0ZXRE1aQ09DSk9JUkxQQklLNA",
+            "name": "Five Flavor Chicken",
+            "description": "Crispy fried chicken thigh tossed in a signature five-flavor sauce, balancing sweet, sour, salty, spicy, and umami notes, served over steamed broccoli.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/d0b319f06d3ce6b3403b60c9dfca1ed03d43cd8b/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEVCSEdLNFdIU0ZQS1REWlREVVRKVU5CUQ",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGFRQVUtXT0dRN0JYNlVXQ0NLSko1QVFJQw",
+            "name": "Chicken With Mix Vegetable",
+            "description": "Juicy chicken thigh stir-fried with broccoli, carrots, zucchini, water chestnuts, snow peas, mushrooms, and bamboo shoots, creating a fresh and nutritious dish.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/7a7ba9658dd671caafdb0ceda09d8563c30842b2/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGERMRFNLUERPQ1YyNUoyNzVENTNQM1NBRA",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGFFXNEhWR1FWRUM2TFZWM0dVTUMzVjNOVA",
+            "name": "Sesame Chicken",
+            "description": "Crispy fried chicken tossed in a rich sesame sauce, garnished with toasted sesame seeds for a flavorful and satisfying dish.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/bdb262a5cb58e7216de4eea0343e5069540cb598/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEtGVDJLUkxRRVNPSUdCS0VKRUpEV1M3Vg",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGE1FS1RCSDVKWUVQNFNUNEVYVU5VRkpDWQ",
+            "name": "Sweet & Sour Chicken",
+            "description": "Crispy fried chicken breast paired with bell peppers, onions, and carrots, tossed in a rich sweet and sour sauce for a tangy and flavorful bite.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/c31572ceb3b6ab8e7c3b981c11e64cf9d2a4ee8c/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDYzVllVREFGQjZDRkhYUTZMRUVUVklRUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDMyVFBBU1dMNkVWMkwyREk2VDdCUVBTSA",
+            "name": "Hunan Chicken",
+            "description": "Chicken breast meat stir-fried with bell peppers, onions, jalape\u00f1os, and garlic, delivering a bold and spicy Hunan-style flavor with a hint of numbing heat.",
+            "imageUrl": "",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE1LSFdLV0RPWEJZRkdIVFlRSzNIVUpUUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFhTN0FJV080T0tVUDRXQVo2RFpGVERVRA",
+            "name": "Mongolian Chicken",
+            "description": "Tender chicken breast slices stir-fried with scallions, onions, and garlic, offering a bold and spicy flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/73ecbbbd441880e8799cc29d4d848e2eff641be1/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEFQV1dRV1pZV1hWNUVIUURDQlM1M1hIRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFlKSk4yN0lESkRBRVpUSUgzUjJCNjNJVg",
+            "name": "Chicken in Hot Garlic Sauce",
+            "description": "Tender chicken breast slices stir-fried with zucchini, water chestnuts, bamboo shoots, scallions, and carrots, delivering a sweet and spicy flavor profile in the classic \u201cfish-fragrant\u201d style.",
+            "imageUrl": "",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDRQVDU2S1NES1FZTzQzUkNYTzQ1RERPUA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFc3VE1ONk9JNjRRRzIyVE9KWU9CRFRERg",
+            "name": "Lemon Chicken",
+            "description": "Crispy fried chicken breast sliced into pieces, served with fresh lemon slices and a zesty lemon sauce on the side.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6b67a8a10f70b181d046fc95ca9b73597ddb55d5/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJYQlRTNjc1WEpJREJKSjNIUk1YREFYWQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFo0NDNFRVBaUTVQREU2NkxGNDQ1WkpRQg",
+            "name": "Mushroom Chicken",
+            "description": "Tender chicken breast meat stir-fried with mushrooms and carrots in a savory garlic sauce, rich in flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/bab451390862a17354fd3073a2836e4d470a0b54/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFJVUzY3Rk9KRkg0N0pEM1JZUFk0T09aQg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFdRUDZSWE9XRVI2SVlERkJCR1ZOSFNUSg",
+            "name": "imperial Chicken",
+            "description": "Crispy fried chicken breast meat tenderloin coated in a signature tomato-based sauce, offering a perfect balance of tangy and sweet flavors.",
+            "imageUrl": "",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEtVTU5TRFlaWVdSM1E3T1pUSkpYU0FGRA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFgzVTVUWERSS1pNVUc0UklQUzJNWllSRA",
+            "name": "MuShu Chicken",
+            "description": "Chicken thigh stir-fried with cabbage, bamboo shoots, carrots, and scallions. Served with 4 Mu Shu pancakes and a signature sauce for wrapping, offering a unique and flavorful experience",
+            "imageUrl": "",
+            "priceCents": 1400,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFNDTlJGSjcyUUE2WENSV0Q2VlJVSldDVA",
+            "variationName": "Regular / Dark Meat"
+          },
+          {
+            "id": "CALI_CAESGERWUzVZS0ZOUk5OT0tZVFpPVUhKNlhMSg",
+            "name": "String Bean Chicken",
+            "description": "Tender chicken slices stir-fried with crisp green beans in a savory black bean sauce, packed with rich flavor.",
+            "imageUrl": "",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNBRzNONzVGQ0NURUVHM0FKSFAySTNIWg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFSRkk2MlVCQlRJN0ZDRzNMSEM0Q0hESg",
+            "name": "Salt Pepper Chicken",
+            "description": "Crispy fried chicken breast meat stir-fried with garlic and jalape\u00f1os, seasoned with salt and pepper for a perfectly balanced, savory-spicy flavor.",
+            "imageUrl": "",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNTSjZCVEtUVlczNTdWTFVSSzI1NkoyWg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFVJWkVJS1RXVkZOQktGMlRSTEFHR0hURQ",
+            "name": "Chicken in Black Bean Sauce",
+            "description": "Chicken breast meat stir-fried with bell peppers and onions in a savory black bean sauce, rich and flavorful.",
+            "imageUrl": "",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFdQM0tXUE5STVc0R1UyQ05VQ0RLSVFRNA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFZQUDRKR1gzUUw3WDdIQ0ZEWU1DQ0MzMw",
+            "name": "Chicken Snow Peas",
+            "description": "Tender chicken breast meat slices stir-fried with snow peas and bamboo shoots in a savory garlic sauce, offering a fresh and crisp taste.",
+            "imageUrl": "",
+            "priceCents": 1550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEhXRUNHMk5QWEpOTjJDVUdMRko3TlBGTg",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGE5DWlFLVzJTMlhPS1oyS0gzTTdKQVM3WA",
+        "name": "Beef",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/327ed1df654c514d505e6c8de22fac5514738528/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFBaQ0pONTdQWVRCMkhTSkMzSVFEWkU3SQ",
+            "name": "Mushroom Beef",
+            "description": "Tender beef slices stir-fried with mushrooms and carrots in a savory garlic sauce, rich in flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/26dc2d105a417af7203cacbe833f76788826a68d/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFNURVUzTEpDMlBSRkZPNjQyWU1GWkI0VQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEdVVUhSMzdMUFJJNEIyM0JOTDVDVEhFSA",
+            "name": "Grenn Onion Beef",
+            "description": "Tender beef slices stir-fried with fresh scallions, creating a rich and savory flavor in a simple yet delicious dish.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/327ed1df654c514d505e6c8de22fac5514738528/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJRV0M1VEtON1lHRE9GT0xPRlJINUYzRQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEM3WVVWUUYzWkRLRVhUV1ZMVkhCSUM2RQ",
+            "name": "Mings Beef",
+            "description": "Zucchini, carrots, mushrooms, and tender beef slices stir-fried in a rich dark garlic sauce for a flavorful dish.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/d8afa10769cd5aa095fa6f341908ab30f2d7ff98/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEw1Rkg0R0VYT1lCWUZVWkFQNTZWNFlIMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDQyRkRQQjZDN09BSk5TSUlXNUpKVDRVSg",
+            "name": "Broccoli Beef",
+            "description": "Tender beef slice stir-fried with broccoli in a savory garlic sauce, perfectly flavorful and satisfying.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/d15e0330350a6c19f23f2971c803b74d6b308ae5/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFRST1NWTk5ZQlhYVTZFNEdXTEdTU1ZLNQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGExHMjJMS080VlBFM01TS1NZTVJNUVdWRA",
+            "name": "Ginger Beef",
+            "description": "Tender beef slices stir-fried with julienned ginger and garlic, delivering a fragrant and slightly spicy flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/40d18ddefb1e4b4045fedf72035a59931ef21dfe/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEEyNk5RUEtPVDVTVVBTN0QyVDRZR1NBNg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGENXNFhISFA1UjZEUkFIWFlWQ0pFRVVKQQ",
+            "name": "Beef with Snowpea",
+            "description": "Tender beef slices stir-fried with snow peas and bamboo shoots in a savory garlic sauce, offering a fresh and crisp taste.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/d39ca53b0525b49066b8a7fd56b24c60110eb442/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVWTk9HRFVYVzVZR1RaMzRSUUxPNk1LNQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDQ0Sko2QVcyNjZWWjVBVjU1RlNYNENXRg",
+            "name": "Sezchuan Beef",
+            "description": "Crispy fried beef slices tossed in a sweet and spicy garlic sauce, perfectly balanced with a bold and flavorful kick.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/8bd17f8f55bdd4af3b0105a497d23477fca2095b/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFJHVkFLTEpFQ0MyTUNRU0dKQlhDRjZVVg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEhIU1A1UlgySFNMTUhONjdBUktJNU9MVQ",
+            "name": "Mongolian Beef",
+            "description": "Tender beef slices stir-fried with scallions, onions, and garlic, offering a bold and spicy flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/748e4d4886757d8a97c77d28826da241ae300904/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVVWlhYVEdYM1VYNUNUS1NZSDJENlBXRQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEo0NFlDMkJUT0tIVzVFTkMyTlEyMkRDSw",
+            "name": "Black Pepper Beef",
+            "description": "Tender beef slices stir-fried with bell peppers, onions, and garlic in a signature black pepper sauce, rich and slightly spicy.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/bd2a7a93dc4a25d7e753b4333393b8eb2f31fd49/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE1ET0VLQTZNS1I0T0lJSEFITVNLRzZDUQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEhMVjZUU0RPUUw2UVZGSjZXUU9DSEZMUA",
+            "name": "Orange Beef",
+            "description": "Crispy fried beef coated in a signature orange peel sauce, tender inside with a hint of citrus sweetness.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/8b1b7e9fb90e7cdca6f6bc383209a5c0716189c9/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFRTWVREQlhOVFVJRTJIRUNKVFY2REtEUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE43TFRKU1RGUkdURlNRSzJFUUxLR1NHMg",
+            "name": "Beef with Mix Vegetable",
+            "description": "Tender beef slice stir-fried with broccoli, carrots, zucchini, water chestnuts, snow peas, mushrooms, and bamboo shoots, creating a fresh and nutritious dish.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/72c467017710e96223717523f386150f1aabcba9/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEU2NEw0TTZPUklENlhKVE5HQUpZQlRKTQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEdGR080UlBaTk1YQU5ZN0FQM1hFRzNYUQ",
+            "name": "Beef in Hot Garlic Sauce",
+            "description": "Tender beef slices stir-fried with zucchini, water chestnuts, bamboo shoots, scallions, and carrots, delivering a sweet and spicy flavor profile in the classic  style.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/9f50259727d2dd429d01f3cecdb5a1aa13434509/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFpVS0RMNTdWWVhORFFCWUZDVjdWUFNURA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFJCTEJOTE42VFpMWFBMQUFHV0hMUzY3Rw",
+            "name": "Hunan Beef",
+            "description": "Tender beef slices stir-fried with bell peppers, onions, jalape\u00f1os, and garlic, delivering a bold and spicy Hunan-style flavor with a hint of numbing heat.",
+            "imageUrl": "",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFYzM042VEtJMkMzWUJCSkM2NjZUVEpQRQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEhLR1hCQVpaR0tLWUJNUkJWNDc0UjRRVA",
+            "name": "Mu Shu Beef",
+            "description": "Tender beef slices stir-fried with cabbage, bamboo shoots, carrots, and scallions. Served with 4 Mu Shu pancakes and a signature sauce for wrapping, offering a unique and flavorful experience.",
+            "imageUrl": "",
+            "priceCents": 1400,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDI0NFpDNldaR0ZHTVBVRUdBRzVDVTQyRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFKR1pMTkYySlQ0NlZFUEpWMkZENzJBVA",
+            "name": "Sesame Beef",
+            "description": "Crispy fried beef tossed in a rich sesame sauce, garnished with toasted sesame seeds for a flavorful and satisfying dish.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/ecebfb88283b3a1687d5f551c769b8d3ccb7d849/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVQNEpGU1NPMlRBMjVDQ1ZKU0NaRUZRNg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEpTU040Q0lYVUhISjRBRk80WElOR1E3Qw",
+            "name": "Beef with Baby Bakchoy",
+            "description": "Saut\u00e9ed bok choy hearts in a light garlic white sauce as the base, topped with beef stir-fried in a rich dark garlic sauce, creating a perfect balance of freshness and bold flavors.",
+            "imageUrl": "",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFNGNDNUSVY0SFFOWjJETVZPUldWRFpZVw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEJNWkc1TkpDU1FSWjJZUVBNREJQMzNURg",
+            "name": "Kun Pao Beef",
+            "description": "Beef stir-fried with bell peppers, onions, and peanuts in a zesty garlic chili sauce, offering a perfect balance of heat and flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e4d2b53e3f61ec41ac221e04c319ce7b5187b3cd/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9WUEZPS0FJREZYWVM1QUJESDRINUo2TA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEVOWlVIRzNaVUpXNEJDVTczQklNUEdLQg",
+            "name": "Beef with Black Beans",
+            "description": "Beef stir-fried with bell peppers and onions in a savory black bean sauce, rich and flavorful.",
+            "imageUrl": "",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElNNFNPWkNGTTJONUlaSzVJVEQzVDM2WA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDc2SlgzVEE0UlAyVFRLRzZENkFQV1dCNQ",
+            "name": "Beef String Beans",
+            "description": "Tender beef slices stir-fried with crisp green beans in a savory black bean sauce, packed with rich flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/62d42f6640cdbf082a380c91e6b68ddf09a9281a/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGENVWlhXUVdMWkxPNEdCNVVVN1gzNVA1SQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEVJMjI3RDVXQ0lZUlE1TEhPQlNOWk5PNg",
+            "name": "Curry Beef",
+            "description": "Beef saut\u00e9ed with mushrooms and onions in a flavorful curry sauce, light yet delicious.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/5d62aad2531a44661267548b37dd7b5212f5a9a4/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJLSU9KTlVGVUdJVDdIWlVKS1NBU1UyVQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDIyTTI1VjNIRERYNE5BWFhXR1VCTzNKWQ",
+            "name": "Beef in Hot Garlic Sauce",
+            "description": "Tender beef stir-fried with zucchini, water chestnuts, bamboo shoots, scallions, and carrots, delivering a sweet and spicy flavor profile in the classic \u201cfish-fragrant\u201d style.",
+            "imageUrl": "",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDdUVkVJWDYzSlU3UTRSVE1RVzI1UlhMNQ",
+            "variationName": "Dinner Special"
+          },
+          {
+            "id": "CALI_CAESGDdKN1RJR1dURzJXR041N1JYR0pWNTI2Sg",
+            "name": "Beef in Hot Garlic Sauce",
+            "description": "Tender beef stir-fried with zucchini, water chestnuts, bamboo shoots, scallions, and carrots, delivering a sweet and spicy flavor profile in the classic \u201cfish-fragrant\u201d style.",
+            "imageUrl": "",
+            "priceCents": 1575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE1YTUtCNkNER1lXRVhZNlJDMjRYQ0RWVw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFhCUzRVVDJSWEtWRkJIWFVCTEhNWjNNMg",
+        "name": "Rice&Noodle",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/004c0096fcb24f340ec963b4875d7ea308f1a049/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGDRQNE1ZU0M1QVBNVlBNRlJWNVJHQ1VHWA",
+            "name": "White Rice(16oz)",
+            "description": "16oz",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/48cf94c52cb24fee0b242e58cab4ca62e7a95ae4/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 300,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFRLM0hSVllZQlM1WUNPT0pQNDQ3UkdOWg",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEpYVTQyVlpQN1dGUzdUNktMVVhXQ0FLQw",
+        "name": "Seafood",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGE5IN080VTMzNFU1NE9KWFE2R1pPUFNTWg",
+            "name": "Sweet & Sour Prawns",
+            "description": "Crispy fried shrimp paired with bell peppers, onions, and carrots, tossed in a rich sweet and sour sauce for a tangy and flavorful bite.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE5aNlVXQ003SE01V0FGQllNTUozT0FYTw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9XNUVFWUZVMklZQlhaTkVPUDZSQVhKRQ",
+            "name": "Prawns with Snowpeas",
+            "description": "Shrimp stir-fried with snow peas and bamboo shoots in a white garlic sauce, offering a fresh and crisp taste.",
+            "imageUrl": "",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGExWNElINEpaTElSRVlOTUY3RDQ2TkkzSg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFVET1MyV0FIN1BPVjNQTUtQNVU1UkxBNQ",
+            "name": "Curry Prawns",
+            "description": "Shrimp saut\u00e9ed with mushrooms and onions in a flavorful curry sauce, light yet delicious.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e31859ddc89eaf6e0ad525544dd60c984aad6f12/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGERERk9BQTVESlhXSEtOVENUUVBYNUxPRg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDJOSzRBVkdLSFJIVjRaUUlGTFRKQ0taRQ",
+            "name": "Kung Pao Prawns",
+            "description": "Shrimp stir-fried with bell peppers, onions, and peanuts in a zesty garlic chili sauce, offering a perfect balance of heat and flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/3b98fee4fe36da1f3e8cf529eb0afdf7bc346a69/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFpWRzJCRFhWVkpGRkI3TUVEV1Y0SlJJTQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEhRV0ZRVDYzU1ZEVUhLQVBPUUZYUElDSQ",
+            "name": "Hunan Prawns",
+            "description": "Shrimp stir-fried with bell peppers, onions, jalape\u00f1os, and garlic, delivering a bold and spicy Hunan-style flavor with a hint of numbing heat.",
+            "imageUrl": "",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJaNDQzQUJQUFBBT0QzR0xIMlVFSjNDRA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEpYSk1RSlFHSTRBRDRINUpDMkNPWlVYUQ",
+            "name": "Mongolian Prawns",
+            "description": "Shrimp stir-fried with scallions, onions, and garlic, offering a bold and spicy flavor.",
+            "imageUrl": "",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEo2NFlJQTRYWUVMUzIyWVJLVTNCWEFEVQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9CSFNZSUlYNURaQVNJMzZINzIyWlEzTQ",
+            "name": "Prawns in Hot Garlic Sauce",
+            "description": "Shrimp stir-fried with zucchini, water chestnuts, bamboo shoots, scallions, and carrots, delivering a sweet and spicy flavor profile in the classic  style.",
+            "imageUrl": "",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEZXUDM1STNKVzZONjJLTkROUURHNE5MRg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEZQV1BaUlUyS0RXSTRNV0JTQkhIWURaSg",
+            "name": "Loves Prawns",
+            "description": "Half of the shrimp saut\u00e9ed in a creamy garlic white sauce, and the other half cooked in a sweet and spicy sauce, served with steamed broccoli for a delightful and flavorful combination.",
+            "imageUrl": "",
+            "priceCents": 2025,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDMySUNDNkFGMlpJWjZFSzZSSTdJSzI2TA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEg1VVpGTllCR0ZBQTdWTU5NTUdEUzRaUw",
+            "name": "Kung Pao Calamari",
+            "description": "Scallops stir-fried with bell peppers, onions, and peanuts in a zesty garlic chili sauce, offering a perfect balance of heat and flavor.",
+            "imageUrl": "",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGExSUUMzUEFGS0JCQTJZRVNZTTNJV0g1NQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFCUkpTNktLUDNTV0dLSlhNNEpRTU1GVQ",
+            "name": "Prawns Mix Vegetable",
+            "description": "Shrimp stir-fried with broccoli, carrots, zucchini, water chestnuts, snow peas, mushrooms, and bamboo shoots, creating a fresh and nutritious dish.",
+            "imageUrl": "",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9CUk40VkI3VUFYRFJHUkVSSzdTV0lEQQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFEQzNHQlA3QkE0UlBKQ09WM0lGUFEyUg",
+            "name": "Prawns Black Bean Sauce",
+            "description": "Tender shrimp stir-fried with bell peppers and onions in a savory black bean sauce, rich and flavorful.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/cca6fcb6fade029c4b5a484e96267b867f642369/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFNPR1JSN0dUT08zSkw1SUQyNU9EWlQ2SA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEhJVEpCR0lZN0NTSFpGM1o2NVZYRVM2QQ",
+            "name": "Honey Walnut Prawns",
+            "description": "Crispy fried shrimp paired with crunchy walnuts, coated in a sweet honey mayo sauce for a delightful and unique",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/052f63e7ca827e94832ebe8940b2bf9c8a1106ac/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGERaVEk3QUpKWFJFSUMzNFdOREdCRko3UQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEhYVkg3QTRaQVUzWkVVVU9KWUNUV0ZQTA",
+            "name": "Sweet & Sour Fish",
+            "description": "Crispy fried fish fillet paired with bell peppers, onions, and carrots, tossed in a rich sweet and sour sauce for a tangy and flavorful bite.",
+            "imageUrl": "",
+            "priceCents": 2050,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFBESDYzRUo2TEg2Q1Y0WkFHS1hUUFRMUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEFDUkpOS05MQVlPQUg3VURFQ1FWNVcyRw",
+            "name": "Crispy Fish Hot Garlic Sauce",
+            "description": "Golden fried fish, tender inside and crispy outside, served with a spicy garlic sauce on the side for added flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/5f4d9cba82f6f393070dc3ebfb11e0253c6922d6/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 2050,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGENYNlE3Q05BT1lUWlAyNVVVWlVUS0lQNQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9ZVllCUlNMRTY0WE1GNFhFTkFQU1pDNg",
+            "name": "Steam Fish Ginger and Scallions",
+            "description": "Tender steamed fish topped with scallions and ginger, drizzled with hot oil to release aromatic flavors, served with a signature soy-based steamed fish sauce.",
+            "imageUrl": "",
+            "priceCents": 2200,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNOUEw3R1JUNUhWRzVCUEE0U1JRUklXUw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFFNlNLNVVBSkpHQ0xQNUZEREdCMlRSRQ",
+            "name": "Fish w/ Black Beean Sauce",
+            "description": "Fish fillet stir-fried with bell peppers and onions in a savory black bean sauce, rich and flavorful.",
+            "imageUrl": "",
+            "priceCents": 2050,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFM3NjdMTkFHTVVUV1FBNEtIN0ZST1hSRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFJTVk5RNFlUWFhIUkZRSEdVWVJPSjc3Nw",
+            "name": "Mu Shu Prawns",
+            "description": "Shrimp stir-fried with cabbage, bamboo shoots, carrots, and scallions. Served with 4 Mu Shu pancakes and a signature sauce for wrapping, offering a unique and flavorful experience",
+            "imageUrl": "",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDdaNkZGVlNTSVlUT1pNVkZLVkJPR0xCQQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE8zRUhRVERJRzRXWUdLTjVVWTQ2WFU0Vw",
+            "name": "Fire Cracker Prawns",
+            "description": "Crispy fried shrimp stir-fried in a signature chili sauce, delivering a bold and flavorful kick.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/642a3c65184149b6ac0f0f24dded0e6f73189b1b/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFNBTENWSDJUTjRCRFg3TUIyUlBVWTdZSA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE5ETTJGRDVMRkxBWk1aQ1kyTVVESURUUA",
+            "name": "Szechuan Prawns",
+            "description": "Crispy fried shrimp stir-fried with snow peas, zucchini, carrots, and mushrooms in a spicy garlic sauce, delivering bold and savory Sichuan flavors.",
+            "imageUrl": "",
+            "priceCents": 1750,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEtPQk9QR1BUTExXSTJMQVlLS1k1VVNSVg",
+            "variationName": "Regular"
+          }
+        ]
+      }
+    ],
+    "itemCount": 75
+  },
+  "r2-purple-onion-cafe": {
+    "brand": "Purple Onion Cafe",
+    "address": "26 E Main St, Los Gatos, CA",
+    "unitToken": "V5JBKNXNPJWP9",
+    "hours": {},
+    "categories": [],
+    "itemCount": 0
+  },
+  "r3-plur-coffee": {
+    "brand": "Plur Coffee",
+    "address": "2425 Samaritan Dr, Main Entrance, Los Gatos, CA",
+    "unitToken": "L95YKYXXGX6P6",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_ALWAYS_AVAILABLE"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGFJQSERUUFA3TVpXN1ZOV1dTTlJON0haNA",
+        "name": "water",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/452a488192de984e0c22ccb430992388c8e39447/original.png?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFVTTk82RUQzV0lOWVNDVzVCWFFXVzdBUA",
+            "name": "Saratoga\u00ae Natural Spring Water 12 Oz Glass Bottle",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/452a488192de984e0c22ccb430992388c8e39447/original.png?width=640&crop=1%3A1",
+            "priceCents": 300,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFNEV1NGU0JXS1RFQlhDU0RSVTVFV01NSA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEozQ0Q2SFpIRUtOMlNHQ0RFTUNJWDRGTg",
+            "name": "Sparking saratoga water 12oz",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 300,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9GNlQ2WklTWlRPRFhPTUVVMzZKQjU1Ug",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEJWSkdHTDdNSk9PRFpGM1JIQlIyQktMSw",
+        "name": "Latte",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/2e066293c11494afbcd0881a26c5027a31f8d990/original.png?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFg1VlNCUkZMVlZHUEs3M0FUN0tDWlJEWg",
+            "name": "Cafe Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/2e066293c11494afbcd0881a26c5027a31f8d990/original.png?width=640&crop=1%3A1",
+            "priceCents": 525,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGERaQVhZUU5aSjJTMjZLMzdaQ1hSU0RGNQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDJGS1NSTlhUUTRCS0UzQkpYVTJYWUdCSw",
+            "name": "Caramel Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/db0db1ba46987fc91c4f697a04b96b3abc36e3e1/original.png?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElMTjVCSkhUNlZBV1hBV1RBTFJBNE1KVA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDVZQ1hVUFBUTFdPNDVOWlJTNzJEMjZSUA",
+            "name": "Chai Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/d5c05372b86cf01ca13c29caeb734003448ce727/original.png?width=640&crop=1%3A1",
+            "priceCents": 599,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFdSWElIUkpBNkxXQlY2V1NOQlBQWkpINA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFZWSEU2NkU0RVRHNFhLQVVBT1Y1QUc3Tg",
+            "name": "Tiramisu Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/fa31f036a165c03a73a90f352bcbeedb20aeb184/original.png?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE5DUjNETUZWSFY1UEg3N0ZFRkNDUVZHVQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFNOU0RKVU1BRDdTWFZHUEw2UlVRWUpPQg",
+            "name": "Matcha Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/2600181f1f14ee60411c3ccd8ccfda83db27d313/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 599,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElIVUtaRUlNVzM1SEZEVlNPTU03TFVSMg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFBaU1A0RjMzN1FSVkFZM0tHTEUyWkI2TQ",
+            "name": "Vanilla Cafe Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/adfe661ddd74b09c8760bfe9488dd99eb56d27da/original.png?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEk1T0pQWlhHWlQ1TlRYWllOQU5XSjM0SQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFQ3TjVRMk01RU0ySk1TVEdGVzdCNzdNTQ",
+            "name": "Lavender Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/922736f2f49eaec88fb4d84884a0b2e26c32d463/original.png?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDdBUlNNSFRYSjI0WjJONTRIRkdHQkRNSw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFRSSVhQSkROSzdISTNXVEhPNUVRVE1LVQ",
+            "name": "Hazelnut Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/fa31f036a165c03a73a90f352bcbeedb20aeb184/original.png?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJXM082T0ZKNllOSDVKV0RSQzVVNDVGVw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEdMRUpSWTNTQlhGTUIyRDU1WjI0WFBIVw",
+            "name": "Sugar Free Vanilla Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/db0db1ba46987fc91c4f697a04b96b3abc36e3e1/original.png?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJTRUhIR0w1VUtOUzdJUlc0RlA0QkQzVw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFNGSk1SV1RHRkg1UE5RQzcyTFhNU1dJQg",
+            "name": "Pistachio Latte",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFEzR1RWUDNFVDVPSjVaNk5QVlZXREc1WA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE1HVEpJT1hVU05HS1lTSEY3RFJQSkNRNw",
+            "name": "Ice Strawberry LATTE",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEZMNkw0TjQ0V0VZS1lCTEJQQTJHSjROUA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGElUNkdNT0U2RFFINERTUlBPSTNCVUQ0Vw",
+            "name": "Captain Crunch Latte",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE03UUxXM09TWEFON0ZCVUxMTzRLRzZZRQ",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGDRMSjJFWkpMM1lCS0xDRVFXVklORjc2Mw",
+        "name": "PASTRIES",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/11a0ab143e637b4da0973613a8ed2a682da8a8a8/original.png?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGE1TRU9YQ05MS1BLV0xKQjRKNUNQSENFQw",
+            "name": "Whole Wheat Chocolate Walnut Cookie",
+            "description": "Ingredients: Butter, Brown Sugar, Vanilla, Eggs, Yecora Wheat Flour, Salt, Baking Soda, Chocolate, Walnuts Allergens: Gluten, Dairy, Eggs, Walnuts",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/8b0d1679422c1246dd140b818bcae6377874c255/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEZZM1VZTENMSUxEWDJENlYyU0JIRlNZQg",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFczSTNSVFJDNkxUWklXUlVHUFlXTjZXQg",
+        "name": "Flowers",
+        "imageUrl": "",
+        "items": [
+          {
+            "id": "CALI_CAESGDRLUExQU1VUVDJMSUNUTzY1TTZUMjZESw",
+            "name": "Orchid",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 3000,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFdMUldZNE9JTUxORDdMUTRBQVhIU0xQTg",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEpXTldNNFNWSDZIS1ZKUDJQREFRWFJYTA",
+        "name": "Items",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/8f3c1d02a9feb099b672cd6f3c77906c39d4b2a7/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGE1VWkI1R1hSSTNCSTNTTjJPWTRVMlBUWQ",
+            "name": "Add shot",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/8f3c1d02a9feb099b672cd6f3c77906c39d4b2a7/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 140,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEI2T0tFQVJBVzZUNEtVVEVOWFZOTlhCVw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFlRTjUzTUsyMjUzSVE2NEVTWlY2SE5LWg",
+            "name": "Americano",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/493e8ffcbd54f4838a59ccca52e9db4b241ef2ee/original.png?width=640&crop=1%3A1",
+            "priceCents": 449,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEtLRE82NUlXVDdZV0tQU1VNTDI0WUozQQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFVLRTZaUVNERDJDRFBKTUNPQkVKTjNTTQ",
+            "name": "Cafe Mocha",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/02403be347a263456dba81c622ef58b49d484216/original.png?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElTRENJUVBOM1RHWFlBNzVMVENPSFRFSg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDJOQUZFTERPQUU3V09CWTRETUxTWTI2VQ",
+            "name": "Cafecito/CUBAN",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/0d80032ab26c1c35f5a1ed0d7a48694ea4c2f5c0/original.png?width=640&crop=1%3A1",
+            "priceCents": 475,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFAzWDJQVzNZNkY3WVNYNDdaUkxLTTRNWA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFpKNjc2WktPWUJRQ0dMSVdFVk1DMkNYSg",
+            "name": "Cappuccino",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/db0db1ba46987fc91c4f697a04b96b3abc36e3e1/original.png?width=640&crop=1%3A1",
+            "priceCents": 499,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE5QRlBXM09TUU9EVVBJU0FZRVNQRk81WA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDRPWUhWSEFGVDVFQ1VSNlVYQU9TNFZFSA",
+            "name": "Caramel Steamer",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEhBS1ZKTVRDNUpGWTM2NUNCUUlONExSMg",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGFNGS01EQUNKNTJXM09CSjJTUzMyTUJUNg",
+            "name": "Cocoa",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/9d7d09c3294db80bdd838c164777b1dce1d57ffa/original.png?width=640&crop=1%3A1",
+            "priceCents": 449,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNUV01PM0hJU042VUEzWUZFVUpMNVRZVQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEVDV1ZXTU9RRTJUWExUU0FQSVBUS1U1SQ",
+            "name": "Cold Brew",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/f1c8779c523cd3276cbd7b5a5e2cd8c40fc5df30/original.png?width=640&crop=1%3A1",
+            "priceCents": 550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE1JUElNVzJRTVNUM1dRSlBVSUZWQlZGQw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFJWS1ZVV0w0QlA2UDZPU1dTUENMR1RQWQ",
+            "name": "Cortado",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/c4b58b047297ea5a0254b642b56504ce536570eb/original.png?width=640&crop=1%3A1",
+            "priceCents": 475,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZEM1M2TFJTWjdTR0ZWSUtBUVFRREZGTw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE1GVVBCU1c0VENKSk8yM1lBV0ZBSElFVQ",
+            "name": "Espresso",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/8f3c1d02a9feb099b672cd6f3c77906c39d4b2a7/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 375,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEdZSE5RUElLUDNCVjJVSUs0UUFMRUlPSg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDJQVVhFWlBSSzdSRE1BNVZZS0JKQ0NLQg",
+            "name": "Espresso Tonic",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 550,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEpXRFZDVzNUU1RKRFc2VFZNUEVRRTZNQw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDZGN1ZDU1NPWEhEREFHTUxUV0dCMkxBUQ",
+            "name": "Hot Tea",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/52202c05664b2774562066e1f55d0ea7aa25a532/original.png?width=640&crop=1%3A1",
+            "priceCents": 349,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFlDN1FIWDZDQTJGQUFRQUlRU1VLSzVISg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEpHSU9NNUkyVFdWM0hCUjRVQktXNFFPRw",
+            "name": "Peach Ice",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/62e8dce3173b1a86e4a2a5c4de23a6295b187436/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEhKMlJLNFNGRlhENFFVMkxLNzJNVE9ETw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEI1VFdZV1FNNUxKS1FQRkNZRE80TEkzSQ",
+            "name": "Peppermint Mocha",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/0412d056e92663dcc916f1002da08e85b7766640/original.png?width=640&crop=1%3A1",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9XUFRZT1FTNFVKRU9CRFVDSkdEUEVRQg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9PRDNFWFcyM0JHWVpHWDZPQVpLUkVZTw",
+            "name": "Strawberry Ice drink",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e859b63c81c9de83f296456274fdd9909b649a97/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEFaNkpSUjdSS1JMUklCTkFLUFNYN0tPRg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEpDQ1dDRFlPT01PVFhHWTNRRFdTMllRWQ",
+            "name": "Sugar Free Hazelnut Latte",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 625,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFc3M0RYRUlRREVZQUNGV1NINVdUSFFXTQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFlJRzNIVFBVQ1MyTEg0U0FQTUJNR1dDTg",
+            "name": "Vanilla Steamer",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/75d3be6c7560c3ef583779ffc2cfce96afce4fce/original.png?width=640&crop=1%3A1",
+            "priceCents": 399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFlJNzVVQUdVTVpKUUI1MjVYNU9JVFlQRQ",
+            "variationName": "Regular"
+          }
+        ]
+      }
+    ],
+    "itemCount": 33
+  },
+  "r4-heritage-pub-&-chop-house": {
+    "brand": "Heritage Pub & Chop House",
+    "address": "15 N Santa Cruz Ave, Los Gatos, CA",
+    "unitToken": "LGHKMTE384841",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_ALWAYS_AVAILABLE"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGE1TSlBYUzYyTkFFS0FKNzdQNlVNQzVZUw",
+        "name": "Quiche",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/8c44f5f738e80b0078be5de4770a502362d37e75/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGDU2VEJBUFBKM1YyM0NPR1VSN0FCUldZWg",
+            "name": "Lorraine",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/8c44f5f738e80b0078be5de4770a502362d37e75/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZXVjNOS1pRU0E0SFZBNVlIUTNMNk9DSw",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGDdFVElFTkNTM0JBWFpLREtaQVQ0Rkk1QQ",
+            "name": "Spinach, artichoke + Goat cheese",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFFUMzNUQkFLVUJLQlNSNUlMSldQWVlIVQ",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGFdDWUY0UzNBMjcySEkyU0dZRExTWUlITQ",
+            "name": "Ham + Cheese",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFpVNzUzUFJUNTRTVUpOVUUyRlNDVFU0NQ",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGFdQTjNTSTVUUloySkNXMkJFWTZVMjRITg",
+            "name": "Caramelized Onion and Gruyere",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/9f107c8eb55058c39439aebbaafe654f37cb4453/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJRR1Q0UTY1QlFDWkIyNVpFSU1QN0FVNA",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGFVZRkM0VkVKWjJQVjRLVFlHRVRDUVdRRw",
+            "name": "BLT",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/aa8351a7cdef9d051fb1e2a308cdbc172b15d317/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE5XVFA3WEtSVzc2QkdRNlpBWTZRNlg3Wg",
+            "variationName": null
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGDZKTDI3SVBXRUhITkFSM1pXS1k0TURWRg",
+        "name": "Gluten Free Quiche",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/aa8351a7cdef9d051fb1e2a308cdbc172b15d317/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGDU2VEJBUFBKM1YyM0NPR1VSN0FCUldZWg",
+            "name": "Lorraine",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/8c44f5f738e80b0078be5de4770a502362d37e75/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZXVjNOS1pRU0E0SFZBNVlIUTNMNk9DSw",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGDdFVElFTkNTM0JBWFpLREtaQVQ0Rkk1QQ",
+            "name": "Spinach, artichoke + Goat cheese",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFFUMzNUQkFLVUJLQlNSNUlMSldQWVlIVQ",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGFdDWUY0UzNBMjcySEkyU0dZRExTWUlITQ",
+            "name": "Ham + Cheese",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFpVNzUzUFJUNTRTVUpOVUUyRlNDVFU0NQ",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGFdQTjNTSTVUUloySkNXMkJFWTZVMjRITg",
+            "name": "Caramelized Onion and Gruyere",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/9f107c8eb55058c39439aebbaafe654f37cb4453/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJRR1Q0UTY1QlFDWkIyNVpFSU1QN0FVNA",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGFVZRkM0VkVKWjJQVjRLVFlHRVRDUVdRRw",
+            "name": "BLT",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/aa8351a7cdef9d051fb1e2a308cdbc172b15d317/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE5XVFA3WEtSVzc2QkdRNlpBWTZRNlg3Wg",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGDZDRU9aVldaNzdYTlRXQ1BHNVNSMzc3Sg",
+            "name": "Spring Veggie",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 4500,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDdWN0NaNEhRT1E2WkFQVFpJQUhTWFpSUQ",
+            "variationName": null
+          }
+        ]
+      }
+    ],
+    "itemCount": 6
+  },
+  "r5-plated-by-chef-kiah": {
+    "brand": "Plated By Chef Kiah",
+    "address": "1600 Dell Ave Ste B, Los Gatos, CA",
+    "unitToken": "LV0N4T3WJ8QVC",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_ALWAYS_AVAILABLE"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGFRRSVkySEgzQVZSSVY2TTJTWlJHWk5SUw",
+        "name": "Holiday Cookies",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/506e0f93c6930041f0c0ecb5385c39e6450769db/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEc3Skg3RlJCWjdaWFFLUTNKUUdTTENWSA",
+            "name": "Sea Salt Chocolate Chip Cookies",
+            "description": "Soft and Chewy box of 1 Dozen",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e46b3a888abca006ad0062c4ec2f7f4ce7d93f04/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 3000,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEM1WUZQVDVQUjJYVlpBQ1RPQ042NFJTRQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFBNVYyUkpCNkhUS0cyNk1DU1VOV1RZNA",
+            "name": "Peruvian Alfajores Cookies",
+            "description": "12 addictive sandwiched shortbread cookies with a rich dulce de leche filling and dusted with powder sugar.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/511d18d1f1fa6d1f9ba3284440d7b2b095952cf5/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 3800,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFBYVDRIVkI1N0hEQkZZUTNQWlAzR1pMRg",
+            "variationName": "Regular"
+          }
+        ]
+      }
+    ],
+    "itemCount": 2
+  },
+  "r6-kenz-coffee-bar": {
+    "brand": "Kenz Coffee Bar",
+    "address": "445 Hershner Dr, Los Gatos, CA",
+    "unitToken": "L4K1Z7XATG9EN",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_AVAILABLE_LATER",
+      "hoursFormatted": "7:00 AM-2:30 PM",
+      "nextAvailableFormatted": "Every day 7AM - 2:30PM"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGFAyTzRMTUdESERFSU5BRjRLVUNCNVlITw",
+        "name": "Drinks",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/3d9c9536e4c46594a32784ebaddab9c3d3ea32a6/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFVJMk40R0tGSjVYRkZNRFQ0U0FIM0RIRA",
+            "name": "Espresso",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/3d9c9536e4c46594a32784ebaddab9c3d3ea32a6/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 375,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFBZQVVOQkZDVExTRFE2Nk9GMklPM0FGQg",
+            "variationName": "Hot - 4 oz"
+          },
+          {
+            "id": "CALI_CAESGFpQVlJFTjJYSUxYWFhXNjVRNFVGN0FDTw",
+            "name": "Cappuccino",
+            "description": "8oz. Espresso + Heavy Foam/Steamed Milk of Choice",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/3d62a24b3bf8660660419a3a2081a5e35e331133/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 525,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNXS1VDNVE3R1JCTFZMR1dJWE9ZRFNLUQ",
+            "variationName": "Hot - 8 oz"
+          },
+          {
+            "id": "CALI_CAESGDJHQk9KS1hBUTZVUllQSE80VFlKM0xMSw",
+            "name": "Traditional Macchiato",
+            "description": "Espresso + Dollop of Milk Foam",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/438f03a87955374818dea2267f231153740efa7d/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 425,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNFVVIzSTQzUlI1T0JLV1NQVDdYNExQRA",
+            "variationName": "Hot - 4 oz"
+          },
+          {
+            "id": "CALI_CAESGE9UT1RRUTJMSldLQ0hDQ1I2VjU1RDQ0Wg",
+            "name": "Americano",
+            "description": "12 oz. Hot Water + Espresso\n12 oz. Ice+ Water + Espresso",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/b956ec0e57fb1e24832bd9f3e8ffe3a8612b1bc0/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 450,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEU2UUlMTUxERk1PQVdXNExUQkxTNTZSMg",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGDRGV1o0NDdRRUhYRTNMWUdDN0FWR1lYRQ",
+            "name": "Cortado",
+            "description": "6 oz.\nEspresso + 4 oz steamed warm milk of choice with a thin layer of foam",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/0050752a33523d80d71aca7703bbaa40fb2c41cd/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 475,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVMV1ZKQldIUEdINk5MT05DN0pHWDRQRA",
+            "variationName": "Hot - 4 oz"
+          },
+          {
+            "id": "CALI_CAESGEtVNUtFN0pVWVhRWlA1Slc0N0tXT0ZSNw",
+            "name": "Mocha",
+            "description": "12 oz. Espresso melted over Guittard Semisweet Chocolate, mixed with  milk of choice",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/34653cdbd36ad12993115d8ac8d1f53d8056e1a5/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 675,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFdLVU5KTTNKNlBBSlpOMk9ZTkdEWk83VQ",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGFhFUURaQkRKM0NPNkM3SFVZTkMySklHTw",
+            "name": "Rose Chai",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/d3ec01f6950b64dee534e9c01798ea335425db88/original.png?width=640&crop=1%3A1",
+            "priceCents": 675,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFo1NTdGRkFMUVQ1WDVFN00yTjZaUzRKUg",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGFBOTFFUQkQ1RDQzTE80VVIyWkxMMzJMRw",
+            "name": "Hot Chocolate",
+            "description": "12 oz. Guittard Semisweet Chocolate mixed with our specialty Vanilla Bean Syrup, combined with steamed milk of choice",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/fdf1c674547eeb35f03c45cc62ef80c0d6f45ca1/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 575,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDRVNDdaWldDM0xKNkpGSU5GRFVVUzZCQg",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGEZTM0I2SkdQWUdGQldaWUNBWFI2RFdKWQ",
+            "name": "Steamer",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/4ef0f8d14489e12d70df749a3e907086519e5074/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 400,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGExPRlFBWUlaT080SllVSEs3R01JQ1lFVg",
+            "variationName": "Hot - 8 oz"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFQyQ1o1VzczNUdNVFBYNFRTQVM1MjdJSg",
+        "name": "Lattes",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/75ce1f50a69315b0b1095683a411007b685883c1/original.png?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGDVRWUNSR0RCTlozWDVON1BQNFRGWFZCQg",
+            "name": "Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/75ce1f50a69315b0b1095683a411007b685883c1/original.png?width=640&crop=1%3A1",
+            "priceCents": 600,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEhKU05SNElUSkdQN0w0UjZDTkZNM0RSUw",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGFZDWURSRVVGQ1hEWllDQUNQUFdUV05HSw",
+            "name": "Vanilla Latte",
+            "description": "Specialty Latte made with House made Madagascar Vanilla Beans and Dark Brown Sugar",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/1e9811ede4622ae09d485e7ee74cbef189216710/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 650,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9BNUlYUUlXNEpCSFFUSkgzTVVFNjRWTA",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGFFTRE5XMkxVWks1TUhMNzJBS1lZR0RGWQ",
+            "name": "Lavender Latte",
+            "description": "Specialty Latte made with House Made Spanish Lavender and Dark Brown Sugar syrup",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/634ffecb13f440817ab45c0c255478c8907aadc5/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 650,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEk2R0VMVk9JUEQyUk9CS1lJTDRRR0lDVg",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGDRCVlRONzI2U0NXSENNUEEzQ05aVjRBRg",
+            "name": "Pistachio Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/5eed387868ed7edee791865816e1411a9907f20b/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 650,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGExSQ0E0UUw3U1o2NjNFTlRSUlNQSkszRQ",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGFZDVkZPTERXWjQyUEg2WUxBRkVYREM3Rw",
+            "name": "Sweet Honey Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/54280a62d5737d9d8148083fb8d0fad2af69f684/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 650,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFE0WkxXWkVSVVdOTjdUWUw1TzNPNUc0Vg",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGE1ZR0xSQVI2UFJKNFpBUktYVEpCRzNPVQ",
+            "name": "Chai Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/cce991ed9709ac6ac62683ec4b51987dc9c52f53/original.png?width=640&crop=1%3A1",
+            "priceCents": 650,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDdVRVVNSk5TUVFON0pYTFpaNEJUWU00Ng",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGDdKRkpJSEVQS09IVldIUFNSTTVHNkxWSw",
+            "name": "Ceremonial Matcha Latte",
+            "description": "12 oz. Ceremonial Grade OrganicMatcha + Milk of Choice\n(Ceremonial Matcha is not Pre-Sweetened, please specify if you would like sweetener).",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/72686fe58ec37bd54c1e0d24d912a8cdb75224f4/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 775,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFpFTlZQM0ZNUVBLMkVPMjJQTUszQUNVNQ",
+            "variationName": "Hot - 12 oz"
+          },
+          {
+            "id": "CALI_CAESGFVWTFA0TjJHTFNZS0VPWEE1WUNSQVlESQ",
+            "name": "Pistachio Ceremonial Matcha Latte",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/228934169f523d7cc662ac20c28e47079f9df381/original.png?width=640&crop=1%3A1",
+            "priceCents": 800,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEgzSVlMU1NVQjRBVlJKTlVUQzM3RkdRNg",
+            "variationName": "Hot - 12 oz"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFA2QzZCQU5GSUVOUTNVS1FLN0tINkdGVA",
+        "name": "Pastries",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/f8d7c638186d17856d01c30f44dbf683699125b5/original.png?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGDJUT0tGUEMyVFRMUlhHTEpCRkVIU0VPTg",
+            "name": "Kouign Amann",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/f8d7c638186d17856d01c30f44dbf683699125b5/original.png?width=640&crop=1%3A1",
+            "priceCents": 700,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElHS1lWM1BBVUNUUkhTM0MzVVhYSVg1Sg",
+            "variationName": null
+          },
+          {
+            "id": "CALI_CAESGEpXR0xGU1NPT0pRSlk2NFZaNTU2VkxFMg",
+            "name": "Butter Croissant",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/eb65adf675e2488ec1e611e77869cdbabd692216/original.png?width=640&crop=1%3A1",
+            "priceCents": 650,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFFVWVZKSkFGVEhPT1lCQzJCNFdMRFJMWA",
+            "variationName": null
+          }
+        ]
+      }
+    ],
+    "itemCount": 19
+  },
+  "r7-crust-sourdough-deli-los-gatos": {
+    "brand": "CRUST Sourdough Deli Los Gatos",
+    "address": "1466 Pollard Rd, Los Gatos, CA",
+    "unitToken": "LFB6CXFE1S523",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_ALWAYS_AVAILABLE"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGENJR0ZPWElUMkNVMlJINVRJUTU2RU9ZMg",
+        "name": "6\" Sourdough Sandwiches",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEJLTk1BWEJDWU1OU1BMWUQyWEdXNU1aTw",
+            "name": "6\" The 3 Cheese Ultimate Sandwich (Vegetarian)",
+            "description": "Layers of our finest cheeses Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9TRlJTUE1WTUdNU0FCSU5WNkpDRUdUVw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9KVkZTUUlDT0dUN0c3Vk1BNUhGR0szUg",
+            "name": "6\" The Original Sandwich",
+            "description": "Ham and Turkey piled high and Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e87d6ad5e0f7f8e1ab8be9e9d01c6a00a46e0e01/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJBWVEzU09DTkJCUVlLV1FUWkRJMkhGUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9OSEZKRTJHSVE2S0IzVFFTRjNFSEdUQw",
+            "name": "6\" Pastrami Sandwich",
+            "description": "Freshly Sliced Pastrami Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/670b32c183e8c4770636bb5cec23189681b29069/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElKQU1JNFhDSlhUQzRQWTIzVzI0QlVFRA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGExDTzJZUE5RVlVYRkVOQTNaSFlNSzRETA",
+            "name": "6\" Chipotle Chicken Sandwich",
+            "description": "Chipotle Rubbed Chicken Breast Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6b5922b07d6ca79525c98b384e6e2c5a92271f58/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVUWjNKT0M0WFlKR0NVWEhVVjRUNjRYMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEczVFFJVTZNVDJZQUhYVU1HREtLRjJIQw",
+            "name": "6\" Black Forest Ham Sandwich",
+            "description": "Black Forest Smoked Ham Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6a342dee74f8fa5c614e2e66dfb103cef70ad711/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNDTDRXMkNJVktRREFWTUpYS1ZDTkFaRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEFLWUtVNFVHM0U3UVpOUjRUUjU3UjNBQw",
+            "name": "6\" Oven Roasted Turkey Sandwich",
+            "description": "Hand Carved Oven Roasted Turkey Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6b5922b07d6ca79525c98b384e6e2c5a92271f58/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVJNlc2NzVFU1VITFNDV0tSV0VIV0tUMw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEdKSVRCWFI0SUUyTTdTRExMUEhQVUQzTA",
+        "name": "Market Salads",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/789381539ed0fcdc1890089b6377d9d5a55ee079/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEFHUDJBR01XRFpZVEY1QzNOTFBZUjNHTg",
+            "name": "Chef's Chopped Salad",
+            "description": "Turkey, Ham, Hard-Boiled Egg, Romaine, Cucumber, Cherry Tomato, Cheddar, Croutons, House Ranch",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/789381539ed0fcdc1890089b6377d9d5a55ee079/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEk1WkNLVFBPUDRJUzRNWkhBS0VDUUpLTg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFNPREtVVVVKWVRLRUtETk1PV0QyRFpDRQ",
+            "name": "Chicken Kale Caesar",
+            "description": "Chicken, Kale, Romaine, Cherry Tomatoes, Parmesan, House Croutons, Caesar Dressing",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/9b6207b647888f63b423cbe2849091140738495d/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZYTk5RRjZHTkxHRU1QNEc0TEpGSDZaQw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFVSQVFWSEtSNUQ1RzRYSEJFQkJRMjcyMw",
+            "name": "Chipotle Southwest Salad",
+            "description": "Smoked Chicken, cheddar cheese, romaine, black beans, corn, tomato and house chipotle ranch dressing + Fresh Baked Cookie",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/c7fd12320aa68d4136e11c3c84da7a5afe5ad5e4/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZMRFRGNUJRQUJQQlEzT0YyUFBTN1JFTw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFpKTDRQWkFORlJHNlNDUVpDR1RHSUw3Tg",
+            "name": "Italian Chopped Salad",
+            "description": "Pepperoni, Salami, Ham, Romaine, Bell Peppers, Olives, Tomato, Pepperoncini, Parmesan, House Crouton, Italian Vinaigrette",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/1714803766a9cb7d22c1a258b7e6b33e21bbc582/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFk2MkFRSFVZS0FGRlBXTlFEMlVQMjNDRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGElPTlhGRlM1SFpPUVZLVDdRQkJXWUhBSw",
+            "name": "Quinoa Super Greens Salad",
+            "description": "Quinoa, Avocado, Beets, Edamame, Garbanzo Beans, Kale, Romaine Cherry Tomatoes, Cucumber, House Italian",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e2863dfa8c563690c048042d105eb13b82a2a558/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVYNkUyVU5PNlJXVUhVUEJGMkxZSzQ3RA",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEdBU1JJQllERzUyNUxaT0ZLS1pDUFUyMg",
+        "name": "Chips",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/ae3991344813cb9d199057d9eafb82bc0593713a/original.png?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFhQTEtFUVlUVVBUM0RQWFE0WlhKUVJMMw",
+            "name": "Assorted Hawaiian Kettle Chips",
+            "description": "Maui Onion\nOriginal\nLuau BBQ\nJalapeno",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/ae3991344813cb9d199057d9eafb82bc0593713a/original.png?width=640&crop=1%3A1",
+            "priceCents": 269,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJERlIyTDNFREJXVTdORzQySlZDWDYyUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFRTRFQ2Q0g2RzZHRVRZTEhEUFdNMkxGWQ",
+            "name": "Assorted CRAFT Dirty Chips",
+            "description": "Sea Salt\nSalt & Vinegar\nCracked Pepper\nSour Cream & Onion\nMaui Onion\nBBQ\nFunky Fusion\nJalapeno",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/de684085fcab31e0312a04aa715faca22f1fef2d/original.png?width=640&crop=1%3A1",
+            "priceCents": 299,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDIySjIyR0VEVEJRN09HUDQ0WUpOVUhLSw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFZPU01OVUFRSDdPN1hWM09OV0FCNDRFUw",
+        "name": "Signature Cookies",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/8be526875678944d6caa6e8509dd1eea7a7c05c4/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFJaUExMTVhXWFdCWkhZNVkzU1FLS0IzUQ",
+            "name": "Signature Cookies",
+            "description": "Chocolate Chip\nCho-Coco-Mac\nLemon Delight",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/a3355fb35e466e8c1aa3e53a19c618b0b39de096/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 299,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9aMlJVRFRQUkZMUE83V1haNzRWV05aVA",
+            "variationName": "Lemon Delight"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "r8-crust-sourdough-deli-(los-gatos)": {
+    "brand": "CRUST Sourdough Deli (Los Gatos)",
+    "address": "1466 Pollard Rd, Los Gatos, CA",
+    "unitToken": "L68PJC8GKHF1N",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_ALWAYS_AVAILABLE"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGENJR0ZPWElUMkNVMlJINVRJUTU2RU9ZMg",
+        "name": "6\" Sourdough Sandwiches",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEFLWUtVNFVHM0U3UVpOUjRUUjU3UjNBQw",
+            "name": "6\" Oven Roasted Turkey Sandwich",
+            "description": "Hand Carved Oven Roasted Turkey Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6b5922b07d6ca79525c98b384e6e2c5a92271f58/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVJNlc2NzVFU1VITFNDV0tSV0VIV0tUMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEJLTk1BWEJDWU1OU1BMWUQyWEdXNU1aTw",
+            "name": "6\" The 3 Cheese Ultimate Sandwich (Vegetarian)",
+            "description": "Layers of our finest cheeses Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9TRlJTUE1WTUdNU0FCSU5WNkpDRUdUVw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9KVkZTUUlDT0dUN0c3Vk1BNUhGR0szUg",
+            "name": "6\" The Original Sandwich",
+            "description": "Ham and Turkey piled high and Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e87d6ad5e0f7f8e1ab8be9e9d01c6a00a46e0e01/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJBWVEzU09DTkJCUVlLV1FUWkRJMkhGUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9OSEZKRTJHSVE2S0IzVFFTRjNFSEdUQw",
+            "name": "6\" Pastrami Sandwich",
+            "description": "Freshly Sliced Pastrami Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/670b32c183e8c4770636bb5cec23189681b29069/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElKQU1JNFhDSlhUQzRQWTIzVzI0QlVFRA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGExDTzJZUE5RVlVYRkVOQTNaSFlNSzRETA",
+            "name": "6\" Chipotle Chicken Sandwich",
+            "description": "Chipotle Rubbed Chicken Breast Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6b5922b07d6ca79525c98b384e6e2c5a92271f58/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVUWjNKT0M0WFlKR0NVWEhVVjRUNjRYMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEczVFFJVTZNVDJZQUhYVU1HREtLRjJIQw",
+            "name": "6\" Black Forest Ham Sandwich",
+            "description": "Black Forest Smoked Ham Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6a342dee74f8fa5c614e2e66dfb103cef70ad711/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNDTDRXMkNJVktRREFWTUpYS1ZDTkFaRw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEdKSVRCWFI0SUUyTTdTRExMUEhQVUQzTA",
+        "name": "Market Salads",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/789381539ed0fcdc1890089b6377d9d5a55ee079/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEFHUDJBR01XRFpZVEY1QzNOTFBZUjNHTg",
+            "name": "Chef's Chopped Salad",
+            "description": "Turkey, Ham, Hard-Boiled Egg, Romaine, Cucumber, Cherry Tomato, Cheddar, Croutons, House Ranch",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/789381539ed0fcdc1890089b6377d9d5a55ee079/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEk1WkNLVFBPUDRJUzRNWkhBS0VDUUpLTg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFNPREtVVVVKWVRLRUtETk1PV0QyRFpDRQ",
+            "name": "Chicken Kale Caesar",
+            "description": "Chicken, Kale, Romaine, Cherry Tomatoes, Parmesan, House Croutons, Caesar Dressing",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/9b6207b647888f63b423cbe2849091140738495d/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZYTk5RRjZHTkxHRU1QNEc0TEpGSDZaQw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFVSQVFWSEtSNUQ1RzRYSEJFQkJRMjcyMw",
+            "name": "Chipotle Southwest Salad",
+            "description": "Smoked Chicken, cheddar cheese, romaine, black beans, corn, tomato and house chipotle ranch dressing + Fresh Baked Cookie",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/c7fd12320aa68d4136e11c3c84da7a5afe5ad5e4/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZMRFRGNUJRQUJQQlEzT0YyUFBTN1JFTw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFpKTDRQWkFORlJHNlNDUVpDR1RHSUw3Tg",
+            "name": "Italian Chopped Salad",
+            "description": "Pepperoni, Salami, Ham, Romaine, Bell Peppers, Olives, Tomato, Pepperoncini, Parmesan, House Crouton, Italian Vinaigrette",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/1714803766a9cb7d22c1a258b7e6b33e21bbc582/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFk2MkFRSFVZS0FGRlBXTlFEMlVQMjNDRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGElPTlhGRlM1SFpPUVZLVDdRQkJXWUhBSw",
+            "name": "Quinoa Super Greens Salad",
+            "description": "Quinoa, Avocado, Beets, Edamame, Garbanzo Beans, Kale, Romaine Cherry Tomatoes, Cucumber, House Italian",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e2863dfa8c563690c048042d105eb13b82a2a558/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVYNkUyVU5PNlJXVUhVUEJGMkxZSzQ3RA",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEdBU1JJQllERzUyNUxaT0ZLS1pDUFUyMg",
+        "name": "Chips",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/ae3991344813cb9d199057d9eafb82bc0593713a/original.png?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFhQTEtFUVlUVVBUM0RQWFE0WlhKUVJMMw",
+            "name": "Assorted Hawaiian Kettle Chips",
+            "description": "Maui Onion\nOriginal\nLuau BBQ\nJalapeno",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/ae3991344813cb9d199057d9eafb82bc0593713a/original.png?width=640&crop=1%3A1",
+            "priceCents": 269,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJERlIyTDNFREJXVTdORzQySlZDWDYyUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFRTRFQ2Q0g2RzZHRVRZTEhEUFdNMkxGWQ",
+            "name": "Assorted CRAFT Dirty Chips",
+            "description": "Sea Salt\nSalt & Vinegar\nCracked Pepper\nSour Cream & Onion\nMaui Onion\nBBQ\nFunky Fusion\nJalapeno",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/de684085fcab31e0312a04aa715faca22f1fef2d/original.png?width=640&crop=1%3A1",
+            "priceCents": 299,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDIySjIyR0VEVEJRN09HUDQ0WUpOVUhLSw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFZPU01OVUFRSDdPN1hWM09OV0FCNDRFUw",
+        "name": "Signature Cookies",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/8be526875678944d6caa6e8509dd1eea7a7c05c4/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFJaUExMTVhXWFdCWkhZNVkzU1FLS0IzUQ",
+            "name": "Signature Cookies",
+            "description": "Chocolate Chip\nCho-Coco-Mac\nLemon Delight",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/a3355fb35e466e8c1aa3e53a19c618b0b39de096/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 299,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9aMlJVRFRQUkZMUE83V1haNzRWV05aVA",
+            "variationName": "Lemon Delight"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "r9-crust-sourdough-deli-(los-gatos-high-sch": {
+    "brand": "CRUST Sourdough Deli (Los Gatos High School)",
+    "address": "1466 Pollard Rd, Los Gatos, CA",
+    "unitToken": "L68PJC8GKHF1N",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_ALWAYS_AVAILABLE"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGENJR0ZPWElUMkNVMlJINVRJUTU2RU9ZMg",
+        "name": "6\" Sourdough Sandwiches",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEFLWUtVNFVHM0U3UVpOUjRUUjU3UjNBQw",
+            "name": "6\" Oven Roasted Turkey Sandwich",
+            "description": "Hand Carved Oven Roasted Turkey Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6b5922b07d6ca79525c98b384e6e2c5a92271f58/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVJNlc2NzVFU1VITFNDV0tSV0VIV0tUMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEJLTk1BWEJDWU1OU1BMWUQyWEdXNU1aTw",
+            "name": "6\" The 3 Cheese Ultimate Sandwich (Vegetarian)",
+            "description": "Layers of our finest cheeses Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9TRlJTUE1WTUdNU0FCSU5WNkpDRUdUVw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9KVkZTUUlDT0dUN0c3Vk1BNUhGR0szUg",
+            "name": "6\" The Original Sandwich",
+            "description": "Ham and Turkey piled high and Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e87d6ad5e0f7f8e1ab8be9e9d01c6a00a46e0e01/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJBWVEzU09DTkJCUVlLV1FUWkRJMkhGUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE9OSEZKRTJHSVE2S0IzVFFTRjNFSEdUQw",
+            "name": "6\" Pastrami Sandwich",
+            "description": "Freshly Sliced Pastrami Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/670b32c183e8c4770636bb5cec23189681b29069/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGElKQU1JNFhDSlhUQzRQWTIzVzI0QlVFRA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGExDTzJZUE5RVlVYRkVOQTNaSFlNSzRETA",
+            "name": "6\" Chipotle Chicken Sandwich",
+            "description": "Chipotle Rubbed Chicken Breast Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6b5922b07d6ca79525c98b384e6e2c5a92271f58/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVUWjNKT0M0WFlKR0NVWEhVVjRUNjRYMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEczVFFJVTZNVDJZQUhYVU1HREtLRjJIQw",
+            "name": "6\" Black Forest Ham Sandwich",
+            "description": "Black Forest Smoked Ham Served on Freshly Baked Sourdough and comes with Lettuce, Tomato, Red Onions, Swiss Cheese, and House Spread",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6a342dee74f8fa5c614e2e66dfb103cef70ad711/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1049,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNDTDRXMkNJVktRREFWTUpYS1ZDTkFaRw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEdKSVRCWFI0SUUyTTdTRExMUEhQVUQzTA",
+        "name": "Market Salads",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/789381539ed0fcdc1890089b6377d9d5a55ee079/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEFHUDJBR01XRFpZVEY1QzNOTFBZUjNHTg",
+            "name": "Chef's Chopped Salad",
+            "description": "Turkey, Ham, Hard-Boiled Egg, Romaine, Cucumber, Cherry Tomato, Cheddar, Croutons, House Ranch",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/789381539ed0fcdc1890089b6377d9d5a55ee079/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEk1WkNLVFBPUDRJUzRNWkhBS0VDUUpLTg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFNPREtVVVVKWVRLRUtETk1PV0QyRFpDRQ",
+            "name": "Chicken Kale Caesar",
+            "description": "Chicken, Kale, Romaine, Cherry Tomatoes, Parmesan, House Croutons, Caesar Dressing",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/9b6207b647888f63b423cbe2849091140738495d/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZYTk5RRjZHTkxHRU1QNEc0TEpGSDZaQw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFVSQVFWSEtSNUQ1RzRYSEJFQkJRMjcyMw",
+            "name": "Chipotle Southwest Salad",
+            "description": "Smoked Chicken, cheddar cheese, romaine, black beans, corn, tomato and house chipotle ranch dressing + Fresh Baked Cookie",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/c7fd12320aa68d4136e11c3c84da7a5afe5ad5e4/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFZMRFRGNUJRQUJQQlEzT0YyUFBTN1JFTw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFpKTDRQWkFORlJHNlNDUVpDR1RHSUw3Tg",
+            "name": "Italian Chopped Salad",
+            "description": "Pepperoni, Salami, Ham, Romaine, Bell Peppers, Olives, Tomato, Pepperoncini, Parmesan, House Crouton, Italian Vinaigrette",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/1714803766a9cb7d22c1a258b7e6b33e21bbc582/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFk2MkFRSFVZS0FGRlBXTlFEMlVQMjNDRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGElPTlhGRlM1SFpPUVZLVDdRQkJXWUhBSw",
+            "name": "Quinoa Super Greens Salad",
+            "description": "Quinoa, Avocado, Beets, Edamame, Garbanzo Beans, Kale, Romaine Cherry Tomatoes, Cucumber, House Italian",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e2863dfa8c563690c048042d105eb13b82a2a558/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVYNkUyVU5PNlJXVUhVUEJGMkxZSzQ3RA",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEdBU1JJQllERzUyNUxaT0ZLS1pDUFUyMg",
+        "name": "Chips",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/ae3991344813cb9d199057d9eafb82bc0593713a/original.png?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFhQTEtFUVlUVVBUM0RQWFE0WlhKUVJMMw",
+            "name": "Assorted Hawaiian Kettle Chips",
+            "description": "Maui Onion\nOriginal\nLuau BBQ\nJalapeno",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/ae3991344813cb9d199057d9eafb82bc0593713a/original.png?width=640&crop=1%3A1",
+            "priceCents": 269,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDJERlIyTDNFREJXVTdORzQySlZDWDYyUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFRTRFQ2Q0g2RzZHRVRZTEhEUFdNMkxGWQ",
+            "name": "Assorted CRAFT Dirty Chips",
+            "description": "Sea Salt\nSalt & Vinegar\nCracked Pepper\nSour Cream & Onion\nMaui Onion\nBBQ\nFunky Fusion\nJalapeno",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/de684085fcab31e0312a04aa715faca22f1fef2d/original.png?width=640&crop=1%3A1",
+            "priceCents": 299,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDIySjIyR0VEVEJRN09HUDQ0WUpOVUhLSw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFZPU01OVUFRSDdPN1hWM09OV0FCNDRFUw",
+        "name": "Signature Cookies",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/8be526875678944d6caa6e8509dd1eea7a7c05c4/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFJaUExMTVhXWFdCWkhZNVkzU1FLS0IzUQ",
+            "name": "Signature Cookies",
+            "description": "Chocolate Chip\nCho-Coco-Mac\nLemon Delight",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/a3355fb35e466e8c1aa3e53a19c618b0b39de096/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 299,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE9aMlJVRFRQUkZMUE83V1haNzRWV05aVA",
+            "variationName": "Lemon Delight"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "r10-the-posh-bagel": {
+    "brand": "The Posh Bagel",
+    "address": "2005 Camden Ave, Los Gatos, CA",
+    "unitToken": "LTWT2ETMSDPW0",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_ALWAYS_AVAILABLE"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGEZTUUpRTktDVVJQQ01WSVFVV0xEUlVSUw",
+        "name": "EGGWICHES",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/12df13ed11a99a769d95557e20a001b97bb0f82f/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFdDVVE3NlNXVUdTWEwyTllBQjI3TzZKNA",
+            "name": "Deluxe Eggwich",
+            "description": "Savor the Deluxe Eggwich, featuring a fluffy scrambled egg, savory ham, fresh spinach, and saut\u00e9ed mushrooms, all served on your choice of a toasted bagel.",
+            "imageUrl": "",
+            "priceCents": 945,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEhVSVdVRENCQ0lXVjdZQUZWV0E0VlNBWQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEU0U0pSRVZYRkFNTUJHSFlMQVVTUzNFUQ",
+            "name": "Denver Eggwich",
+            "description": "A hearty mix of diced ham, jalape\u00f1o, saut\u00e9ed onions, and fresh tomatoes, all layered on your choice of bagel.",
+            "imageUrl": "",
+            "priceCents": 945,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFJUMlFEVVVRRFFMUVg1N1UyUE9IVDJJUQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDU0MkVPNEVSNTM3Q0lIV09CVVUyNE1SRQ",
+            "name": "Kitchen Sink",
+            "description": "A hearty ensemble of crispy bacon, savory sausage, and tender ham, complemented by bell peppers, onions, fresh spinach, and mushrooms. All topped with a rich garlic cream cheese and served on your choice of bagel.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/98f20a0d2b802a054184e9c31df03ef3ada8f445/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1245,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEFJVUlBUURNTE03UjZPS1AySFFYUVRUNA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEFNWFlJRUVHVkxPRkRGSEhGS080UFBBWA",
+            "name": "Meat & Cheddar Eggwich",
+            "description": "Choose from a variety of meats including bacon, sausage, turkey, chicken apple sausage, pineapple sausage, hot link sausage, or ham. Each option comes with a perfectly cooked egg, seasoned with salt and pepper, melted cheddar cheese, and a hint of butter, all sandwiched between a fluffy bun.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/710a780753b5daa3af7bfba939726afcc707dd6a/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 845,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE1MNFVTWkhHVVU0WUtKTlNUNk5PU0NRMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFZZUFVQUlVBRlhRTlpEQkk1M1hPQ0c3Mw",
+            "name": "Eggwich Sliced Lox & Cream Cheese",
+            "description": "Savory lox layered with rich cream cheese and a perfectly cooked egg, all nestled between a toasted bagel.",
+            "imageUrl": "",
+            "priceCents": 1245,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFFWM0xORFRLSDQ0QlpERUhHNVpHWjI3Wg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDNMWUpZQzRaRE02Q0dGNFRZNURNNDcyRg",
+            "name": "Special Eggwich",
+            "description": "A delightful blend of fresh spinach and saut\u00e9ed mushrooms, combined with a fluffy egg and a generous spread of garlic-infused cream cheese, all served on a toasted bagel of choice.",
+            "imageUrl": "",
+            "priceCents": 845,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVBRDVTUEFXNVFOMlBRR1o3SkxYNEJDNQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFk1RVk3S1pXQVIzNkVDUlNTR0FMS09ESw",
+            "name": "Supreme Eggwich",
+            "description": "Fluffy scrambled eggs, crispy bacon, cheddar cheese, fresh chives, and juicy tomato, all layered on your choice of toasted bagel.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/a467635d5888535453d67a7a3451213c78af221c/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 945,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGERNSEdXTjRWWUFZNVJOT0tOVU9GTlhLMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEdXRE5HMjdSTUlOUUpKTEtSTllIWlY0NQ",
+            "name": "Veggie Eggwich",
+            "description": "Fluffy scrambled eggs, melted cheddar cheese, fresh tomato slices, diced onions, and saut\u00e9ed bell peppers, all layered on your choice of a toasted bagel.",
+            "imageUrl": "",
+            "priceCents": 845,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFY2RktPVlgyVlRSN09FRlBMQVlaWjJCNQ",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFlZVVk3WExKREZGS0tPRkpYWkRVRllRWQ",
+        "name": "Classic & Specialty Sandwiches",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/4d216b03997e505d139ac4881e854f06e40505b6/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFNEM1pKV1VTNUJZSzI1NUFUV1dXQ05SWA",
+            "name": "Avocado & Cheddar",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 1050,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE40TkxHSzdGVEpEUTUzSzNVN0xETVBLTg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFpMU0JJSkpNVTU1TTZENlVDREtRTzdUUg",
+            "name": "BLT",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 1195,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDNZTTRNR0k2TEVVNVJQV1ZTM0xHNFRMSg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEpDUzdZSlUyV0xQN0lDSjNXUVdDU1c3VQ",
+            "name": "BLTCC",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 1195,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGENJWkRMN1JTSllVVjVNUldBTDNYRDQ0Tw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDdKUkRaT0dCM05CRVg0MlFXNVVWQldWRg",
+            "name": "California Club",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/4d216b03997e505d139ac4881e854f06e40505b6/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1195,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFYzWVVQT0xTQkVJMlRISkxRNzVaVFFXSg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFUSDJFQjJZWE42RVdLSEhPVE5FMjYzTw",
+            "name": "California Supreme",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/968e2885b0d9d09c8f8082a108a74d16ee9c5a6f/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1195,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFFMUFRUVFFYVEFOUjVXVTRZQlVITUJRRw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGE82WVlaRExSNTdEQVdZQ1ZVWUVRRTNZTA",
+        "name": "Hot Sandwiches",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/4f1ab0fb83ef895728f060e36457b70712c0be3a/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGEVXNVdXRkgzSVNVM1JDUTJQU1dHRk1ETA",
+            "name": "Chicken Bacon Ranch Melt",
+            "description": "",
+            "imageUrl": "",
+            "priceCents": 1195,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFlWNTQzVlVFVVVHVTNBUktMSUs0WU9SVA",
+            "variationName": "Regular"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "r11-orange-bowl": {
+    "brand": "Orange Bowl",
+    "address": "186 E Sunnyoaks Ave Ste F, Los Gatos, CA",
+    "unitToken": "LP2HF1ME35M3N",
+    "hours": {
+      "state": "LOCAL_MENU_HOURS_STATE_ALWAYS_AVAILABLE"
+    },
+    "categories": [
+      {
+        "id": "CALC_CAESGEgySkNER1o1RExYTVIzWVdBVUU0VlpENw",
+        "name": "Cold Sandwiches",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/2618db85db65b29903a500df77f8f1301b27fccb/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFRKWVBQSlgyWFBWSE5SWVMzS1RZWlNCUw",
+            "name": "BLT",
+            "description": "Bacon, lettuce and tomato & your choice of bread.\n\nregular: sandwich only with your choice of bread\n\ncombo: include french fries or bag of potato chips and a can of soda!",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/2618db85db65b29903a500df77f8f1301b27fccb/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1199,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFlBSVZITjdLRlVITzVXT08yRlJKTE9TTw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDZMMzJUM1dBVjdTWFJFQ1VSQzRESkg3UA",
+            "name": "Chicken Salad Sandwich",
+            "description": "Chicken salad, Iceberg, lettuce, tomato and cheese & your choice of bread.\n\nregular: sandwich only with your choice of bread\n\ncombo: include french fries or bag of potato chips and a can of soda!",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/050f24052bd04ad9ca01a2363f254ce2751405bb/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1199,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFJLT1lZUTdGVEpaNVBRQVpGTDdTUzZTUw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDNHVzdMS1lGRlZMNkJGNFpLTlhZVEk2UA",
+            "name": "Tuna Salad Sandwich",
+            "description": "Tuna salad, Iceberg, lettuce, tomato and cheese & your choice of bread.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/3a295a211b24805adde2cf6c2e6aa8b005250b3c/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1199,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFNBWlRWTDdLNzI0U1Y0V0VFVzUyTE1aSg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFJRNVoyU1dJU0dEQ1ZWRTJWM0pIQkxKMw",
+            "name": "Turkey Sandwich",
+            "description": "Turkey, Iceberg, lettuce, tomato and cheese & your choice of bread.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/49bde12eb41efa8bc5a196c14ce484cac79862b6/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 999,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEJFWUFYT0JHWTMzSUlQUzZXVk1MVUM1VA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFZLTjJEWUtDQlhGTUpQSFRYVVg2UFBCUQ",
+            "name": "Smoked Ham Sandwich",
+            "description": "Smoked ham, Iceberg, lettuce, tomato,and cheese & your choice of bread.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/5eea49e1c7a9b9fd0e423d04f2673967fead0d82/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 999,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDRKWUtBSFNGUFhKVFBFSlhPRUhQQlBNRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEYzR0tMSUNYQklMNFVMNk5PWEpYV083Uw",
+            "name": "Club Sandwich",
+            "description": "Ham, Turkey, Bacon, Iceberg, lettuce, tomato and cheese & your choice of bread.\nregular: sandwich only with your choice of bread\n\ncombo: include french fries or bag of potato chips and a can of soda!\n",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/462f266e24af2d5239e91cb0ed890a29a7db2373/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDQ1R1dEV05QVlk3UlRKT1pKNEVOUUJRRA",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGDVWN1NZN0JFREpVVkNFQU9PSERBRVQ3Sg",
+        "name": "Meat Cutlets",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/6fff5fb381c6e91efa66987e8dabe79ae18ce837/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFJCTU9aTVJNNFVOSkNCUVlRWkZTNVRaRA",
+            "name": "Chicken Katsu",
+            "description": "Deep fried chicken cutlet served with honey mustard sauce. Served with a side of rice and cabbage salad.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/6fff5fb381c6e91efa66987e8dabe79ae18ce837/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFRRRUY3VVNPNFFQTTJWN041Q0VJUTJTUg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDdQRzJNM1BBVVVBQU9TNVpPMlJaR1Y0Vg",
+            "name": "Tenderloin Donkatsu",
+            "description": "Deep fried pork(tenderloin) cutlet served with our signature house made sauce. Served with a side of rice and cabbage salad.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/37178b25c84ba179ed5f3ee10e8acc8e1805b848/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1699,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEZaTVI0VUJGSlczTlYyRE02QVlEN0ROVQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGENETzVMVk43QUVWRVRGWFpWTlU0VjUzUA",
+            "name": "Chicken Strips",
+            "description": "On sale only on Friday.\nIf order on a different day, it is replaced with Chicken Katsu instead of Chicken Strips.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/01052d7498cd0be7ca292096fcb5f484cad72910/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE02RFRQRldBU1RTUERSUVlGVVFGN1BVQw",
+            "variationName": "regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGDVMWTdYV0xZSVRMRUhHUDNBVVFMQ1BKNA",
+        "name": "Breakfast(Hours: 6am~11am)",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/fdc13d6df1140edbd69768d351f310ef3e6ae685/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFROVTNYRTRMNlRUUDMzRUE3R1JBNEczMg",
+            "name": "English Muffin",
+            "description": "Two eggs and cheese w/bacon or sausage or ham",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/fdc13d6df1140edbd69768d351f310ef3e6ae685/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 799,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEdGS1k3Wko3MjVUTlNNMlpTTU1PUkdPNQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGENYNUg0RTRXRlMzQ1RYWFZETVgzRk00Nw",
+            "name": "Wake up call",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/63dde44338913c1288f39cc1980c7ef11ecb5777/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 799,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEFITVdZS1MzRzNKNEc3U1VRSVVMVEhFNA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGElaWlFNSlhWRUk0TkhVN1BYTkNNMlBLUA",
+            "name": "Chicken Quesadilla",
+            "description": "marinated grill chicken with jack and cheddar cheeses",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/32f8efebfeb1461b72475852dfccee8a0613d786/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1099,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEZMWEFMNE1WSUNYMlI1NEdSTExIQjJFVg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFZXVFdYNUI0RENFSVNXR05aN1c2M1hCVw",
+            "name": "Grilled Ham & Cheese",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/339a8e9d4dd6d22498afa077e76eceb9af2f6701/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 999,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEJUQjNEWUI3SjNMVzRXUlBZQU1IRUlDMg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDVITUdaUERSWElCUDVYWjJPSkE2WURWUA",
+            "name": "Breakfast Burrito",
+            "description": "10\" tortilla filled potatoes, fluffy scrambled eggs  jack and cheddar, cheeses, with bacon or sausage or ham and a side of salsa.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/b9ec0176764d704e9d72a997a2cd93ca6640ebc7/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 899,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEFJSDJCRE5LRExQUUlQWlU3V1FPUlZCSQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE03RUFJVDJFSUpEWUpCQTZZTVpJM1FPTQ",
+            "name": "Eye Opener",
+            "description": "Two eggs any style served with hash brown, ham or sausage or bacon and your choice of toast",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/63dde44338913c1288f39cc1980c7ef11ecb5777/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 999,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGDVZVE1OV0ZQS1dSTU5RREZOUVA0MldYTg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFM2WDY3NDNYVE5TTTVWWk5IWlI1Sks0UA",
+            "name": "Croissant Sandwich",
+            "description": "Two eggs and cheese w/bacon or sausage or ham",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/f5f5d97d7a502ae4a8b5016def6da6921f0e4b66/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 799,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEpIUVdSWlpUVkFQRFVLTllRQVVBTFVPQw",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGFMzSlFNWUxCTDRZR1ZDM1VUSElHVFlWUA",
+        "name": "Teriyakis",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/664fbe51b6a4c4cea54124c5194a2b2efe344ed6/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGE82SEJHTFZVR05JSEQ2VlFXTFhZTTVQSQ",
+            "name": "Beef Teriyaki",
+            "description": "BOWL: Fresh hand-picked beef tenderloin BBQ served with homemade teriyaki sauce. Served with stir-fried vegetables over rice.\n\nPLATE: Marinated teriyaki beef over rice with fresh salad\n\nBENTO: Marinated teriyaki beef over rice, salad, fried 2 Mandu (dumplings), and half cut orange",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/664fbe51b6a4c4cea54124c5194a2b2efe344ed6/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1599,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFJEREtYWEk3NUdMRFRLUlVZSkpCNUZHSg",
+            "variationName": "Plate"
+          },
+          {
+            "id": "CALI_CAESGFVQUFBHUVZONEdRN1BONDM3WEQ1Q0c1Tw",
+            "name": "Chicken Teriyaki",
+            "description": "Our most popular dish!\nFresh hand-picked, natural marinated grilled chicken legs served with homemade teriyaki sauce. Served with stir-fried vegetables over rice.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/fb282225c9414f5b6bb1c31622f3dce243c11770/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1299,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGENCMkZESk4yT09aQVFEUjQyNjJSN0hLQQ",
+            "variationName": "Plate"
+          },
+          {
+            "id": "CALI_CAESGE9YRzI0NVBZVDQ3SkFVUjNBSDQ1WUhXRQ",
+            "name": "Fire Chicken Teriyaki",
+            "description": "Fresh hand-picked, natural marinated grilled chicken legs served with homemade teriyaki sauce w/our special hot sauce. Served with stir-fried vegetables over rice.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/499fe6de1a43742bf10fb67fc0f05c657dff2dd7/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1399,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEZNUTU1Mk9PVllDR0Q2UVpITFdIT0hIMg",
+            "variationName": "Plate"
+          },
+          {
+            "id": "CALI_CAESGDVRNUNWTFg2QTVJUEpHTFJVSzVMVE1VRg",
+            "name": "Salmon Teriyaki",
+            "description": "Grilled salmon marinated in fine wine served with homemade teriyaki sauce. Served with stir-fried vegetables over rice.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/575e69d0d9c91fb09eba223187c20b2c9eff9e94/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1599,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFJZTjZKR1ZFQTczRVFQNVZSRFFGWVhVVA",
+            "variationName": "Plate"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEU1UkdHR0pHRDVISDQ0M1hMNjJLRjc0VA",
+        "name": "Hot Sandwiches",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/19d31fa5ed6f1d84b343375d1b3ee5ffb1a06506/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGDRaNkQyQVk2UFZPTVNQTUNVR0lDMjNBVg",
+            "name": "Philly Cheese Chicken",
+            "description": "Tender chicken breast provolone cheese, bell peppers and onions on a french roll",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/19d31fa5ed6f1d84b343375d1b3ee5ffb1a06506/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1099,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVWTUEySUVaNzNIWUo0R1pYWU5MSzVMUA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEFYSEpVVk01REZPR0pTNkU2WVdUV1JLWA",
+            "name": "Philly Cheese Steak",
+            "description": "Tender beef, provolone cheese, bell peppers and onions on a french roll",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/0c7eb5e18115e5adde8f8ca7844ef106046f03df/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1099,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEtaN1ZOUllLSU5RWEwzU1RLV1hIREtCNQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFFHVjJBUU5CT0pTWFdWU1c3SU1YVUxBNg",
+            "name": "Honey Mustard Chicken",
+            "description": "Tender chicken breast swiss cheese,tomatoes, lettuce, and onions on a french roll\n\nregular: sandwich only\n\ncombo: include french fries or bag of potato chips and a can of soda!",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/e61f52364790cd0a149780b6efcfbb03aea1ee79/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1099,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEkyNkI1WkhBRDJBTjIyNlNSM1FMSkZBMw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGENVM0pERkZFV0VFVUdMVUlCRDVNUUlLRg",
+            "name": "Pastrami Supreme",
+            "description": "Sliced pastrami, swiss cheese, peperoncino, lettuce, and onions on a french roll",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/ebccc85bf58271db8d2dd008f3edc75f71a014fa/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1099,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEpUNUZUV0xQREk3MkRMUkc1VFpFRktHRw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFRSREE1NENMQURQWEFDWEZRQ0tLTFhJNw",
+            "name": "Bulgogi Burrito",
+            "description": "Combining Korean traditional style beef bbq(bulgogi), salsa, cheese, rice in a delicious wrapped burrito.\n\nregular: burrito only\n\ncombo: include french fries or bag of potato chips and a can of soda!",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/a881a4fc52465ce972b6a9e7c8a95f36b4da1d6b/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1499,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE40SDVUM1g0WFo1TlVQQ1lSVFJFNEVQWQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGE5CUUJQRFZTSlpPUkNJT01SN1BaR0ZBRA",
+            "name": "Chicken Katsu Sandwich",
+            "description": "It\u2019s Crispy Juicy Tender.\nDeep fried chicken cutlet with honey mustard sauce.\nw/pickles,cheese, onion, lettuce and tomato.\n\nregular: sandwich only\n\ncombo: include french fries or bag of potato chips and a can of soda!\n",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/48a16ecf76f14f9105e4e0d3ff8f09591943d466/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 999,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEZSRUVCUTMzTEUySEdRUVlCVldJSUZDWQ",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGERPTUxLWUpJUUhaUkNNRURWUVBFWFlETw",
+            "name": "Cheese Burger",
+            "description": "1/4 lb. grilled all beef patty topped, cheese, with crisp lettuce, tomatoes, purple onions, tangy pickles\n\nregular: burger only\n\ncombo: include french fries or bag of potato chips and a can of soda!",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/d74655762ba245c4a243d3885a77219cf4c38039/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 999,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFVPUlAyS1dRRFNZWUJVSFIyWDNIUVk1QQ",
+            "variationName": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "CALC_CAESGEE3VU9ZTkNKWk9TVlRJQk9BRUQzNFdCQQ",
+        "name": "Items",
+        "imageUrl": "https://items-images-production-f.squarecdn.com/files/4bf30d7dd3c5ddc880097476117e6cf7c27a3466/original.jpeg?width=640&crop=1%3A1",
+        "items": [
+          {
+            "id": "CALI_CAESGFhWREY3RDZFQldCNVpVRFlKSVRENUFYVw",
+            "name": "Bibimbap",
+            "description": "Traditional Korean food with various vegetables and marinated korean bbq beef,. include bean sprouts, carrots, spinach, mushrooms, cabbage kimchi over rice, served with gochujang paste and sesame oil over rice Also your choice of egg on top of the dish!",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/4bf30d7dd3c5ddc880097476117e6cf7c27a3466/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1799,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFYzVEhMTlhYVEpGT0xGVEhBM1hMWkZFUw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFhYM1NNVEZWSEdNVzVXVU4yWllaU0dPQg",
+            "name": "Stuff Hamburger Steak ",
+            "description": "Juicy homemade hamburger steak stuffed with melted cheese for extra flavor, topped with our rich homemade sauce.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/97ca064f7f73bb9cb364a002ba82ca5ec1e84fff/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 2199,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGFJDTzZMRTJLREk2RjRHS0hFNkhBS0NPQw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDQzVkVTNTdRNks3SVJQM0NaR0lBSVM1NA",
+            "name": "Chicken Piccata",
+            "description": "Juicy chicken saut\u00e9ed to perfection and topped with a bright, buttery wine sauce, capers, and garlic.\nSimple ingredients, unforgettable flavor.",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/673fb1d8997f72fed6db7bacb250e98b9a1b6af5/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 2199,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGE42M1RKU0pXVEFDSjdRUFJUUVJDQTRHWg",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGEMzTTZaUUlTM0hTRjZETUpZVjdMQkVETQ",
+            "name": "Chef's Salad",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/3f05da7f5d33235d2876e8f30acb00d1e19216d7/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1199,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGERMTFhCREtCTFFXS0o3V0NMMjdYSEdRTw",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGFZEMlBHNlpKUE83WVZXUEFQNFJJNU5PTg",
+            "name": "Chinese Chicken Salad",
+            "description": "marinated shredded chicken with dry cranberries and walnut wrapped in lettuce and tomatoes on bread\n\n\nregular: sandwich only with your choice of bread\n\n\ncombo: include french fries or bag of potato chips and a can of soda!",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/b6161b44019863d5e72f9e751b6089725b2a930a/original.jpeg?width=640&crop=1%3A1",
+            "priceCents": 1299,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEI2MlFOTkpKN1RNMjVBVFRRMjU0NVVSWA",
+            "variationName": "Regular"
+          },
+          {
+            "id": "CALI_CAESGDZOQjRGNlZZMkoyRkpST09HVERQNENWSg",
+            "name": "French fries",
+            "description": "",
+            "imageUrl": "https://items-images-production-f.squarecdn.com/files/34d89aa3f16d3cc9a5afb563f9dff857b3f0ed00/original.png?width=640&crop=1%3A1",
+            "priceCents": 499,
+            "currency": "USD",
+            "variationId": "CALIV_CAESGEpYVjVGQk5BUkhKM1hMRFRVVUNXRUhCVg",
+            "variationName": "Regular"
+          }
+        ]
+      }
+    ],
+    "itemCount": 33
+  }
+}

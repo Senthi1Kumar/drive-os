@@ -1,0 +1,1 @@
+driveauth_edge-1.0.0 wheel built from Drive_auth_edge@76f33c8 (git archive + uv build --wheel); regenerate: git -C Drive_auth_edge archive 76f33c8 | tar x -C /tmp/da && uv build --wheel (no voice/torch extras)

@@ -1,0 +1,118 @@
+# DriveOS configuration.
+# Copy to ~/.config/driveos/config.toml (or /etc/driveos/config.toml, or point DRIVEOS_CONFIG at it).
+# Every key can also be set from the environment or .env: DRIVEOS_<SECTION>__<KEY>, e.g. DRIVEOS_MAPBOX__TOKEN.
+
+mode = "demo"                       # "demo": simulated kitchen / pump / store + simulated car; "live": real services
+log_level = "INFO"
+default_destination = "work"
+
+[display]
+width = 1280
+height = 800
+fullscreen = false
+units = "imperial"
+
+[mapbox]
+# token = "pk.…"                    # Directions + Search Box + Geocoding; enables the live map
+style = "mapbox://styles/mapbox/standard"
+light_preset = "night"
+theme = "monochrome"
+
+[merchants]
+sources = ["local", "mapbox"]       # + "square" and/or "mcp" for real ordering backends
+local_ordering = "auto"             # simulated in demo, browse + navigate only in live
+include_dataset = true              # the 319-restaurant, 20-city menu set
+search_radius_m = 12000
+max_results = 6
+
+[payments]
+provider = "simulated"              # "stripe" | "square"
+capture_on = "accepted"
+cancel_window_s = 120
+
+[policy]
+voice_only_max_minor = 2500         # voice approval up to $25 per order
+voice_only_daily_minor = 5000
+voice_requires_known_merchant = false
+per_transaction_max_minor = 15000
+daily_max_minor = 30000
+
+[auth]
+methods = ["voice", "face", "otp"]
+face = "simulated"                  # "command" runs face_command (exit 0 = match); "none" hides Face ID
+face_command = ["driveos-face-verify"]
+otp_channel = "phone"               # "sms" sends codes with Twilio
+# twilio_account_sid = "AC…"
+# twilio_auth_token = "…"
+# twilio_from = "+15550001111"
+timeout_s = 45
+
+[voice]
+enabled = true
+stt = "parakeet"                    # "parakeet" (CPU, scripts/build_parakeet.sh + fetch-models; falls back to whisper), "whisper", "none"
+# parakeet_lib = ""                 # default: $DRIVEOS_PARAKEET_LIB, then <data>/models/parakeet/libparakeet.so
+# parakeet_model = ""               # default: $DRIVEOS_PARAKEET_MODEL, then <data>/models/parakeet/tdt_ctc-110m-q8_0.gguf
+wake_engine = "parakeet"            # "parakeet" shares the STT model; "whisper" uses wake_whisper_model
+wake = "phrase"                     # "phrase" (any phrase, on-device), "openwakeword", "none"
+wake_phrase = "hey nova"
+whisper_model = "base.en"           # fallback STT; "small.en" on a GPU head unit
+wake_whisper_model = "tiny.en"
+tts = "phonon"                      # "phonon" (natural, CPU, `driveos fetch-models` first), "kokoro", "pyttsx3", "say" (macOS), "none"
+# phonon_voice = ""                  # default voice of the model
+# phonon_duration_delta = -0.25      # negative = faster speech; 0 = original rate
+follow_up_s = 8
+end_silence_ms = 700
+echo_tail_ms = 400                # mic stays closed this long after Nova stops speaking (speaker echo)
+vad = "silero"                    # "webrtc" = legacy fixed windows; "silero" = wake once, then converse
+turn_detector = "smart"           # Smart Turn decides whether a pause ends the turn; "none" = every pause ends it
+conversation_idle_s = 60          # the conversation closes after this long without speech (End and mute close it too)
+conversation_max_utterance_s = 60
+
+[nlu]
+engine = "rules"                    # "harness" adds the OpenRouter tool agent (key: OPENROUTER_API_KEY in .env)
+# [nlu.openrouter]
+# primary_model = "deepseek/deepseek-v4.1-flash"
+# fallback_model = "anthropic/claude-haiku-5.5"
+# router_model = "openai/gpt-5.6-luna"
+# provider_order = []              # e.g. ["Together"] to pin a host; sorted by latency when empty
+# [nlu.budget]
+# max_steps = 4
+# deadline_s = 6.0
+
+[vehicle]
+source = "simulator"                # "gps" follows the real position (switchable in the app)
+gps_source = "auto"                 # auto | qt | gpsd[:host:port] | serial:/dev/ttyACM0[@9600] | tcp:host:port
+                                    # | udp:10110 | replay[:file.nmea|file.gpx][@speed] | ip
+simulator_speed_mps = 15.6
+start = { lat = 37.2358, lon = -121.9746 }
+start_label = "Los Gatos, California"
+
+[[payers]]
+id = "visa-4417"
+display = "Visa ending 4417"
+brand = "visa"
+last4 = "4417"
+owner_name = "Singh"
+label = "Personal"
+provider = "simulated"
+token = "pm_card_visa"              # PSP payment-method id, never a card number
+
+[[occupants]]
+id = "singh"
+name = "Singh"
+role = "owner"
+payer_ids = ["visa-4417"]
+default_payer_id = "visa-4417"
+phone = "+14085550117"              # where one-time codes go
+
+[[places]]
+id = "home"
+name = "Home"
+location = { lat = 37.2205, lon = -121.9848 }
+aliases = ["house"]
+
+[[places]]
+id = "work"
+name = "Work"
+location = { lat = 37.2590, lon = -121.9627 }
+aliases = ["office"]

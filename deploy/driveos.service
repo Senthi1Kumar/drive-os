@@ -1,0 +1,34 @@
+# /etc/systemd/system/driveos.service — kiosk HMI on a Linux head unit (Wayland compositor such as cage).
+[Unit]
+Description=DriveOS HMI (Nova)
+After=network-online.target sound.target gpsd.service fprintd.service
+Wants=network-online.target gpsd.service
+
+[Service]
+Type=simple
+User=driveos
+Group=driveos
+SupplementaryGroups=audio video input render
+Environment=DRIVEOS_CONFIG=/etc/driveos/config.toml
+Environment=QT_QPA_PLATFORM=wayland
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=WAYLAND_DISPLAY=wayland-0
+EnvironmentFile=-/etc/driveos/secrets.env
+StateDirectory=driveos
+Environment=XDG_DATA_HOME=/var/lib
+ExecStartPre=/usr/local/bin/driveos ledger verify
+ExecStart=/usr/local/bin/driveos run --live --fullscreen
+Restart=always
+RestartSec=2
+# the ledger and device key live in /var/lib/driveos; everything else is read-only
+ProtectSystem=strict
+ReadWritePaths=/var/lib/driveos
+ProtectHome=read-only
+PrivateTmp=true
+NoNewPrivileges=true
+LockPersonality=true
+RestrictSUIDSGID=true
+UMask=0077
+
+[Install]
+WantedBy=graphical.target

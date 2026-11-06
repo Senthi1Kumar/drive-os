@@ -1,0 +1,90 @@
+{
+  "updatedAt": "2026-08-10",
+  "note": "Restaurant cover URLs. Applied when Redis catalog imageUrl is empty.",
+  "covers": [
+    {
+      "digest": "9bf6e766d96880fda93bb2f254d70597",
+      "brand": "CRUST Sourdough Deli (Los Gatos)",
+      "address": "1466 Pollard Rd, Los Gatos, California",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+      "source": "redis"
+    },
+    {
+      "digest": "224bf57e04e7b700aa3370c32e0eedd2",
+      "brand": "CRUST Sourdough Deli (Los Gatos High School)",
+      "address": "1466 Pollard Rd, Los Gatos, California",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+      "source": "redis"
+    },
+    {
+      "digest": "e31e3d1c324d545cc788c41c3b92e9c9",
+      "brand": "Heritage Pub & Chop House",
+      "address": "15 N Santa Cruz Ave, Los Gatos, California",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/8c44f5f738e80b0078be5de4770a502362d37e75/original.jpeg?width=640&crop=1%3A1",
+      "source": "redis"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/99ec56b8c75f65597b5974709126b8844cd3c359/original.jpeg?width=640&crop=1%3A1",
+      "source": "redis"
+    },
+    {
+      "digest": "9a4cf542386a4312f19e7c1bcd307e6c",
+      "brand": "Plated By Chef Kiah",
+      "address": "1600 Dell Ave Ste B, Los Gatos, California",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/506e0f93c6930041f0c0ecb5385c39e6450769db/original.jpeg?width=640&crop=1%3A1",
+      "source": "redis"
+    },
+    {
+      "digest": "71d9977d27e9d2d2496e11e2aa0abd0d",
+      "brand": "CRUST Sourdough Deli Los Gatos",
+      "address": "1466 Pollard Rd, Los Gatos, California",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/05d5714b60697602cf5c1ee9d0b84a5063fcf291/original.jpeg?width=640&crop=1%3A1",
+      "source": "redis"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/452a488192de984e0c22ccb430992388c8e39447/original.png?width=640&crop=1%3A1",
+      "source": "redis"
+    },
+    {
+      "digest": "ebb33153b4b371ed39658c3ad289938e",
+      "brand": "The Posh Bagel",
+      "address": "2005 Camden Ave, Los Gatos, California",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/4217f9b11bb65f730e5bdcd4532c1cdf218e454c/original.jpeg?width=640&crop=1%3A1",
+      "source": "redis"
+    },
+    {
+      "digest": "8fd528388d36abf91bc383d3d5038aa7",
+      "brand": "Purple Onion Cafe",
+      "address": "26 E Main St, Los Gatos, California",
+      "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-o/07/53/a3/9d/purple-onion-cafe.jpg",
+      "source": "tripadvisor"
+    },
+    {
+      "digest": "c4112f431b0f644033e4c42d4429f468",
+      "brand": "Purple Onion Cafe",
+      "address": "26 E Main St, Los Gatos, CA",
+      "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-o/07/53/a3/9d/purple-onion-cafe.jpg",
+      "source": "tripadvisor"
+    },
+    {
+      "digest": "c54feab9c086f2f4620fc46d728ba378",
+      "brand": "Kenz Coffee Bar",
+      "address": "445 Hershner Dr, Los Gatos, CA",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/3d9c9536e4c46594a32784ebaddab9c3d3ea32a6/original.jpeg?width=640&crop=1%3A1",
+      "source": "fixture"
+    },
+    {
+      "digest": "f5e5e1cb51778c7c1a9fe053596564fa",
+      "brand": "Orange Bowl",
+      "address": "186 E Sunnyoaks Ave Ste F, Los Gatos, CA",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/2618db85db65b29903a500df77f8f1301b27fccb/original.jpeg?width=640&crop=1%3A1",
+      "source": "fixture"
+    }
+  ]
+}

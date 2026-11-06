@@ -1,0 +1,234 @@
+{
+ "v": 1,
+ "type": "state",
+ "seq": 1,
+ "state": {
+  "tab": "shop",
+  "voice": {
+   "state": "idle",
+   "level": 0.0,
+   "partial": "",
+   "heard": "",
+   "reply": "",
+   "available": true,
+   "wake": true,
+   "phrase": "hey nova"
+  },
+  "vehicle": {
+   "speed_mps": 0.0,
+   "parked": true,
+   "lat": 37.2358,
+   "lon": -121.9746,
+   "label": "Los Gatos, California",
+   "heading": 0.0
+  },
+  "shop": {
+   "view": "checkout",
+   "status": "",
+   "places": [
+    {
+     "id": "local:r6-kenz-coffee-bar",
+     "name": "Kenz Coffee Bar",
+     "category": "coffee",
+     "distance_m": 1311,
+     "eta_min": 2,
+     "rating": null,
+     "address": "445 Hershner Dr, Los Gatos, CA",
+     "distance_text": "0.8 mi",
+     "orderable": true
+    },
+    {
+     "id": "local:r3-plur-coffee",
+     "name": "Plur Coffee",
+     "category": "coffee",
+     "distance_m": 3168,
+     "eta_min": 5,
+     "rating": null,
+     "address": "2425 Samaritan Dr, Main Entrance, Los Gatos, CA",
+     "distance_text": "2.0 mi",
+     "orderable": true
+    },
+    {
+     "id": "local:r2-purple-onion-cafe",
+     "name": "Purple Onion Cafe",
+     "category": "coffee",
+     "distance_m": 1608,
+     "eta_min": 2,
+     "rating": null,
+     "address": "26 E Main St, Los Gatos, CA",
+     "distance_text": "1.0 mi",
+     "orderable": false
+    },
+    {
+     "id": "local:cielito",
+     "name": "cielito health bar & café",
+     "category": "coffee",
+     "distance_m": 5305,
+     "eta_min": 8,
+     "rating": null,
+     "address": "1979 Harris Ave Apt 1, Los Gatos, CA",
+     "distance_text": "3.3 mi",
+     "orderable": false
+    }
+   ],
+   "place": {
+    "id": "local:r3-plur-coffee",
+    "name": "Plur Coffee"
+   },
+   "menu": [
+    {
+     "section": "Latte",
+     "items": [
+      {
+       "id": "I0",
+       "name": "Cafe Latte",
+       "price": 5.25,
+       "price_text": "$5.25",
+       "desc": "Double espresso with steamed milk",
+       "addable": true
+      },
+      {
+       "id": "I1",
+       "name": "Caramel Latte",
+       "price": 6.25,
+       "price_text": "$6.25",
+       "desc": "House caramel, whole milk",
+       "addable": true
+      },
+      {
+       "id": "I2",
+       "name": "Chai Latte",
+       "price": 5.99,
+       "price_text": "$5.99",
+       "desc": "",
+       "addable": true
+      },
+      {
+       "id": "I3",
+       "name": "Matcha Latte",
+       "price": 5.99,
+       "price_text": "$5.99",
+       "desc": "Ceremonial grade matcha",
+       "addable": true
+      },
+      {
+       "id": "I4",
+       "name": "Vanilla Cafe Latte",
+       "price": 6.25,
+       "price_text": "$6.25",
+       "desc": "",
+       "addable": true
+      },
+      {
+       "id": "I5",
+       "name": "Tiramisu Latte",
+       "price": 6.25,
+       "price_text": "$6.25",
+       "desc": "Mascarpone foam, cocoa",
+       "addable": true
+      }
+     ]
+    },
+    {
+     "section": "Water",
+     "items": [
+      {
+       "id": "I0",
+       "name": "Saratoga® Natural Spring Water 12 Oz Glass Bottle",
+       "price": 3.0,
+       "price_text": "$3.00",
+       "desc": "",
+       "addable": true
+      },
+      {
+       "id": "I1",
+       "name": "Sparkling Saratoga water 12oz",
+       "price": 3.0,
+       "price_text": "$3.00",
+       "desc": "",
+       "addable": true
+      }
+     ]
+    },
+    {
+     "section": "Bakery",
+     "items": [
+      {
+       "id": "I0",
+       "name": "Butter Croissant",
+       "price": 4.25,
+       "price_text": "$4.25",
+       "desc": "Baked this morning",
+       "addable": true
+      }
+     ]
+    }
+   ],
+   "item": null,
+   "cart": {
+    "lines": [
+     {
+      "id": "L1",
+      "name": "Cafe Latte",
+      "qty": 2,
+      "price": 10.5,
+      "price_text": "$10.50"
+     },
+     {
+      "id": "L2",
+      "name": "Butter Croissant",
+      "qty": 1,
+      "price": 4.25,
+      "price_text": "$4.25"
+     }
+    ],
+    "subtotal": 14.75,
+    "tax": 1.33,
+    "total": 16.08,
+    "total_text": "$16.08",
+    "place": "Plur Coffee"
+   },
+   "checkout": {
+    "pending": true,
+    "amount": 16.08,
+    "amount_text": "$16.08",
+    "merchant": "Plur Coffee",
+    "methods": [
+     "voice",
+     "face",
+     "code"
+    ],
+    "auth": {
+     "stage": "face",
+     "challenge": null,
+     "detail": "",
+     "preview": false,
+     "face_state": "verified",
+     "face_rect": null,
+     "face_name": "alex"
+    }
+   },
+   "order": null
+  },
+  "nav": {
+   "active": false,
+   "dest": "",
+   "maneuver": "",
+   "eta_min": 0,
+   "mode": "idle"
+  },
+  "toast": null,
+  "update": {
+   "available": false,
+   "version": "",
+   "highlights": []
+  }
+ },
+ "hello": {
+  "v": 1,
+  "type": "hello",
+  "app": "DriveOS",
+  "version": "0.1.0",
+  "build": "a1b2c3d"
+ }
+}

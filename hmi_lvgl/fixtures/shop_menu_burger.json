@@ -1,0 +1,189 @@
+{
+ "v": 1,
+ "type": "state",
+ "seq": 1,
+ "state": {
+  "tab": "shop",
+  "voice": {
+   "state": "idle",
+   "level": 0.0,
+   "partial": "",
+   "heard": "",
+   "reply": "",
+   "available": true,
+   "wake": true,
+   "phrase": "hey nova"
+  },
+  "vehicle": {
+   "speed_mps": 0.0,
+   "parked": true,
+   "lat": 37.2358,
+   "lon": -121.9746,
+   "label": "Los Gatos, California",
+   "heading": 0.0
+  },
+  "shop": {
+   "view": "menu",
+   "status": "",
+   "places": [
+    {
+     "id": "local:stack-burger-co",
+     "name": "Stack Burger Co",
+     "category": "food",
+     "distance_m": 2400,
+     "eta_min": 6,
+     "rating": null,
+     "address": "88 University Ave, Los Gatos, CA",
+     "distance_text": "1.5 mi",
+     "orderable": true,
+     "sample": true
+    }
+   ],
+   "place": {
+    "id": "local:stack-burger-co",
+    "name": "Stack Burger Co"
+   },
+   "menu": [
+    {
+     "section": "Burgers",
+     "items": [
+      {
+       "id": "I0",
+       "name": "Classic Cheeseburger",
+       "price": 11.95,
+       "price_text": "$11.95",
+       "desc": "Cheddar, pickles, house sauce",
+       "addable": true,
+       "img": "food/burger_classic_160.jpg",
+       "img_lg": "food/burger_classic_320.jpg"
+      },
+      {
+       "id": "I1",
+       "name": "Bacon Burger",
+       "price": 13.95,
+       "price_text": "$13.95",
+       "desc": "",
+       "addable": true,
+       "img": "food/burger_bacon_160.jpg",
+       "img_lg": "food/burger_bacon_320.jpg"
+      },
+      {
+       "id": "I2",
+       "name": "Veggie Burger",
+       "price": 12.95,
+       "price_text": "$12.95",
+       "desc": "",
+       "addable": true,
+       "img": "food/burger_veggie_160.jpg",
+       "img_lg": "food/burger_veggie_320.jpg"
+      }
+     ]
+    },
+    {
+     "section": "Sides",
+     "items": [
+      {
+       "id": "I0",
+       "name": "French Fries",
+       "price": 4.95,
+       "price_text": "$4.95",
+       "desc": "",
+       "addable": true,
+       "img": "food/fries_160.jpg",
+       "img_lg": "food/fries_320.jpg"
+      },
+      {
+       "id": "I1",
+       "name": "Onion Rings",
+       "price": 5.95,
+       "price_text": "$5.95",
+       "desc": "",
+       "addable": true,
+       "img": "food/onion_rings_160.jpg",
+       "img_lg": "food/onion_rings_320.jpg"
+      },
+      {
+       "id": "I2",
+       "name": "Chicken Wings",
+       "price": 11.95,
+       "price_text": "$11.95",
+       "desc": "",
+       "addable": true,
+       "img": "food/chicken_wings_160.jpg",
+       "img_lg": "food/chicken_wings_320.jpg"
+      }
+     ]
+    },
+    {
+     "section": "Drinks",
+     "items": [
+      {
+       "id": "I0",
+       "name": "Vanilla Milkshake",
+       "price": 6.95,
+       "price_text": "$6.95",
+       "desc": "",
+       "addable": true,
+       "img": "food/smoothie_160.jpg",
+       "img_lg": "food/smoothie_320.jpg"
+      },
+      {
+       "id": "I1",
+       "name": "Soda",
+       "price": 2.95,
+       "price_text": "$2.95",
+       "desc": "",
+       "addable": true,
+       "img": "food/soda_160.jpg",
+       "img_lg": "food/soda_320.jpg"
+      }
+     ]
+    }
+   ],
+   "item": null,
+   "cart": {
+    "lines": [],
+    "subtotal": 0,
+    "tax": 0,
+    "total": 0,
+    "total_text": "$0.00",
+    "place": null
+   },
+   "checkout": {
+    "pending": false,
+    "amount": 0,
+    "amount_text": "$0.00",
+    "merchant": "",
+    "methods": [],
+    "auth": {
+     "stage": "idle",
+     "challenge": "",
+     "detail": ""
+    }
+   },
+   "order": null,
+   "sample": true
+  },
+  "nav": {
+   "active": false,
+   "dest": "",
+   "maneuver": "",
+   "eta_min": 0,
+   "mode": "idle"
+  },
+  "toast": null,
+  "update": {
+   "available": false,
+   "version": "",
+   "highlights": []
+  }
+ },
+ "hello": {
+  "v": 1,
+  "type": "hello",
+  "app": "DriveOS",
+  "version": "0.1.0",
+  "build": "a1b2c3d",
+  "image_root": "fixtures/assets"
+ }
+}

@@ -1,0 +1,155 @@
+{
+  "places": [
+    {
+      "id": "los-gatos",
+      "label": "Los Gatos, CA",
+      "query": "Los Gatos, CA",
+      "restaurants": [
+        {
+          "rank": 1,
+          "name": "SHANGRI-LA CHINESE RESTAURANT",
+          "address": "784 Blossom Hill Rd",
+          "locationName": "SHANGRI-LA CHINESE RESTAURANT",
+          "miles": 0.12,
+          "description": "",
+          "hours": "11:00 AM - 3:00 PM, 4:00 PM - 8:30 PM",
+          "menuKey": "r1-shangri-la-chinese-restaurant",
+          "menuError": null,
+          "locationAddress": "784 Blossom Hill Rd, Los Gatos, CA"
+        },
+        {
+          "rank": 2,
+          "name": "Purple Onion Cafe",
+          "address": "26 E Main St",
+          "locationName": "Purple Onion Cafe",
+          "miles": 1.4,
+          "description": "",
+          "hours": "8:30 AM - 4:00 PM",
+          "menuKey": "r2-purple-onion-cafe",
+          "menuError": null,
+          "locationAddress": "26 E Main St, Los Gatos, CA"
+        },
+        {
+          "rank": 3,
+          "name": "Plur Coffee",
+          "address": "2425 Samaritan Dr, Main Entrance",
+          "locationName": "Plur coffee",
+          "miles": 1.5,
+          "description": "PLUR Coffee is a unique coffee shop that's not only serves coffee but also promotes the values of Peace, Love, Unity, and Respect (PLUR). It's a place where people can come together, enjoy a cup of co\u2026",
+          "hours": "7:30 AM - 11:45 AM, 12:15 PM - 2:30 PM",
+          "menuKey": "r3-plur-coffee",
+          "menuError": null,
+          "locationAddress": "2425 Samaritan Dr, Main Entrance, Los Gatos, CA"
+        },
+        {
+          "rank": 4,
+          "name": "Heritage Pub & Chop House",
+          "address": "15 N Santa Cruz Ave",
+          "locationName": "Heritage Pub & Chop House",
+          "miles": 1.5,
+          "description": "",
+          "hours": "11:30 AM - 10:00 PM",
+          "menuKey": "r4-heritage-pub-&-chop-house",
+          "menuError": null,
+          "locationAddress": "15 N Santa Cruz Ave, Los Gatos, CA"
+        },
+        {
+          "rank": 5,
+          "name": "Plated By Chef Kiah",
+          "address": "1600 Dell Ave Ste B",
+          "locationName": "Plated By Chef Kiah",
+          "miles": 1.9,
+          "description": "Chef Kiah brings the luxury of restaurant-quality dining into your home through chef-driven, seasonal cuisine that celebrates local ingredients and elegant presentation. From weekly meal prep to intim\u2026",
+          "hours": "9:00 AM - 5:00 PM",
+          "menuKey": "r5-plated-by-chef-kiah",
+          "menuError": null,
+          "locationAddress": "1600 Dell Ave Ste B, Los Gatos, CA"
+        },
+        {
+          "rank": 6,
+          "name": "Kenz Coffee Bar",
+          "address": "445 Hershner Dr",
+          "locationName": "Kenz Coffee Bar",
+          "miles": 2.2,
+          "description": "Specialty coffee bar operating out of a vintage Airstream Trailer, serving hand-crafted coffee and espresso drinks, using signature Kenz Coffee Beans. Outdoor seating available.",
+          "hours": "7:00 AM - 12:45 PM",
+          "menuKey": "r6-kenz-coffee-bar",
+          "menuError": null,
+          "locationAddress": "445 Hershner Dr, Los Gatos, CA"
+        },
+        {
+          "rank": 7,
+          "name": "CRUST Sourdough Deli Los Gatos",
+          "address": "1466 Pollard Rd",
+          "locationName": "CRUST Sourdough Deli",
+          "miles": 2.3,
+          "description": "",
+          "hours": "10:00 AM - 5:45 PM",
+          "menuKey": "r7-crust-sourdough-deli-los-gatos",
+          "menuError": null,
+          "locationAddress": "1466 Pollard Rd, Los Gatos, CA"
+        },
+        {
+          "rank": 8,
+          "name": "CRUST Sourdough Deli (Los Gatos)",
+          "address": "1466 Pollard Rd",
+          "locationName": "CRUST Sourdough Deli",
+          "miles": 2.3,
+          "description": "",
+          "hours": "9:30 AM - 5:30 PM",
+          "menuKey": "r8-crust-sourdough-deli-(los-gatos)",
+          "menuError": null,
+          "locationAddress": "1466 Pollard Rd, Los Gatos, CA"
+        },
+        {
+          "rank": 9,
+          "name": "CRUST Sourdough Deli (Los Gatos High School)",
+          "address": "1466 Pollard Rd",
+          "locationName": "CRUST Sourdough Deli",
+          "miles": 2.3,
+          "description": "",
+          "hours": "12:15 PM - 12:30 PM",
+          "menuKey": "r9-crust-sourdough-deli-(los-gatos-high-sch",
+          "menuError": null,
+          "locationAddress": "1466 Pollard Rd, Los Gatos, CA"
+        },
+        {
+          "rank": 10,
+          "name": "The Posh Bagel",
+          "address": "2005 Camden Ave",
+          "locationName": "The Posh Bagel",
+          "miles": 2.5,
+          "description": "To be the most trusted neighborhood bagel caf\u00e9 by creating memorable guest experiences, supporting our communities, and setting the standard for quality, cleanliness, and customer service. We strive t\u2026",
+          "hours": "6:30 AM - 2:30 PM",
+          "menuKey": "r10-the-posh-bagel",
+          "menuError": null,
+          "locationAddress": "2005 Camden Ave, Los Gatos, CA"
+        },
+        {
+          "rank": 11,
+          "name": "Orange Bowl",
+          "address": "186 E Sunnyoaks Ave Ste F",
+          "locationName": "orangeBowl",
+          "miles": 2.5,
+          "description": "",
+          "hours": "6:00 AM - 3:00 PM, 5:00 PM - 8:00 PM",
+          "menuKey": "r11-orange-bowl",
+          "menuError": null,
+          "locationAddress": "186 E Sunnyoaks Ave Ste F, Los Gatos, CA"
+        },
+        {
+          "rank": 12,
+          "name": "cielito health bar & caf\u00e9",
+          "address": "1979 Harris Ave Apt 1",
+          "locationName": "cielito health bar & caf\u00e9",
+          "miles": 3.3,
+          "description": "",
+          "hours": "10:00 AM - 4:00 PM",
+          "menuKey": null,
+          "menuError": "no_menu"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-08-05T07:59:39Z"
+}

@@ -1,0 +1,345 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.143,
+     37.4419
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-walg1",
+    "name": "Walgreens",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.143,
+     "latitude": 37.4419
+    },
+    "brand": [
+     "Walgreens"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.14305,
+     37.44192
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-walg2",
+    "name": "Walgreens",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.14305,
+     "latitude": 37.44192
+    },
+    "brand": [
+     "Walgreens"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.1441,
+     37.4425
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-char",
+    "name": "Charesela Technologies Inc",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.1441,
+     "latitude": 37.4425
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.15,
+     37.444
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-cvs1",
+    "name": "CVS Pharmacy",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.15,
+     "latitude": 37.444
+    },
+    "brand": [
+     "CVS"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.1503,
+     37.4441
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-cvs2",
+    "name": "CVS Pharmacy",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.1503,
+     "latitude": 37.4441
+    },
+    "brand": [
+     "CVS"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.151,
+     37.445
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-labs",
+    "name": "Stanford Biotech Labs",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.151,
+     "latitude": 37.445
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.139,
+     37.439
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-rx",
+    "name": "Town & Country Rx",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.139,
+     "latitude": 37.439
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.16,
+     37.45
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-ra",
+    "name": "Rite Aid",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.16,
+     "latitude": 37.45
+    },
+    "brand": [
+     "Rite Aid"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.17,
+     37.43
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-cvs3",
+    "name": "CVS Pharmacy",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.17,
+     "latitude": 37.43
+    },
+    "brand": [
+     "CVS"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.138,
+     37.438
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-luck",
+    "name": "Lucky Drugs",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.138,
+     "latitude": 37.438
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.137,
+     37.437
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-hold",
+    "name": "Peninsula Holdings LLC",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.137,
+     "latitude": 37.437
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.136,
+     37.436
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-bay",
+    "name": "Bayshore Pharmacy",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.136,
+     "latitude": 37.436
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.135,
+     37.435
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-med",
+    "name": "Medicine Shoppe",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.135,
+     "latitude": 37.435
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.134,
+     37.434
+    ]
+   },
+   "properties": {
+    "mapbox_id": "m-cap",
+    "name": "Summit Capital Partners",
+    "full_address": "Palo Alto, CA",
+    "poi_category_ids": [
+     "pharmacy",
+     "health_services"
+    ],
+    "coordinates": {
+     "longitude": -122.134,
+     "latitude": 37.434
+    }
+   }
+  }
+ ]
+}

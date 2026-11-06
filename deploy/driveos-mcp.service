@@ -1,0 +1,19 @@
+# /etc/systemd/system/driveos-mcp.service — the merchant MCP server over streamable HTTP,
+# for fleets that run one shared merchant gateway instead of a stdio child per vehicle.
+[Unit]
+Description=DriveOS merchant MCP server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=driveos
+EnvironmentFile=-/etc/driveos/secrets.env
+Environment=DRIVEOS_MCP_DEMO=0
+ExecStart=/usr/local/bin/driveos mcp-merchant --http 8765
+Restart=always
+DynamicUser=false
+ProtectSystem=strict
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

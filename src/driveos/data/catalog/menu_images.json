@@ -1,0 +1,436 @@
+{
+  "updatedAt": "2026-08-10",
+  "note": "Menu item imageUrl overrides for entries missing images in live Redis menus.",
+  "items": [
+    {
+      "digest": "e31e3d1c324d545cc788c41c3b92e9c9",
+      "brand": "Heritage Pub & Chop House",
+      "address": "15 N Santa Cruz Ave, Los Gatos, California",
+      "itemId": "CALI_CAESGDdFVElFTkNTM0JBWFpLREtaQVQ0Rkk1QQ",
+      "name": "Spinach, artichoke + Goat cheese",
+      "category": "Quiche",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/8c44f5f738e80b0078be5de4770a502362d37e75/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e31e3d1c324d545cc788c41c3b92e9c9",
+      "brand": "Heritage Pub & Chop House",
+      "address": "15 N Santa Cruz Ave, Los Gatos, California",
+      "itemId": "CALI_CAESGFdDWUY0UzNBMjcySEkyU0dZRExTWUlITQ",
+      "name": "Ham + Cheese",
+      "category": "Quiche",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/8c44f5f738e80b0078be5de4770a502362d37e75/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e31e3d1c324d545cc788c41c3b92e9c9",
+      "brand": "Heritage Pub & Chop House",
+      "address": "15 N Santa Cruz Ave, Los Gatos, California",
+      "itemId": "CALI_CAESGDdFVElFTkNTM0JBWFpLREtaQVQ0Rkk1QQ",
+      "name": "Spinach, artichoke + Goat cheese",
+      "category": "Gluten Free Quiche",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/aa8351a7cdef9d051fb1e2a308cdbc172b15d317/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e31e3d1c324d545cc788c41c3b92e9c9",
+      "brand": "Heritage Pub & Chop House",
+      "address": "15 N Santa Cruz Ave, Los Gatos, California",
+      "itemId": "CALI_CAESGFdDWUY0UzNBMjcySEkyU0dZRExTWUlITQ",
+      "name": "Ham + Cheese",
+      "category": "Gluten Free Quiche",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/aa8351a7cdef9d051fb1e2a308cdbc172b15d317/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e31e3d1c324d545cc788c41c3b92e9c9",
+      "brand": "Heritage Pub & Chop House",
+      "address": "15 N Santa Cruz Ave, Los Gatos, California",
+      "itemId": "CALI_CAESGDZDRU9aVldaNzdYTlRXQ1BHNVNSMzc3Sg",
+      "name": "Spring Veggie",
+      "category": "Gluten Free Quiche",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/aa8351a7cdef9d051fb1e2a308cdbc172b15d317/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFg1T05TSzVYVlpLQ1BLMkQ1T1FDN1E1TA",
+      "name": "Curry Chicken",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGE1NSFRTUEhKQ01MUEZSVFBBSDJUTllQWg",
+      "name": "Orange Chicken",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGDMyVFBBU1dMNkVWMkwyREk2VDdCUVBTSA",
+      "name": "Hunan Chicken",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFlKSk4yN0lESkRBRVpUSUgzUjJCNjNJVg",
+      "name": "Chicken in Hot Garlic Sauce",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFdRUDZSWE9XRVI2SVlERkJCR1ZOSFNUSg",
+      "name": "imperial Chicken",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFgzVTVUWERSS1pNVUc0UklQUzJNWllSRA",
+      "name": "MuShu Chicken",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGERWUzVZS0ZOUk5OT0tZVFpPVUhKNlhMSg",
+      "name": "String Bean Chicken",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFFSRkk2MlVCQlRJN0ZDRzNMSEM0Q0hESg",
+      "name": "Salt Pepper Chicken",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFVJWkVJS1RXVkZOQktGMlRSTEFHR0hURQ",
+      "name": "Chicken in Black Bean Sauce",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFZQUDRKR1gzUUw3WDdIQ0ZEWU1DQ0MzMw",
+      "name": "Chicken Snow Peas",
+      "category": "Poultry",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/942d66ba0389a36b68a99594a6f0970ecb504081/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFJCTEJOTE42VFpMWFBMQUFHV0hMUzY3Rw",
+      "name": "Hunan Beef",
+      "category": "Beef",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/327ed1df654c514d505e6c8de22fac5514738528/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGEhLR1hCQVpaR0tLWUJNUkJWNDc0UjRRVA",
+      "name": "Mu Shu Beef",
+      "category": "Beef",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/327ed1df654c514d505e6c8de22fac5514738528/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGEpTU040Q0lYVUhISjRBRk80WElOR1E3Qw",
+      "name": "Beef with Baby Bakchoy",
+      "category": "Beef",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/327ed1df654c514d505e6c8de22fac5514738528/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGEVOWlVIRzNaVUpXNEJDVTczQklNUEdLQg",
+      "name": "Beef with Black Beans",
+      "category": "Beef",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/327ed1df654c514d505e6c8de22fac5514738528/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGDIyTTI1VjNIRERYNE5BWFhXR1VCTzNKWQ",
+      "name": "Beef in Hot Garlic Sauce",
+      "category": "Beef",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/9f50259727d2dd429d01f3cecdb5a1aa13434509/original.jpeg?width=640&crop=1%3A1",
+      "source": "fixture"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGDdKN1RJR1dURzJXR041N1JYR0pWNTI2Sg",
+      "name": "Beef in Hot Garlic Sauce",
+      "category": "Beef",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/9f50259727d2dd429d01f3cecdb5a1aa13434509/original.jpeg?width=640&crop=1%3A1",
+      "source": "fixture"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGE9XNUVFWUZVMklZQlhaTkVPUDZSQVhKRQ",
+      "name": "Prawns with Snowpeas",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGEhRV0ZRVDYzU1ZEVUhLQVBPUUZYUElDSQ",
+      "name": "Hunan Prawns",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGEpYSk1RSlFHSTRBRDRINUpDMkNPWlVYUQ",
+      "name": "Mongolian Prawns",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGE9CSFNZSUlYNURaQVNJMzZINzIyWlEzTQ",
+      "name": "Prawns in Hot Garlic Sauce",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGEZQV1BaUlUyS0RXSTRNV0JTQkhIWURaSg",
+      "name": "Loves Prawns",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGEg1VVpGTllCR0ZBQTdWTU5NTUdEUzRaUw",
+      "name": "Kung Pao Calamari",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFFCUkpTNktLUDNTV0dLSlhNNEpRTU1GVQ",
+      "name": "Prawns Mix Vegetable",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGEhYVkg3QTRaQVUzWkVVVU9KWUNUV0ZQTA",
+      "name": "Sweet & Sour Fish",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGE9ZVllCUlNMRTY0WE1GNFhFTkFQU1pDNg",
+      "name": "Steam Fish Ginger and Scallions",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFFFNlNLNVVBSkpHQ0xQNUZEREdCMlRSRQ",
+      "name": "Fish w/ Black Beean Sauce",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "e78b105b016929e08352c2d7e2f655d0",
+      "brand": "SHANGRI-LA CHINESE RESTAURANT",
+      "address": "784 Blossom Hill Rd, Los Gatos, California",
+      "itemId": "CALI_CAESGFJTVk5RNFlUWFhIUkZRSEdVWVJPSjc3Nw",
+      "name": "Mu Shu Prawns",
+      "category": "Seafood",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/cdf6d2d178bd470c0f28b89509b20d977f06137b/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "ebb33153b4b371ed39658c3ad289938e",
+      "brand": "The Posh Bagel",
+      "address": "2005 Camden Ave, Los Gatos, California",
+      "itemId": "CALI_CAESGFdDVVE3NlNXVUdTWEwyTllBQjI3TzZKNA",
+      "name": "Deluxe Eggwich",
+      "category": "EGGWICHES",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/4217f9b11bb65f730e5bdcd4532c1cdf218e454c/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "ebb33153b4b371ed39658c3ad289938e",
+      "brand": "The Posh Bagel",
+      "address": "2005 Camden Ave, Los Gatos, California",
+      "itemId": "CALI_CAESGFpMU0JJSkpNVTU1TTZENlVDREtRTzdUUg",
+      "name": "BLT",
+      "category": "Classic & Specialty Sandwiches",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/75414d7aa3c6e1976a866bd445a7f9773a2d9d17/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "ebb33153b4b371ed39658c3ad289938e",
+      "brand": "The Posh Bagel",
+      "address": "2005 Camden Ave, Los Gatos, California",
+      "itemId": "CALI_CAESGEpDUzdZSlUyV0xQN0lDSjNXUVdDU1c3VQ",
+      "name": "BLTCC",
+      "category": "Classic & Specialty Sandwiches",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/75414d7aa3c6e1976a866bd445a7f9773a2d9d17/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "itemId": "CALI_CAESGEozQ0Q2SFpIRUtOMlNHQ0RFTUNJWDRGTg",
+      "name": "Sparking saratoga water 12oz",
+      "category": "water",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/452a488192de984e0c22ccb430992388c8e39447/original.png?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "itemId": "CALI_CAESGFNGSk1SV1RHRkg1UE5RQzcyTFhNU1dJQg",
+      "name": "Pistachio Latte",
+      "category": "Latte",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/2e066293c11494afbcd0881a26c5027a31f8d990/original.png?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "itemId": "CALI_CAESGE1HVEpJT1hVU05HS1lTSEY3RFJQSkNRNw",
+      "name": "Ice Strawberry LATTE",
+      "category": "Latte",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/2e066293c11494afbcd0881a26c5027a31f8d990/original.png?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "itemId": "CALI_CAESGElUNkdNT0U2RFFINERTUlBPSTNCVUQ0Vw",
+      "name": "Captain Crunch Latte",
+      "category": "Latte",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/2e066293c11494afbcd0881a26c5027a31f8d990/original.png?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "itemId": "CALI_CAESGDRPWUhWSEFGVDVFQ1VSNlVYQU9TNFZFSA",
+      "name": "Caramel Steamer",
+      "category": "Items",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/8f3c1d02a9feb099b672cd6f3c77906c39d4b2a7/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "itemId": "CALI_CAESGDJQVVhFWlBSSzdSRE1BNVZZS0JKQ0NLQg",
+      "name": "Espresso Tonic",
+      "category": "Items",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/8f3c1d02a9feb099b672cd6f3c77906c39d4b2a7/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "itemId": "CALI_CAESGEpDQ1dDRFlPT01PVFhHWTNRRFdTMllRWQ",
+      "name": "Sugar Free Hazelnut Latte",
+      "category": "Items",
+      "imageUrl": "https://items-images-production-f.squarecdn.com/files/8f3c1d02a9feb099b672cd6f3c77906c39d4b2a7/original.jpeg?width=640&crop=1%3A1",
+      "source": "category"
+    },
+    {
+      "digest": "6f4a455a54e8d059a9b0991ee24eaef3",
+      "brand": "Plur Coffee",
+      "address": "2425 Samaritan Dr, Main Entrance",
+      "itemId": "CALI_CAESGDRLUExQU1VUVDJMSUNUTzY1TTZUMjZESw",
+      "name": "Orchid",
+      "category": "Flowers",
+      "imageUrl": "https://images.pexels.com/photos/1207918/pexels-photo-1207918.jpeg?auto=compress&cs=tinysrgb&w=640&h=640&fit=crop",
+      "source": "pexels"
+    }
+  ]
+}

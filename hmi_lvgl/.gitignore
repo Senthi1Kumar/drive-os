@@ -1,0 +1,4 @@
+build*/
+cfg*.log
+build*.log
+.deps/

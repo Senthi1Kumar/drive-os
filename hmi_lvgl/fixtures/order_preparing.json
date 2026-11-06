@@ -1,0 +1,178 @@
+{
+ "v": 1,
+ "type": "state",
+ "seq": 1,
+ "state": {
+  "tab": "shop",
+  "voice": {
+   "state": "idle",
+   "level": 0.0,
+   "partial": "",
+   "heard": "",
+   "reply": "",
+   "available": true,
+   "wake": true,
+   "phrase": "hey nova"
+  },
+  "vehicle": {
+   "speed_mps": 0.0,
+   "parked": true,
+   "lat": 37.2358,
+   "lon": -121.9746,
+   "label": "Los Gatos, California",
+   "heading": 0.0
+  },
+  "shop": {
+   "view": "order",
+   "status": "",
+   "places": [
+    {
+     "id": "local:r6-kenz-coffee-bar",
+     "name": "Kenz Coffee Bar",
+     "category": "coffee",
+     "distance_m": 1311,
+     "eta_min": 2,
+     "rating": null,
+     "address": "445 Hershner Dr, Los Gatos, CA",
+     "distance_text": "0.8 mi",
+     "orderable": true
+    },
+    {
+     "id": "local:r3-plur-coffee",
+     "name": "Plur Coffee",
+     "category": "coffee",
+     "distance_m": 3168,
+     "eta_min": 5,
+     "rating": null,
+     "address": "2425 Samaritan Dr, Main Entrance, Los Gatos, CA",
+     "distance_text": "2.0 mi",
+     "orderable": true
+    },
+    {
+     "id": "local:r2-purple-onion-cafe",
+     "name": "Purple Onion Cafe",
+     "category": "coffee",
+     "distance_m": 1608,
+     "eta_min": 2,
+     "rating": null,
+     "address": "26 E Main St, Los Gatos, CA",
+     "distance_text": "1.0 mi",
+     "orderable": false
+    },
+    {
+     "id": "local:cielito",
+     "name": "cielito health bar & café",
+     "category": "coffee",
+     "distance_m": 5305,
+     "eta_min": 8,
+     "rating": null,
+     "address": "1979 Harris Ave Apt 1, Los Gatos, CA",
+     "distance_text": "3.3 mi",
+     "orderable": false
+    }
+   ],
+   "place": {
+    "id": "local:r3-plur-coffee",
+    "name": "Plur Coffee"
+   },
+   "menu": [],
+   "item": null,
+   "cart": {
+    "lines": [
+     {
+      "id": "L1",
+      "name": "Cafe Latte",
+      "qty": 2,
+      "price": 10.5,
+      "price_text": "$10.50"
+     },
+     {
+      "id": "L2",
+      "name": "Butter Croissant",
+      "qty": 1,
+      "price": 4.25,
+      "price_text": "$4.25"
+     }
+    ],
+    "subtotal": 14.75,
+    "tax": 0.0,
+    "total": 14.75,
+    "total_text": "$14.75",
+    "place": "Plur Coffee"
+   },
+   "checkout": {
+    "pending": false,
+    "amount": 0,
+    "amount_text": "$0.00",
+    "merchant": "",
+    "methods": [],
+    "auth": {
+     "stage": "idle",
+     "challenge": "",
+     "detail": ""
+    }
+   },
+   "order": {
+    "id": "o-1",
+    "status": "preparing",
+    "status_text": "Preparing",
+    "pickup_code": "A-482",
+    "eta_min": 7.0,
+    "merchant": "Plur Coffee",
+    "terminal": false,
+    "timeline": [
+     {
+      "state": "placed",
+      "at": "10:41 AM",
+      "label": "Order placed",
+      "phase": "done"
+     },
+     {
+      "state": "accepted",
+      "at": "10:41 AM",
+      "label": "Accepted by Plur Coffee",
+      "phase": "done"
+     },
+     {
+      "state": "preparing",
+      "at": "now",
+      "label": "Being prepared",
+      "phase": "now"
+     },
+     {
+      "state": "ready",
+      "at": "~10:49 AM",
+      "label": "Ready for pickup",
+      "phase": "next"
+     },
+     {
+      "state": "picked_up",
+      "at": "",
+      "label": "Picked up",
+      "phase": "next"
+     }
+    ]
+   }
+  },
+  "nav": {
+   "active": false,
+   "dest": "",
+   "maneuver": "",
+   "eta_min": 0,
+   "mode": "idle"
+  },
+  "toast": null,
+  "update": {
+   "available": false,
+   "version": "",
+   "highlights": []
+  }
+ },
+ "hello": {
+  "v": 1,
+  "type": "hello",
+  "app": "DriveOS",
+  "version": "0.1.0",
+  "build": "a1b2c3d"
+ }
+}
