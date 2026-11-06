@@ -92,6 +92,13 @@ def test_appimage_stages_all_native_and_runtime_resources():
     assert 'DRIVEOS_IMAGES__GENERATED_DIR="$HERE/usr/share/drive-os/food"' in run
 
 
+def test_appimage_hmi_uses_c23_capable_clang():
+    build = _read(ROOT / "packaging/appimage/build.sh")
+    assert "dpkg -s cmake clang" in build
+    assert "build-essential clang cmake" in build
+    assert "CC=clang CFLAGS=" in build
+
+
 def test_appimage_scrubs_build_host_paths():
     build = _read(ROOT / "packaging/appimage/build.sh")
     assert 'PYTHONDONTWRITEBYTECODE=1 "$PY" -c' in build

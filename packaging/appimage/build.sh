@@ -48,10 +48,10 @@ echo "==> DriveOS $VERSION"
 
 # --- system packages ---------------------------------------------------------
 SUDO=""; [ "$(id -u)" -ne 0 ] && SUDO=sudo
-if ! dpkg -s cmake libsdl2-dev libdrm-dev libjpeg-dev libegl1-mesa-dev >/dev/null 2>&1; then
+if ! dpkg -s cmake clang libsdl2-dev libdrm-dev libjpeg-dev libegl1-mesa-dev >/dev/null 2>&1; then
   $SUDO apt-get update -qq
   DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -y -qq --no-install-recommends \
-    build-essential cmake pkg-config git curl ca-certificates file patchelf desktop-file-utils squashfs-tools \
+    build-essential clang cmake pkg-config git curl ca-certificates file patchelf desktop-file-utils squashfs-tools \
     libsdl2-dev libdrm-dev libwayland-dev libxkbcommon-dev libinput-dev libjpeg-dev libegl1-mesa-dev \
     libportaudio2 libsndfile1
 fi
@@ -146,7 +146,7 @@ cp -a "$MLN_PREFIX/share/maplibre-native-c/licenses" "$APPDIR/usr/share/licenses
 # --- LVGL HMI ----------------------------------------------------------------
 echo "==> HMI"
 BUILD_SHA="$(git -C "$ROOT" rev-parse --short HEAD 2>/dev/null || echo dev)"
-CFLAGS="${CFLAGS:-} -ffile-prefix-map=$W=." \
+CC=clang CFLAGS="${CFLAGS:-} -ffile-prefix-map=$W=." \
   cmake -S "$SRC/hmi_lvgl" -B "$W/hmi" -DCMAKE_BUILD_TYPE=Release -DDRIVEOS_VERSION="$PYV" \
   -DDOS_MAPLIBRE_PREFIX="$MLN_PREFIX" >/dev/null
 cmake --build "$W/hmi" -j"$(nproc)" >/dev/null
