@@ -111,6 +111,9 @@ def test_release_has_no_companion_parakeet_archive_and_requires_signing():
     workflow = _read(OVERLAY / ".github/workflows/release.yml")
     assert "driveos-parakeet" not in workflow
     assert "MINISIGN_KEY is not set; publishing without signatures" not in workflow
+    assert "apt-get install -y --no-install-recommends minisign" not in workflow
+    assert "minisign-0.12-linux.tar.gz" in workflow
+    assert "9a599b48ba6eb7b1e80f12f36b94ceca7c00b7a5173c95c3efc88d9822957e73" in workflow
     assert re.search(r'if \[ -z "\$MINISIGN_KEY" \].*?exit 1', workflow, re.S)
 
 
