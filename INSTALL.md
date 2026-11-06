@@ -29,6 +29,20 @@ chmod +x DriveOS-*-aarch64.AppImage
 ./DriveOS-*-aarch64.AppImage                 # back-end + HMI, supervised
 ```
 
+For a normal Pi application-menu and Desktop installation, keep the AppImage in `~/Downloads` and run the standalone
+installer from the same release:
+
+```bash
+curl -fsSL https://github.com/Senthi1Kumar/drive-os/releases/download/v1.0.1/driveos-installer.sh \
+  -o ~/Downloads/driveos-installer.sh
+chmod +x ~/Downloads/driveos-installer.sh
+~/Downloads/driveos-installer.sh             # add --launch to open DriveOS after installing
+```
+
+The installer verifies the AppImage's checksum and signature, moves it into `~/Applications`, and creates
+`~/.local/share/applications/drive-os.desktop` and `~/Desktop/DriveOS.desktop`. It needs no sudo and does not download
+models until you launch DriveOS.
+
 Other modes:
 
 ```bash

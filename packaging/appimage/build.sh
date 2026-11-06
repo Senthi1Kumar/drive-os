@@ -93,7 +93,7 @@ reqs = list(p["dependencies"])
 for extra in ("voice", "biometrics", "gps"):
     reqs += p["optional-dependencies"][extra]
 for r in dict.fromkeys(reqs):
-    if not r.lower().startswith(skip) and not r.lower().startswith("ptts"):  # ptts/pyttsx3: Windows SAPI fallbacks
+    if not r.lower().startswith(skip):
         print(r)
 PYEOF
 "$PY" -m pip install -q --no-cache-dir -r "$W/req.txt"

@@ -3,6 +3,7 @@
 #include "png_out.h"
 #include "ui_state.h"
 #include "ws_client.h"
+#include <SDL2/SDL.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -104,6 +105,14 @@ static void ui_stats_tick(void)
     ui_st.busy_ms = 0;
 }
 
+static int native_close_watch(void *userdata, SDL_Event *event)
+{
+    (void)userdata;
+    if(event->type == SDL_QUIT ||
+       (event->type == SDL_WINDOWEVENT && event->window.event == SDL_WINDOWEVENT_CLOSE)) app_request_quit();
+    return 0;
+}
+
 int main(int argc, char **argv)
 {
     args_t a;
@@ -136,6 +145,8 @@ int main(int argc, char **argv)
     app_build(lv_screen_active(), &(app_cfg_t){ .url = a.fixture ? NULL : a.url,
                                                 .initial = a.screen < 0 ? SCR_HOME : (screen_id_t)a.screen,
                                                 .pin_initial = a.screen >= 0 });
+    bool native_watch = !strcmp(dos_display_backend_name(), "sdl");
+    if(native_watch) SDL_AddEventWatch(native_close_watch, NULL);
 
     const char *stats = getenv("DOS_MAP_STATS");
     bool ui_stats = stats && *stats && strcmp(stats, "0") != 0;
@@ -167,6 +178,7 @@ int main(int argc, char **argv)
         if(app_quit_requested() || (a.quit_after_s && lv_tick_elaps(start) >= a.quit_after_s * 1000u)) break;
         lv_delay_ms(t < 3 ? 3 : (t > 20 ? 20 : t));
     }
+    if(native_watch) SDL_DelEventWatch(native_close_watch, NULL);
     link_stop();
     return 0;
 }

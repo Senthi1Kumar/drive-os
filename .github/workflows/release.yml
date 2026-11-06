@@ -58,6 +58,11 @@ jobs:
           name: release-files
           path: dist
 
+      - name: Add standalone installer assets
+        run: |
+          install -m755 scripts/install_appimage.sh dist/driveos-installer.sh
+          install -m644 packaging/icon/drive-os-256.png dist/drive-os.png
+
       - name: Checksums
         working-directory: dist
         run: sha256sum DriveOS-*.AppImage > SHA256SUMS

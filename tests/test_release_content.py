@@ -13,13 +13,14 @@ def _read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def test_first_public_release_is_1_0_0_everywhere():
-    assert 'version = "1.0.0"' in _read(ROOT / "pyproject.toml")
-    assert '__version__ = "1.0.0"' in _read(ROOT / "src/driveos/__init__.py")
+def test_release_is_1_0_1_everywhere():
+    assert 'version = "1.0.1"' in _read(ROOT / "pyproject.toml")
+    assert '__version__ = "1.0.1"' in _read(ROOT / "src/driveos/__init__.py")
     export = ROOT / ".release/export.sh"
     if export.is_file():
-        assert "RELEASE_VERSION:-1.0.0" in _read(export)
-    assert "version-1.0.0-" in _read(OVERLAY / "README.md")
+        assert "RELEASE_VERSION:-1.0.1" in _read(export)
+    assert "version-1.0.1-" in _read(OVERLAY / "README.md")
+    assert "## 1.0.1 — AppImage runtime and desktop fixes" in _read(OVERLAY / "CHANGELOG.md")
     assert "## 1.0.0 — initial release" in _read(OVERLAY / "CHANGELOG.md")
     container = _read(ROOT / "src/driveos/container.py")
     assert "from . import __version__" in container
@@ -92,6 +93,13 @@ def test_appimage_stages_all_native_and_runtime_resources():
     assert 'DRIVEOS_IMAGES__GENERATED_DIR="$HERE/usr/share/drive-os/food"' in run
 
 
+def test_appimage_includes_and_selftests_phonon_runtime():
+    build = _read(ROOT / "packaging/appimage/build.sh")
+    run = _read(ROOT / "packaging/appimage/AppRun")
+    assert 'startswith("ptts")' not in build
+    assert "import ptts" in run
+
+
 def test_appimage_hmi_uses_c23_capable_clang():
     build = _read(ROOT / "packaging/appimage/build.sh")
     assert "dpkg -s cmake clang" in build
@@ -117,6 +125,17 @@ def test_release_has_no_companion_parakeet_archive_and_requires_signing():
     assert re.search(r'if \[ -z "\$MINISIGN_KEY" \].*?exit 1', workflow, re.S)
 
 
+def test_release_includes_standalone_pi_installer():
+    workflow = _read(OVERLAY / ".github/workflows/release.yml")
+    install = _read(OVERLAY / "INSTALL.md")
+    assert "install -m755 scripts/install_appimage.sh dist/driveos-installer.sh" in workflow
+    assert "install -m644 packaging/icon/drive-os-256.png dist/drive-os.png" in workflow
+    assert "driveos-installer.sh" in install
+    assert "~/.local/share/applications/drive-os.desktop" in install
+    assert "~/Desktop/DriveOS.desktop" in install
+    assert "--launch" in install
+
+
 def test_mapbox_navigation_responses_are_not_cached():
     router = _read(ROOT / "src/driveos/nav/router.py")
     config = _read(ROOT / "src/driveos/config.py")
@@ -129,6 +148,17 @@ def test_mapbox_navigation_responses_are_not_cached():
 def test_mapbox_attribution_includes_improve_this_map():
     map_view = _read(ROOT / "hmi_lvgl/src/map/map_view.c")
     assert "Improve this map" in map_view
+
+
+def test_appimage_uses_native_window_controls_and_clean_close():
+    run = _read(ROOT / "packaging/appimage/AppRun")
+    main = _read(ROOT / "hmi_lvgl/src/main.c")
+    assert '"$HMI" --url "ws://127.0.0.1:$PORT/v1/ui" --fullscreen' not in run
+    assert 'exec "$HMI" --url "ws://127.0.0.1:$PORT/v1/ui" ;;' in run
+    assert "SDL_AddEventWatch" in main and "SDL_DelEventWatch" in main
+    assert "SDL_WINDOWEVENT_CLOSE" in main and "SDL_QUIT" in main
+    assert "app_request_quit()" in main
+    assert '/proc/$SERVER_PID/task/$SERVER_PID/children' in run
 
 
 def test_readme_screenshots_are_trackable_release_assets():

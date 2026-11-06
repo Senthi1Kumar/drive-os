@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — AppImage runtime and desktop fixes
+
+- Include the `ptts` runtime in the AppImage so the first-run Phonon text-to-speech model download succeeds.
+- Require a Phonon runtime import in the AppImage self-test.
+- Add a verified no-sudo installer for the Pi application menu and Desktop.
+- Launch the AppImage with native minimize, maximize, resize and close controls; closing the window stops both HMI and backend.
+
 ## 1.0.0 — initial release
 
 First release of DriveOS as a standalone product.

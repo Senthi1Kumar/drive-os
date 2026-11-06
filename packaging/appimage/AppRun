@@ -90,7 +90,7 @@ PY
 selftest() {
   local rc=0 tmp; tmp="$(mktemp -d)"
   log "selftest: back-end import"
-  "$PY" -c 'import driveos, driveos.server.runner, driveauth, websockets, numpy; import sys; assert "PySide6" not in sys.modules; print("ok", driveos.__version__)' || rc=1
+  "$PY" -c 'import driveos, driveos.server.runner, driveauth, websockets, numpy; import ptts; import sys; assert "PySide6" not in sys.modules; print("ok", driveos.__version__)' || rc=1
   local f
   for f in "$DRIVEOS_PARAKEET_LIB" "$DRIVEOS_VOICE__SILERO_MODEL" "$DRIVEOS_VOICE__SMART_TURN_MODEL" \
            "$DRIVEOS_IMAGES__GENERATED_DIR/LICENSE.md" "$HERE/usr/lib/libmaplibre-native-c.so"; do
@@ -126,7 +126,12 @@ SERVER_PID=""; HMI_PID=""
 cleanup() {
   trap - EXIT INT TERM
   [ -n "$HMI_PID" ] && kill "$HMI_PID" 2>/dev/null
+  local children=""
+  if [ -n "$SERVER_PID" ] && [ -r "/proc/$SERVER_PID/task/$SERVER_PID/children" ]; then
+    read -r children < "/proc/$SERVER_PID/task/$SERVER_PID/children" || true
+  fi
   [ -n "$SERVER_PID" ] && kill "$SERVER_PID" 2>/dev/null
+  [ -n "$children" ] && kill $children 2>/dev/null
   wait 2>/dev/null
 }
 
@@ -145,7 +150,7 @@ supervise_server() {  # restart the back-end with exponential backoff; reset aft
 case "$MODE" in
   selftest) setup_display; selftest; exit $? ;;
   server)   trap cleanup EXIT INT TERM; supervise_server --port "$PORT" & SERVER_PID=$!; wait "$SERVER_PID"; exit $? ;;
-  hmi)      setup_display; exec "$HMI" --url "ws://127.0.0.1:$PORT/v1/ui" --fullscreen ;;
+  hmi)      setup_display; exec "$HMI" --url "ws://127.0.0.1:$PORT/v1/ui" ;;
 esac
 
 install_desktop_entry
@@ -157,7 +162,7 @@ fi
 trap cleanup EXIT INT TERM
 supervise_server --port "$PORT" & SERVER_PID=$!
 wait_hello 60 || log "back-end not answering yet; starting HMI anyway (it shows reconnecting)"
-"$HMI" --url "ws://127.0.0.1:$PORT/v1/ui" --fullscreen >>"$LOG/hmi.log" 2>&1 & HMI_PID=$!
+"$HMI" --url "ws://127.0.0.1:$PORT/v1/ui" >>"$LOG/hmi.log" 2>&1 & HMI_PID=$!
 wait "$HMI_PID"; rc=$?
 HMI_PID=""
 exit $rc

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "driveos"
-version = "1.0.0"
+version = "1.0.1"
 description = "DriveOS — hands-free, voice-first in-vehicle ordering and payments (Nova assistant)"
 readme = "README.md"
 requires-python = ">=3.11"
