@@ -55,7 +55,7 @@ DriveOS.AppDir/
 packaging/appimage/out/
 src/driveos/_version.py
 
-# generated screenshots and logs
-screenshots/
+# generated screenshots and logs; README assets are release content
+/screenshots/
 *.log
 .DS_Store

@@ -31,7 +31,7 @@ static lv_display_t *headless_create(int32_t w, int32_t h)
 static lv_display_t *sdl_create(const dos_display_cfg_t *c)
 {
     /* A Wayland session first (the Pi's labwc), X11/Xwayland as the fallback; SDL ignores unknown names. */
-    if(getenv("WAYLAND_DISPLAY") && !getenv("SDL_VIDEODRIVER")) SDL_SetHint(SDL_HINT_VIDEODRIVER, "wayland,x11");
+    if(getenv("WAYLAND_DISPLAY") && !getenv("SDL_VIDEODRIVER")) SDL_SetHint("SDL_VIDEODRIVER", "wayland,x11");
     lv_display_t *d = lv_sdl_window_create(c->w, c->h);
     if(!d) return NULL;
     lv_sdl_window_set_title(d, "DriveOS");

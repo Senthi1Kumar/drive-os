@@ -121,6 +121,19 @@ def test_mapbox_attribution_includes_improve_this_map():
     assert "Improve this map" in map_view
 
 
+def test_readme_screenshots_are_trackable_release_assets():
+    names = ("home", "nav-route", "places", "menu", "item-options", "cart")
+    for name in names:
+        assert (OVERLAY / "assets/screenshots" / f"{name}.png").is_file()
+    assert "\n/screenshots/\n" in _read(OVERLAY / ".gitignore")
+
+
+def test_hmi_sdl_hint_supports_ubuntu_22_04():
+    display = _read(ROOT / "hmi_lvgl/src/display.c")
+    assert 'SDL_SetHint("SDL_VIDEODRIVER", "wayland,x11")' in display
+    assert "SDL_HINT_VIDEODRIVER" not in display
+
+
 def test_image_generation_tools_and_references_stay_out_of_release():
     export = ROOT / ".release/export.sh"
     names = ("gen_food_images.py", "food_jobs_v2.py", "cover_jobs_v3.py", "ingest_food_images.py")
