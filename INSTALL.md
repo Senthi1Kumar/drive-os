@@ -33,7 +33,7 @@ For a normal Pi application-menu and Desktop installation, keep the AppImage in 
 installer from the same release:
 
 ```bash
-curl -fsSL https://github.com/Senthi1Kumar/drive-os/releases/download/v1.0.1/driveos-installer.sh \
+curl -fsSL https://github.com/Senthi1Kumar/drive-os/releases/download/v1.0.2/driveos-installer.sh \
   -o ~/Downloads/driveos-installer.sh
 chmod +x ~/Downloads/driveos-installer.sh
 ~/Downloads/driveos-installer.sh             # add --launch to open DriveOS after installing

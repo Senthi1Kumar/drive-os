@@ -3,7 +3,7 @@
 <img src="assets/banner.png" alt="DriveOS: in-car voice commerce, navigation and biometric pay, by Elevatics AI" width="100%">
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-80a7ff?style=flat-square">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.2-80a7ff?style=flat-square">
   <img alt="Raspberry Pi 5" src="https://img.shields.io/badge/Raspberry%20Pi%205-arm64-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white">
   <img alt="Linux x86_64" src="https://img.shields.io/badge/Linux-x86__64-12161d?style=flat-square&logo=linux&logoColor=white">
   <img alt="Python" src="https://img.shields.io/badge/python-3.11%E2%80%933.13-3776AB?style=flat-square&logo=python&logoColor=white">

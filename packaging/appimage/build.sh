@@ -157,6 +157,7 @@ mkdir -p "$APPDIR/usr/share/drive-os/fixtures" && cp "$SRC"/hmi_lvgl/fixtures/*.
 mkdir -p "$APPDIR/usr/share/drive-os/models"
 cp -a "$ROOT/models/." "$APPDIR/usr/share/drive-os/models/"
 cp -a "$ROOT/hmi_lvgl/assets/food" "$APPDIR/usr/share/drive-os/food"
+install -D -m755 "$ROOT/scripts/set_xvf3800_levels.sh" "$APPDIR/usr/share/drive-os/scripts/set_xvf3800_levels.sh"
 for doc in LICENSE THIRD_PARTY_NOTICES.md PRIVACY.md; do
   [ ! -f "$ROOT/$doc" ] || install -D -m644 "$ROOT/$doc" "$APPDIR/usr/share/doc/drive-os/$doc"
 done

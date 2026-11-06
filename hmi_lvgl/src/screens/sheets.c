@@ -16,6 +16,7 @@ static char s_item_id[96];
 static int s_qty = 1;
 
 static void cmd_back(lv_event_t *e) { (void)e; link_cmd("back", NULL); }
+static void cmd_view_cart(lv_event_t *e) { (void)e; link_cmd("view_cart", NULL); }
 
 static double money_num(const char *t)
 {
@@ -106,6 +107,13 @@ static void fill_item(const ui_state_t *s)
     lv_obj_set_clickable(x, true);
     dos_icon(x, DOS_IC_X, 16, DOS_INK);
     lv_obj_add_event_cb(x, cmd_back, LV_EVENT_CLICKED, NULL);
+    if(s->shop.cart_count > 0) {
+        char label[32];
+        snprintf(label, sizeof label, "Cart %d", s->shop.cart_count);
+        lv_obj_t *cart = dos_btn(s_item_box, DOS_BTN_DEFAULT, true, DOS_IC_SHOPPING_BASKET, label);
+        lv_obj_align(cart, LV_ALIGN_TOP_LEFT, 14, 14);
+        lv_obj_add_event_cb(cart, cmd_view_cart, LV_EVENT_CLICKED, NULL);
+    }
 
     lv_obj_t *body = dos_box(s_item_box, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_pos(body, 20, 246);

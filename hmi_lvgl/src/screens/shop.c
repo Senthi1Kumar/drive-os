@@ -21,6 +21,7 @@ static void cmd_open_item(lv_event_t *e) { link_cmd_str("open_item", "id", lv_ev
 static void cmd_find(lv_event_t *e) { link_cmd_str("find", "category", lv_event_get_user_data(e)); }
 static void cmd_back(lv_event_t *e) { (void)e; link_cmd("back", NULL); }
 static void cmd_checkout(lv_event_t *e) { (void)e; link_cmd("checkout", NULL); }
+static void cmd_view_cart(lv_event_t *e) { (void)e; link_cmd("view_cart", NULL); }
 static void cmd_quick_add(lv_event_t *e) { link_cmd_str_int("add_item", "id", lv_event_get_user_data(e), "qty", 1); }
 static void cmd_remove_all(lv_event_t *e)
 {
@@ -115,7 +116,7 @@ static void fill_places(lv_obj_t *col, const ui_state_t *s)
         char b[32];
         snprintf(b, sizeof b, "Cart %d", s->shop.cart_count);
         lv_obj_t *cb = dos_btn(act, DOS_BTN_PRIMARY, true, -1, b);
-        lv_obj_add_event_cb(cb, cmd_checkout, LV_EVENT_CLICKED, NULL);
+        lv_obj_add_event_cb(cb, cmd_view_cart, LV_EVENT_CLICKED, NULL);
     }
     static const struct { const char *cat, *label; dos_icon_t ic; } K[] = {
         { "coffee", "Coffee", DOS_IC_COFFEE }, { "sandwich", "Sandwiches", DOS_IC_SANDWICH }, { "food", "Food", DOS_IC_UTENSILS },
@@ -338,10 +339,10 @@ void shop_build(lv_obj_t *slot)
         s_col[i] = screen_column(slot, 18);
         lv_obj_set_hidden(s_col[i], true);
     }
-    s_cartbar = dos_btn(slot, DOS_BTN_PRIMARY, false, DOS_IC_SHOPPING_BASKET, "Checkout");
+    s_cartbar = dos_btn(slot, DOS_BTN_PRIMARY, false, DOS_IC_SHOPPING_BASKET, "Cart");
     lv_obj_set_ignore_layout(s_cartbar, true);
     lv_obj_align(s_cartbar, LV_ALIGN_BOTTOM_MID, 0, -186);
-    lv_obj_add_event_cb(s_cartbar, cmd_checkout, LV_EVENT_CLICKED, NULL);
+    lv_obj_add_event_cb(s_cartbar, cmd_view_cart, LV_EVENT_CLICKED, NULL);
     lv_obj_set_hidden(s_cartbar, true);
 }
 
@@ -381,7 +382,7 @@ void shop_update(const ui_state_t *s)
         char b[64];
         dos_fmt_money(b, sizeof b, s->shop.subtotal);
         char t[96];
-        snprintf(t, sizeof t, "Checkout · %d · %s", s->shop.cart_count, b);
+        snprintf(t, sizeof t, "Cart · %d · %s", s->shop.cart_count, b);
         lv_obj_t *lb = lv_obj_get_child(s_cartbar, lv_obj_get_child_count(s_cartbar) - 1);
         dos_label_set(lb, t);
     }

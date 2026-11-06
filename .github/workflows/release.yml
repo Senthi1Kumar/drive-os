@@ -99,7 +99,7 @@ jobs:
         run: |
           VER="${GITHUB_REF_NAME#v}"
           BASE_VERSION="${VER%%-*}"
-          awk -v v="$BASE_VERSION" '/^## /{p = (index($0, v) == 4); next} p' CHANGELOG.md > notes.md
+          awk -v v="$BASE_VERSION" '/^## [0-9]+\.[0-9]+\.[0-9]+([[:space:]]|$)/{p = (substr($0, 4, length(v)) == v && (length($0) == 3 + length(v) || substr($0, 4 + length(v), 1) ~ /[[:space:]]/)); next} p' CHANGELOG.md > notes.md
           test -s notes.md || { echo "CHANGELOG.md has no section for $BASE_VERSION" >&2; exit 1; }
           {
             echo
@@ -113,7 +113,7 @@ jobs:
           prerelease=()
           if [[ "$GITHUB_REF_NAME" == *-* ]]; then prerelease=(--prerelease); fi
           gh release create "$GITHUB_REF_NAME" \
-            --title "DriveOS ${GITHUB_REF_NAME#v}" \
+            --title "${GITHUB_REF_NAME#v}" \
             --notes-file notes.md \
             --verify-tag \
             "${prerelease[@]}" \

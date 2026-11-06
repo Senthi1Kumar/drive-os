@@ -111,18 +111,38 @@ async def test_order_flow_menu_cart_checkout(client):
     await client.cmd("open_place", id=pid)
     await client.wait(lambda: client.state["shop"]["menu"], what="menu")
     assert client.state["shop"]["place"]["id"] == pid
-    item = client.state["shop"]["menu"][0]["items"][0]
-    assert set(item) >= {"id", "name", "price", "desc"}
-    assert (await client.cmd("add_item", id=item["id"], qty=2))["ok"]
-    await client.wait(lambda: client.state["shop"]["cart"]["lines"], what="cart line")
-    line = client.state["shop"]["cart"]["lines"][0]
-    assert line["qty"] == 2 and client.state["shop"]["cart"]["subtotal"] > 0
+    items = client.state["shop"]["menu"][0]["items"][:2]
+    assert all(set(item) >= {"id", "name", "price", "desc"} for item in items)
+    assert (await client.cmd("add_item", id=items[0]["id"], qty=2))["ok"]
+    assert (await client.cmd("add_item", id=items[1]["id"], qty=1))["ok"]
+    await client.wait(lambda: len(client.state["shop"]["cart"]["lines"]) == 2, what="cart lines")
+    first, second = client.state["shop"]["cart"]["lines"]
+    assert first["qty"] == 2 and client.state["shop"]["cart"]["subtotal"] > 0
+
+    assert (await client.cmd("view_cart"))["ok"]
+    await client.wait(lambda: client.state["shop"]["view"] == "cart", what="editable cart")
+    assert client.state["tab"] == "shop" and not client.state["shop"]["checkout"]["pending"]
+    assert (await client.cmd("set_line_qty", id=first["id"], qty=1))["ok"]
+    await client.wait(lambda: client.state["shop"]["cart"]["lines"][0]["qty"] == 1, what="quantity decreased")
+    assert (await client.cmd("set_line_qty", id=first["id"], qty=0))["ok"]
+    await client.wait(lambda: len(client.state["shop"]["cart"]["lines"]) == 1, what="line removed")
+    assert client.state["shop"]["cart"]["lines"][0]["id"] == second["id"]
+
     assert (await client.cmd("checkout"))["ok"]
     await client.wait(lambda: client.state["shop"]["checkout"]["pending"], what="checkout")
     co = client.state["shop"]["checkout"]
     assert co["amount"] > 0 and "voice" in co["methods"]
     assert (await client.cmd("cancel_checkout"))["ok"]
     await client.wait(lambda: not client.state["shop"]["checkout"]["pending"], what="checkout cancelled")
+    assert client.state["shop"]["view"] == "cart"
+
+
+async def test_view_cart_empty_does_not_open_checkout(client):
+    assert (await client.cmd("view_cart"))["ok"]
+    await client.wait(lambda: client.state["shop"]["view"] == "cart", what="empty cart")
+    assert client.state["tab"] == "shop"
+    assert client.state["shop"]["cart"]["lines"] == []
+    assert not client.state["shop"]["checkout"]["pending"]
 
 
 async def test_say_text_goes_through_nova_and_emits_say(client):

@@ -49,6 +49,10 @@ done
 
 log() { printf '[drive-os %s] %s\n' "$(date +%T)" "$*" >&2; }
 
+restore_audio_levels() {
+  bash "$HERE/usr/share/drive-os/scripts/set_xvf3800_levels.sh" || true
+}
+
 install_desktop_entry() {
   local apps="${XDG_DATA_HOME:-$HOME/.local/share}/applications" icons="${XDG_DATA_HOME:-$HOME/.local/share}/icons/hicolor/256x256/apps"
   local target="${APPIMAGE:-}"; [ -n "$target" ] || return 0
@@ -93,7 +97,8 @@ selftest() {
   "$PY" -c 'import driveos, driveos.server.runner, driveauth, websockets, numpy; import ptts; import sys; assert "PySide6" not in sys.modules; print("ok", driveos.__version__)' || rc=1
   local f
   for f in "$DRIVEOS_PARAKEET_LIB" "$DRIVEOS_VOICE__SILERO_MODEL" "$DRIVEOS_VOICE__SMART_TURN_MODEL" \
-           "$DRIVEOS_IMAGES__GENERATED_DIR/LICENSE.md" "$HERE/usr/lib/libmaplibre-native-c.so"; do
+           "$DRIVEOS_IMAGES__GENERATED_DIR/LICENSE.md" "$HERE/usr/lib/libmaplibre-native-c.so" \
+           "$HERE/usr/share/drive-os/scripts/set_xvf3800_levels.sh"; do
     if [ -s "$f" ]; then log "resource OK: ${f#$HERE/}"; else log "resource MISSING: ${f#$HERE/}"; rc=1; fi
   done
   "$PY" - <<'PY' || rc=1
@@ -149,12 +154,13 @@ supervise_server() {  # restart the back-end with exponential backoff; reset aft
 
 case "$MODE" in
   selftest) setup_display; selftest; exit $? ;;
-  server)   trap cleanup EXIT INT TERM; supervise_server --port "$PORT" & SERVER_PID=$!; wait "$SERVER_PID"; exit $? ;;
-  hmi)      setup_display; exec "$HMI" --url "ws://127.0.0.1:$PORT/v1/ui" ;;
+  server)   restore_audio_levels; trap cleanup EXIT INT TERM; supervise_server --port "$PORT" & SERVER_PID=$!; wait "$SERVER_PID"; exit $? ;;
+  hmi)      restore_audio_levels; setup_display; exec "$HMI" --url "ws://127.0.0.1:$PORT/v1/ui" ;;
 esac
 
 install_desktop_entry
 setup_display
+restore_audio_levels
 if [ ! -d "$DATA/models" ] || [ -z "$(ls -A "$DATA/models" 2>/dev/null)" ]; then
   log "first run: fetching models (network required)"
   "$PY" -m driveos fetch-models >>"$LOG/fetch-models.log" 2>&1 || log "fetch-models failed; see $LOG/fetch-models.log"

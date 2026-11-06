@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.0.2 — audio and cart fixes
+
+# DriveOS v1.0.2 Release Notes
+
+Release Date: 2026.11.06
+
+Building on v1.0.1, v1.0.2 restores consistent speaker volume on the XVF3800 and keeps the cart editable until you explicitly begin checkout.
+
+## What's New
+
+### Consistent XVF3800 speaker volume
+
+The AppImage now restores both XVF3800 hardware playback stages to 60 (0 dB) when DriveOS starts. Audio setup is best-effort, so a missing or disconnected device does not prevent the app from launching. Version, help and self-test modes do not change audio settings.
+
+### Edit your order before checkout
+
+Open the editable cart from a place, the menu bar or an item-detail sheet whenever it contains items. Increase or decrease quantities, or remove an item entirely, before paying. Only **Place order** opens checkout; cancelling checkout returns to the editable cart.
+
+## Verification
+
+- Exported-tree Python suite: 1218 passed, 3 skipped.
+- Native HMI suite: 13 of 13 CTests passed.
+- Native aarch64 AppImage self-test passed on Raspberry Pi.
+- Live Pi checks confirmed both XVF3800 playback stages at 60 (0 dB) and the complete edit-cart, checkout and cancel flow over the UI WebSocket.
+
 ## 1.0.1 — AppImage runtime and desktop fixes
 
 - Include the `ptts` runtime in the AppImage so the first-run Phonon text-to-speech model download succeeds.

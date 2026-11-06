@@ -13,13 +13,14 @@ def _read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def test_release_is_1_0_1_everywhere():
-    assert 'version = "1.0.1"' in _read(ROOT / "pyproject.toml")
-    assert '__version__ = "1.0.1"' in _read(ROOT / "src/driveos/__init__.py")
+def test_release_is_1_0_2_everywhere():
+    assert 'version = "1.0.2"' in _read(ROOT / "pyproject.toml")
+    assert '__version__ = "1.0.2"' in _read(ROOT / "src/driveos/__init__.py")
     export = ROOT / ".release/export.sh"
     if export.is_file():
-        assert "RELEASE_VERSION:-1.0.1" in _read(export)
-    assert "version-1.0.1-" in _read(OVERLAY / "README.md")
+        assert "RELEASE_VERSION:-1.0.2" in _read(export)
+    assert "version-1.0.2-" in _read(OVERLAY / "README.md")
+    assert "## 1.0.2 — audio and cart fixes" in _read(OVERLAY / "CHANGELOG.md")
     assert "## 1.0.1 — AppImage runtime and desktop fixes" in _read(OVERLAY / "CHANGELOG.md")
     assert "## 1.0.0 — initial release" in _read(OVERLAY / "CHANGELOG.md")
     container = _read(ROOT / "src/driveos/container.py")
@@ -100,6 +101,46 @@ def test_appimage_includes_and_selftests_phonon_runtime():
     assert "import ptts" in run
 
 
+def test_appimage_restores_xvf3800_levels():
+    build = _read(ROOT / "packaging/appimage/build.sh")
+    run = _read(ROOT / "packaging/appimage/AppRun")
+    assert 'install -D -m755 "$ROOT/scripts/set_xvf3800_levels.sh" ' \
+           '"$APPDIR/usr/share/drive-os/scripts/set_xvf3800_levels.sh"' in build
+    assert 'bash "$HERE/usr/share/drive-os/scripts/set_xvf3800_levels.sh" || true' in run
+    assert run.count("usr/share/drive-os/scripts/set_xvf3800_levels.sh") >= 2
+    assert "install_desktop_entry\nsetup_display\nrestore_audio_levels" in run
+
+
+def test_appimage_xvf3800_setup_only_runs_for_application_modes():
+    run = _read(ROOT / "packaging/appimage/AppRun")
+    assert re.search(r"server\)\s+restore_audio_levels;", run)
+    assert re.search(r"hmi\)\s+restore_audio_levels;", run)
+    selftest = next(line for line in run.splitlines() if line.strip().startswith("selftest)"))
+    assert "restore_audio_levels" not in selftest
+
+
+def test_appimage_xvf3800_setup_is_best_effort():
+    run = _read(ROOT / "packaging/appimage/AppRun")
+    helper = run.split("restore_audio_levels() {", 1)[-1].split("}", 1)[0]
+    assert 'bash "$HERE/usr/share/drive-os/scripts/set_xvf3800_levels.sh" || true' in helper
+
+
+def test_lvgl_cart_controls_open_editable_cart_before_checkout():
+    shop = _read(ROOT / "hmi_lvgl/src/screens/shop.c")
+    assert 'static void cmd_view_cart(lv_event_t *e)' in shop
+    assert 'link_cmd("view_cart", NULL)' in shop
+    assert "lv_obj_add_event_cb(cb, cmd_view_cart" in shop
+    assert "lv_obj_add_event_cb(s_cartbar, cmd_view_cart" in shop
+    assert 'lv_obj_add_event_cb(po, cmd_checkout' in shop
+
+
+def test_lvgl_item_sheet_has_cart_entry_before_checkout():
+    sheets = _read(ROOT / "hmi_lvgl/src/screens/sheets.c")
+    assert "if(s->shop.cart_count > 0)" in sheets
+    assert 'link_cmd("view_cart", NULL)' in sheets
+    assert "lv_obj_add_event_cb(add, add_clicked" in sheets
+
+
 def test_appimage_hmi_uses_c23_capable_clang():
     build = _read(ROOT / "packaging/appimage/build.sh")
     assert "dpkg -s cmake clang" in build
@@ -123,6 +164,54 @@ def test_release_has_no_companion_parakeet_archive_and_requires_signing():
     assert "minisign-0.12-linux.tar.gz" in workflow
     assert "9a599b48ba6eb7b1e80f12f36b94ceca7c00b7a5173c95c3efc88d9822957e73" in workflow
     assert re.search(r'if \[ -z "\$MINISIGN_KEY" \].*?exit 1', workflow, re.S)
+
+
+def test_release_uses_version_only_title_and_structured_notes():
+    import subprocess
+
+    workflow = _read(OVERLAY / ".github/workflows/release.yml")
+    assert '--title "${GITHUB_REF_NAME#v}"' in workflow
+    assert '--title "DriveOS ' not in workflow
+    assert "minisign using \\`driveos-minisign.pub\\`." in workflow
+
+    extractor = re.search(r"awk -v v=\"\$BASE_VERSION\" '([^']+)' CHANGELOG\.md > notes\.md", workflow)
+    assert extractor
+    notes = subprocess.run(
+        ["awk", "-v", "v=1.0.2", extractor.group(1), "CHANGELOG.md"],
+        cwd=OVERLAY,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout
+    assert "# DriveOS v1.0.2 Release Notes" in notes
+    assert "Release Date: 2026.11.06" in notes
+    assert "## What's New" in notes
+    assert "### Consistent XVF3800 speaker volume" in notes
+    assert "### Edit your order before checkout" in notes
+    assert "## Verification" in notes
+    assert "AppImage runtime and desktop fixes" not in notes
+
+
+def test_release_notes_extractor_matches_the_entire_version(tmp_path):
+    import subprocess
+
+    workflow = _read(OVERLAY / ".github/workflows/release.yml")
+    extractor = re.search(r"awk -v v=\"\$BASE_VERSION\" '([^']+)' CHANGELOG\.md > notes\.md", workflow)
+    assert extractor
+    (tmp_path / "CHANGELOG.md").write_text(
+        "## 1.0.20 — newer\n\nWRONG_NEWER\n\n"
+        "## 1.0.2 — requested\n\n## What's New\n\nRIGHT\n\n"
+        "## 1.0.1 — older\n\nWRONG_OLDER\n",
+        encoding="utf-8",
+    )
+    notes = subprocess.run(
+        ["awk", "-v", "v=1.0.2", extractor.group(1), "CHANGELOG.md"],
+        cwd=tmp_path,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout
+    assert notes == "\n## What's New\n\nRIGHT\n\n"
 
 
 def test_release_includes_standalone_pi_installer():

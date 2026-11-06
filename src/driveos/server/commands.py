@@ -128,6 +128,9 @@ class Commands:
             options = dict(sh.item_sel) or None        # the sheet sends only the id: add what is selected
         return self.actions.spawn(self.nova.add_item(_req(a, "id"), qty, options, speak=False))
 
+    def cmd_view_cart(self, a):
+        return self.actions.start("viewCart")
+
     def cmd_set_line_qty(self, a):
         return self.actions.start("lineQty", _req(a, "id"), _req(a, "qty", int))
 
