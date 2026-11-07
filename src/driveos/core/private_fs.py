@@ -42,10 +42,21 @@ def private_file(path: Path | str, *, create: bool = False) -> Path:
 
 
 def write_private_text(path: Path | str, text: str) -> None:
+    import tempfile
+
     p = Path(path)
-    fd = os.open(p, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, FILE_MODE)
-    with os.fdopen(fd, "w") as f:
-        f.write(text)
+    fd, tmp = tempfile.mkstemp(dir=p.parent, prefix=f".{p.name}.", text=True)
+    try:
+        with os.fdopen(fd, "w") as f:
+            f.write(text)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, p)
+    finally:
+        try:
+            os.unlink(tmp)
+        except FileNotFoundError:
+            pass
     private_file(p)
 
 

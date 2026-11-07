@@ -416,3 +416,29 @@ async def test_risk_reported_to_host_without_biometrics(rig):
     assert v.last_risk == got[0]
     ctx = v.seam.auth._risk_ctx
     assert ctx.gps_lat == NEAR["lat"] and ctx.in_trusted_zone is True
+
+
+async def test_non_default_face_profile_disables_voice_id(rig):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(rig.cfg.home)
+    users.set("profile2", "other_1")
+    users.set_role("profile2", "driver")
+    users.select("profile2")
+    v = rig.build()
+    result = await v.verify(1.0)
+    assert not result.success and "profile" in result.detail
+
+
+async def test_non_default_driver_can_still_use_face_id(rig):
+    from driveos.biometrics.f455 import FaceUserMap
+    from driveos.biometrics.verifier import FaceFirstVerifier
+
+    users = FaceUserMap(rig.cfg.home)
+    users.set("profile2", "other_1")
+    users.set_role("profile2", "driver")
+    users.select("profile2")
+    voice = rig.build(rung="confident")
+    face = FaceFirstVerifier.sharing(voice)
+    result = await face.verify(5.0)
+    assert "original profile" not in result.detail

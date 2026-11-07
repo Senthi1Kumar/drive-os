@@ -3,7 +3,7 @@
 <img src="assets/banner.png" alt="DriveOS: in-car voice commerce, navigation and biometric pay, by Elevatics AI" width="100%">
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.2-80a7ff?style=flat-square">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-80a7ff?style=flat-square">
   <img alt="Raspberry Pi 5" src="https://img.shields.io/badge/Raspberry%20Pi%205-arm64-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white">
   <img alt="Linux x86_64" src="https://img.shields.io/badge/Linux-x86__64-12161d?style=flat-square&logo=linux&logoColor=white">
   <img alt="Python" src="https://img.shields.io/badge/python-3.11%E2%80%933.13-3776AB?style=flat-square&logo=python&logoColor=white">
@@ -42,8 +42,10 @@ continuous-conversation mode are built in.
 voice-ID challenge with random digits and advisory anti-spoof measurement, Face ID, then a one-time code. Anti-spoof
 scores do not approve or reject payments by themselves. The exact amount is re-priced and shown before any approval.
 
-**F455 Face ID.** Intel RealSense ID F455 support over USB, with a live camera preview in the approval sheet. Templates stay
-inside the camera; DriveOS only sees a match decision and a user id.
+**F455 Face ID.** Intel RealSense ID F455 support over USB, with **Settings → Face ID** enrollment, re-enrollment,
+existing-face linking and deletion, plus a live camera preview during enrollment and approval. Manage up to five named
+driver/passenger profiles, edit metadata, and select the active driver; passengers cannot approve checkout. Templates stay
+inside the camera; DriveOS stores only a private user mapping and never deletes linked AI Box entries.
 
 **One-time-code step-up.** Codes arrive by SMS (Twilio) or as a phone notification on screen, can be spoken or typed, are
 limited to three attempts and are masked in every log.

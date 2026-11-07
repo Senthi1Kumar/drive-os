@@ -31,6 +31,26 @@ bool app_quit_requested(void) { return s_quit; }
 
 int app_screen_from_name(const char *name)
 {
+    if(!strcmp(name, "face")) {
+        enroll_open_face();
+        return SCR_ENROLL;
+    }
+    if(!strcmp(name, "face-consent")) {
+        enroll_open_face_consent();
+        return SCR_ENROLL;
+    }
+    if(!strcmp(name, "face-delete")) {
+        enroll_open_face_delete();
+        return SCR_ENROLL;
+    }
+    if(!strcmp(name, "face-add")) {
+        enroll_open_face_add();
+        return SCR_ENROLL;
+    }
+    if(!strcmp(name, "face-edit")) {
+        enroll_open_face_edit();
+        return SCR_ENROLL;
+    }
     for(int i = 0; i < SCR_COUNT; i++)
         if(!strcmp(name, TAB_NAMES[i])) return i;
     return -1;
@@ -38,6 +58,7 @@ int app_screen_from_name(const char *name)
 
 void app_show(screen_id_t id)
 {
+    if(id != SCR_ENROLL) enroll_leave_face();
     if(id == SCR_ENROLL && A.cur != SCR_ENROLL) enroll_reset();
     A.cur = id;
     for(int i = 0; i < SCR_COUNT; i++) dos_show(A.screens[i], i == (int)id);

@@ -207,7 +207,22 @@ class Commands:
         return self._enroll(lambda e: e.start(str(a.get("name") or ""), a.get("consent")))
 
     def cmd_enroll_face_start(self, a):
-        return self._enroll(lambda e: e.face.start(str(a.get("name") or ""), a.get("consent")))
+        return self._enroll(lambda e: e.face.start(str(a.get("name") or ""), a.get("consent"),
+                                                   a.get("profile_id"), a.get("role")))
+
+    def cmd_face_profile_select(self, a):
+        self._enroll(lambda e: e.face.select(a.get("profile_id")))
+        return None
+
+    def cmd_face_profile_edit(self, a):
+        self._enroll(lambda e: e.face.edit(a.get("profile_id"), a.get("name"), a.get("role")))
+        return None
+
+    def cmd_enroll_face_link(self, a):
+        return self._enroll(lambda e: e.face.link(a.get("confirm")))
+
+    def cmd_enroll_face_delete(self, a):
+        return self._enroll(lambda e: e.face.delete(a.get("confirm"), a.get("profile_id")))
 
     def cmd_enroll_face_cancel(self, a):
         self._enroll(lambda e: e.face.cancel())

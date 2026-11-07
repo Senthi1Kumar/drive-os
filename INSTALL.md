@@ -186,16 +186,30 @@ Say "Hey Nova" or press the voice button, then, for example: "find me a coffee",
 
 ## 4. Enroll the driver
 
-Voice ID and Face ID are optional but are what the approval ladder uses for larger amounts.
+Voice ID and Face ID are optional but are what the approval ladder uses for larger amounts. In the AppImage, open
+**Settings → Voice ID** or **Settings → Face ID** and follow the on-screen flow. Face ID supports enrollment,
+re-enrollment, existing-face linking and deletion; every operation starts only after the driver's explicit consent or
+confirmation.
+
+Face ID lists up to five captured profiles with names and driver/passenger roles. Use **Add user** for the on-screen name
+keyboard and role choice, **Edit** to change metadata without recapturing, and **Select** to choose the active profile.
+Only a selected driver can approve checkout; selecting a passenger blocks every approval method until a driver is selected.
+Existing single-user enrollments become driver profiles automatically. Voice ID remains tied to the original voice profile;
+non-default face profiles use Face ID or OTP instead.
+
+For the F455, connect the camera, build `rsid_py` with the same Python ABI as DriveOS, and add the user to `dialout`
+as described in [the F455 camera section](#8-f455-face-id-camera). The camera stores the encrypted face template;
+DriveOS stores only its private user mapping in `~/.local/share/drive-os/f455_users.json`. Preview frames stay in RAM.
+Deleting a linked AI Box camera entry only removes the DriveOS link and keeps the camera entry.
+
+Source-checkout voice tools remain available:
 
 ```bash
 .venv/bin/driveos enroll --name Alex          # voice: 3 to 6 short phrases, quiet room
-.venv/bin/driveos enroll --face --name Alex   # F455 camera
 .venv/bin/driveos voice-check                 # measures speaker and anti-spoof scores on this microphone
 ```
 
-Enrollment needs the driver's explicit consent; templates stay on the device (see [PRIVACY.md](PRIVACY.md)). Without an
-enrollment, DriveOS falls back to simulated approvals in demo mode.
+Without an enrollment, DriveOS falls back to simulated approvals in demo mode (see [PRIVACY.md](PRIVACY.md)).
 
 ## 5. GPS
 

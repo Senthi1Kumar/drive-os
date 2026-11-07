@@ -1021,6 +1021,16 @@ class Nova:
     async def checkout(self, *, source: str = "voice") -> None:  # noqa: C901 - one linear flow
         """Review the cart and open the approval sheet. A policy denial is explained once; while it stands the
         screen's repeat taps are ignored (voice gets the same sentence again, without a second review)."""
+        from ..biometrics.f455 import FaceUserMap
+
+        users = FaceUserMap(self.s.biometrics.home)
+        selected = users.selected_id(self.s.biometrics.driver_id)
+        if selected and users.role(selected) == "passenger":
+            await self.say("The selected profile is a passenger. Select a driver before checkout.", listen=True)
+            return
+        if self.capture_busy is not None and self.capture_busy():
+            await self.say("Finish or cancel enrollment before checkout.", listen=True)
+            return
         sh = self.shop
         sh.awaiting = ""
         if sh.checkout is not None and sh.checkout.stage == "processing":
@@ -1152,6 +1162,9 @@ class Nova:
             await self._scan(co, verifier, look=look)
 
     async def choose_auth(self, method: str, *, resend: bool = False, under_lock: bool = False) -> None:
+        if self.capture_busy is not None and self.capture_busy():
+            await self.say("Finish or cancel enrollment before choosing an approval method.", listen=True)
+            return
         sh = self.shop
         co = sh.checkout
         if not co or co.stage == "processing":

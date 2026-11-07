@@ -1,5 +1,38 @@
 # Changelog
 
+## 1.1.0 — Face ID settings
+
+# DriveOS v1.1.0 Release Notes
+
+Release Date: 2026.11.07
+
+Building on v1.0.2, v1.1.0 makes F455 Face ID enrollment available directly from the AppImage Settings screen, with safe reuse and deletion of existing camera enrollments.
+
+## What's New
+
+### Enroll and manage Face ID in Settings
+
+Open **Settings → Face ID** to enroll, re-enroll or delete Face ID without a source checkout. The flow includes explicit consent, delete confirmation, cancellation, progress, success and actionable camera errors. The enrolled driver's name is preserved on re-enrollment.
+
+### Reuse existing F455 enrollments safely
+
+If the camera already contains the driver's face, DriveOS identifies it and asks before linking. Linked entries created by another app such as AI Box are never deleted; removing Face ID only unlinks them. Re-enrollment removes only a previous DriveOS-owned template.
+
+### Manage up to five face profiles
+
+Add up to five named driver or passenger profiles, select the active profile, and edit names or roles without recapturing a face. Only a selected driver can approve checkout; passenger profiles are identified but cannot pay. Existing enrollments become driver profiles automatically, and non-default profiles use Face ID or OTP rather than the original driver's Voice ID.
+
+### Live camera preview and private local state
+
+The F455 live preview is available during enrollment as well as checkout. Preview frames remain in memory, encrypted templates remain inside the camera, and DriveOS stores only its private user mapping in `~/.local/share/drive-os/f455_users.json`.
+
+## Verification
+
+- Backend coverage includes consent, linking, replacement, deletion, expiry, failures and camera/enrollment busy guards.
+- Preview coverage includes enrollment startup, unavailable preview, terminal results and cancellation cleanup.
+- Native HMI suite: 14 of 14 CTests passed; every Face ID state was rendered and inspected at 1024×600.
+- The AppImage self-test renders the Face ID Settings screen.
+
 ## 1.0.2 — audio and cart fixes
 
 # DriveOS v1.0.2 Release Notes

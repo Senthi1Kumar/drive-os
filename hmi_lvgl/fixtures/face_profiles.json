@@ -1,0 +1,1 @@
+{"type":"state","state":{"tab":"home","voice":{},"vehicle":{},"shop":{},"nav":{},"face_id":{"enrolled":true,"name":"Bob","linked":true},"face_profiles":{"items":[{"id":"driver1","name":"Sam","role":"driver","linked":false},{"id":"profile2","name":"Bob","role":"passenger","linked":true}],"selected_id":"profile2","max":5},"enroll_face":null}}

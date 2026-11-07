@@ -116,7 +116,7 @@ PY
   kill "$spid" 2>/dev/null; wait "$spid" 2>/dev/null
   log "selftest: HMI headless screenshots"
   local pair
-  for pair in home:home agent_idle:agent about_update:about; do
+  for pair in home:home agent_idle:agent about_update:about face_idle:face; do
     local fx="${pair%%:*}" sc="${pair##*:}"
     if SDL_VIDEODRIVER=dummy "$HMI" --fixture "$FIXTURES/$fx.json" --screen "$sc" --screenshot "$tmp/$sc.png" >/dev/null 2>&1 && [ -s "$tmp/$sc.png" ]; then
       log "screenshot $sc OK ($(stat -c %s "$tmp/$sc.png") bytes)"

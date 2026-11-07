@@ -339,6 +339,34 @@ static void parse_state(const cbj_t *st)
             S.enroll.n_q++;
         }
     }
+    memset(&S.face_id, 0, sizeof S.face_id);
+    const cbj_t *fid = cbj_get(st, "face_id");
+    S.face_id.enrolled = cbj_bool(cbj_get(fid, "enrolled"), false);
+    S.face_id.linked = cbj_bool(cbj_get(fid, "linked"), false);
+    cp(S.face_id.name, sizeof S.face_id.name, cbj_get(fid, "name"), "");
+    memset(&S.enroll_face, 0, sizeof S.enroll_face);
+    const cbj_t *ef = cbj_get(st, "enroll_face");
+    S.enroll_face.active = ef && ef->type == CBJ_OBJ;
+    if(S.enroll_face.active) {
+        cp(S.enroll_face.operation, sizeof S.enroll_face.operation, cbj_get(ef, "operation"), "enroll");
+        cp(S.enroll_face.stage, sizeof S.enroll_face.stage, cbj_get(ef, "stage"), "capturing");
+        cp(S.enroll_face.name, sizeof S.enroll_face.name, cbj_get(ef, "name"), "");
+        cp(S.enroll_face.error, sizeof S.enroll_face.error, cbj_get(ef, "error"), "");
+    }
+    memset(&S.face_profiles, 0, sizeof S.face_profiles);
+    const cbj_t *fps = cbj_get(st, "face_profiles");
+    cp(S.face_profiles.selected_id, sizeof S.face_profiles.selected_id, cbj_get(fps, "selected_id"), "");
+    S.face_profiles.max = (int)cbj_num(cbj_get(fps, "max"), 5);
+    const cbj_t *items = cbj_get(fps, "items");
+    for(int i = 0; items && i < items->count && i < 5; i++) {
+        const cbj_t *item = cbj_at(items, i);
+        if(!item || item->type != CBJ_OBJ) continue;
+        __typeof__(S.face_profiles.items[0]) *p = &S.face_profiles.items[S.face_profiles.n++];
+        cp(p->id, sizeof p->id, cbj_get(item, "id"), "");
+        cp(p->name, sizeof p->name, cbj_get(item, "name"), "");
+        cp(p->role, sizeof p->role, cbj_get(item, "role"), "driver");
+        p->linked = cbj_bool(cbj_get(item, "linked"), false);
+    }
     const cbj_t *up = cbj_get(st, "update");
     S.update.available = cbj_bool(cbj_get(up, "available"), false);
     cp(S.update.version, sizeof S.update.version, cbj_get(up, "version"), "");
@@ -470,8 +498,11 @@ uint32_t ui_shop_hash(void)
 
 uint32_t ui_enroll_hash(void)
 {
-    const uint8_t *p = (const uint8_t *)&S.enroll;
     uint32_t h = 2166136261u;
-    for(size_t i = 0; i < sizeof S.enroll; i++) h = (h ^ p[i]) * 16777619u;
+    const uint8_t *blocks[] = { (const uint8_t *)&S.enroll, (const uint8_t *)&S.face_id,
+                                (const uint8_t *)&S.face_profiles, (const uint8_t *)&S.enroll_face };
+    const size_t sizes[] = { sizeof S.enroll, sizeof S.face_id, sizeof S.face_profiles, sizeof S.enroll_face };
+    for(size_t b = 0; b < 4; b++)
+        for(size_t i = 0; i < sizes[b]; i++) h = (h ^ blocks[b][i]) * 16777619u;
     return h;
 }

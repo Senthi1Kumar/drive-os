@@ -28,6 +28,7 @@ log = logging.getLogger("driveos.server.enroll")
 
 EXTRA_ATTEMPTS = 4          # re-records allowed on top of the target number of good takes
 LEVEL_POLL_S = 0.03
+FACE_LINK_TTL_S = 60.0
 
 
 class EnrollError(Exception):
@@ -48,7 +49,7 @@ class EnrollService:
         self._name = ""
         self._task: asyncio.Task | None = None
         self._paused = False
-        self.face = FaceEnrollService(settings, nova, on_change=on_change)
+        self.face = FaceEnrollService(settings, nova, on_change=on_change, voice_active=lambda: self.active)
 
     # ------------------------------------------------------------------ state
     def state(self) -> dict[str, Any] | None:
@@ -84,7 +85,7 @@ class EnrollService:
         name = (name or "").strip()
         if not name:
             raise EnrollError("missing argument: name")
-        if self.active:
+        if self.active or self.face.active:
             raise EnrollError("enrollment already in progress")
         if self.nova.bio_capture or self.nova.shop.checkout is not None:
             raise EnrollError("busy with a checkout")
@@ -209,62 +210,157 @@ FACE_ERRORS = {"Timeout": "I couldn't see a face. Look at the camera and try aga
 
 
 class FaceEnrollService:
-    """F455 face enrollment: the camera owns the template; DriveOS keeps only the user id it generated."""
+    """F455 enrollment and deletion; linked camera entries are never deleted."""
 
     def __init__(self, settings: Settings, nova: Nova, *, on_change: Callable[[], None] = lambda: None,
-                 client: F455Client | None = None):
+                 client: F455Client | None = None, voice_active: Callable[[], bool] | None = None):
         self.settings, self.nova, self.on_change = settings, nova, on_change
         self.client = client or F455Client(settings.biometrics.f455_lib)
+        self.voice_active = voice_active or (lambda: False)
         self._state: dict[str, Any] | None = None
         self._task: asyncio.Task | None = None
+        self._candidate: str | None = None
+        self._link_timer: asyncio.TimerHandle | None = None
+        self._profile_id = ""
+        self._role = "driver"
 
     def state(self) -> dict[str, Any] | None:
         return self._state
 
+    def status(self) -> dict[str, Any]:
+        cfg = self.settings.biometrics
+        users = FaceUserMap(cfg.home)
+        selected = users.selected_id(cfg.driver_id)
+        uid = users.get(selected) if selected else None
+        return {"enrolled": uid is not None, "name": users.get_name(selected) or "" if selected else "",
+                "linked": bool(uid and users.is_linked(uid))}
+
+    def profiles_state(self) -> dict[str, Any]:
+        users = FaceUserMap(self.settings.biometrics.home)
+        return {"items": users.profiles(), "selected_id": users.selected_id(self.settings.biometrics.driver_id),
+                "max": 5}
+
     @property
     def active(self) -> bool:
-        return self._state is not None and self._state["stage"] == "capturing"
+        return self._state is not None and self._state["stage"] in ("capturing", "link_confirm", "deleting")
 
     def _set(self, **kw: Any) -> None:
         if self._state is not None:
             self._state.update(kw)
+            stage = kw.get("stage")
+            if stage in ("done", "failed") and self._state["operation"] == "enroll":
+                hub = getattr(self.client, "hub", None)
+                if hub is not None:
+                    hub.finish(stage == "done", self._state["name"] if stage == "done" else None)
             self.on_change()
 
-    def start(self, name: str, consent: Any) -> asyncio.Future:
-        if consent is not True:
-            raise EnrollError("face enrollment consent is required")
-        name = (name or "").strip()
-        if not name:
-            raise EnrollError("missing argument: name")
-        if self.active:
+    def _clear_link_timer(self) -> None:
+        if self._link_timer is not None:
+            self._link_timer.cancel()
+            self._link_timer = None
+
+    def _check_available(self) -> None:
+        if self.active or self.voice_active():
             raise EnrollError("enrollment already in progress")
         if self.nova.bio_capture or self.nova.shop.checkout is not None:
             raise EnrollError("busy with a checkout")
-        self._state = {"stage": "capturing", "error": ""}
+
+    @staticmethod
+    def _name(value: Any) -> str:
+        name = str(value or "").strip()
+        if not name or len(name) > 32 or len(name.encode()) > 47 or not name.isprintable():
+            raise EnrollError("name must be 1-32 printable characters")
+        return name
+
+    @staticmethod
+    def _valid_role(value: Any) -> str:
+        role = str(value or "driver")
+        if role not in ("driver", "passenger"):
+            raise EnrollError("role must be driver or passenger")
+        return role
+
+    def _check_name_unique(self, users: FaceUserMap, profile_id: str, name: str) -> None:
+        if any(p["id"] != profile_id and p["name"].casefold() == name.casefold() for p in users.profiles()):
+            raise EnrollError("another profile already uses that name")
+
+    def _target(self, users: FaceUserMap, profile_id: Any) -> str:
+        if profile_id == "new":
+            if len(users.profiles()) >= 5:
+                raise EnrollError("at most five face profiles are allowed")
+            import uuid
+            return f"profile_{uuid.uuid4().hex[:12]}"
+        if profile_id is not None and str(profile_id):
+            pid = str(profile_id)
+            if users.get(pid) is None:
+                raise EnrollError("unknown face profile")
+            return pid
+        return users.selected_id(self.settings.biometrics.driver_id) or self.settings.biometrics.driver_id
+
+    def start(self, name: str, consent: Any, profile_id: Any = None, role: Any = None) -> asyncio.Future:
+        if consent is not True:
+            raise EnrollError("face enrollment consent is required")
+        self._check_available()
+        users = FaceUserMap(self.settings.biometrics.home)
+        pid = self._target(users, profile_id)
+        name = self._name(name)
+        self._check_name_unique(users, pid, name)
+        self._profile_id = pid
+        self._role = self._valid_role(role if role is not None else users.role(pid))
+        self._clear_link_timer()
+        self._candidate = None
+        self._state = {"operation": "enroll", "name": name, "profile_id": pid, "stage": "capturing", "error": ""}
         self.on_change()
         self._task = asyncio.ensure_future(self._enroll(name))
         return self._task
 
+    async def _remove_replaced(self, users: FaceUserMap, old: str | None, new: str) -> None:
+        if not old or old == new or users.is_linked(old) or users.profile_for_user(old) is not None:
+            return
+        try:
+            await asyncio.to_thread(self.client.remove_user, old)
+        except Exception:
+            log.warning("could not remove the previous face template", exc_info=True)
+
     async def _enroll(self, name: str) -> None:
         cfg = self.settings.biometrics
         users = FaceUserMap(cfg.home)
+        pid = self._profile_id
         try:
             if not await asyncio.to_thread(self.client.device_present):
                 self._set(stage="failed", error=FACE_ERRORS["Unavailable"])
                 return
             uid = new_user_id(name)
             res = await asyncio.to_thread(self.client.enroll, uid, 30.0)
+            if res.status == "DuplicateFaceprints":
+                found = await asyncio.to_thread(self.client.authenticate, 10.0)
+                if not found.matched or not found.user_id:
+                    self._set(stage="failed", error="I couldn't identify the existing face. Try again.")
+                    return
+                owner = users.profile_for_user(found.user_id)
+                if owner and owner != pid:
+                    self._set(stage="failed", error="This face belongs to another DriveOS profile.")
+                    return
+                if found.user_id == users.get(pid):
+                    users.set_name(pid, name)
+                    users.set_role(pid, self._role)
+                    users.select(pid)
+                    self._set(stage="done", error="")
+                    return
+                self._candidate = found.user_id
+                self._set(stage="link_confirm", error="")
+                candidate = self._candidate
+                self._link_timer = asyncio.get_running_loop().call_later(
+                    FACE_LINK_TTL_S, self._expire_link, candidate)
+                return
             if not res.matched:
                 self._set(stage="failed", error=FACE_ERRORS.get(res.status, f"Face enrollment failed ({res.status})."))
                 return
-            old = users.get(cfg.driver_id)
-            users.set(cfg.driver_id, uid)
-            users.set_name(cfg.driver_id, name)
-            if old and old != uid:
-                try:
-                    await asyncio.to_thread(self.client.remove_user, old)
-                except Exception:
-                    log.warning("could not remove the previous face template", exc_info=True)
+            old = users.get(pid)
+            users.set(pid, uid)
+            users.set_name(pid, name)
+            users.set_role(pid, self._role)
+            users.select(pid)
+            await self._remove_replaced(users, old, uid)
             self._set(stage="done", error="")
         except asyncio.CancelledError:
             raise
@@ -272,10 +368,113 @@ class FaceEnrollService:
             log.exception("face enrollment failed")
             self._set(stage="failed", error=str(e) or type(e).__name__)
 
+    def _expire_link(self, candidate: str) -> None:
+        self._link_timer = None
+        if self._state is None or self._state["stage"] != "link_confirm" or self._candidate != candidate:
+            return
+        self._candidate = None
+        self._set(stage="failed", error="Link confirmation timed out. Try again.")
+
+    def link(self, confirm: Any) -> asyncio.Future:
+        if confirm is not True:
+            raise EnrollError("face link confirmation is required")
+        if self._state is None or self._state["stage"] != "link_confirm" or self._candidate is None:
+            raise EnrollError("no face link to confirm")
+        self._clear_link_timer()
+        self._task = asyncio.ensure_future(self._link())
+        return self._task
+
+    async def _link(self) -> None:
+        cfg = self.settings.biometrics
+        users = FaceUserMap(cfg.home)
+        candidate = self._candidate
+        pid = self._profile_id
+        try:
+            assert candidate is not None and self._state is not None
+            owner = users.profile_for_user(candidate)
+            if owner and owner != pid:
+                self._set(stage="failed", error="This face belongs to another DriveOS profile.")
+                return
+            old = users.get(pid)
+            users.link(pid, candidate)
+            users.set_name(pid, self._state["name"])
+            users.set_role(pid, self._role)
+            users.select(pid)
+            await self._remove_replaced(users, old, candidate)
+            self._candidate = None
+            self._set(stage="done", error="")
+        except asyncio.CancelledError:
+            raise
+        except Exception as e:
+            log.exception("face linking failed")
+            self._set(stage="failed", error=str(e) or type(e).__name__)
+
+    def select(self, profile_id: Any) -> None:
+        self._check_available()
+        users = FaceUserMap(self.settings.biometrics.home)
+        try:
+            users.select(str(profile_id or ""))
+        except ValueError as e:
+            raise EnrollError(str(e)) from e
+        self.on_change()
+
+    def edit(self, profile_id: Any, name: Any, role: Any) -> None:
+        self._check_available()
+        users = FaceUserMap(self.settings.biometrics.home)
+        pid = str(profile_id or "")
+        if users.get(pid) is None:
+            raise EnrollError("unknown face profile")
+        clean = self._name(name)
+        self._check_name_unique(users, pid, clean)
+        users.set_name(pid, clean)
+        users.set_role(pid, self._valid_role(role) if role is not None else users.role(pid))
+        self.on_change()
+
+    def delete(self, confirm: Any, profile_id: Any = None) -> asyncio.Future:
+        if confirm is not True:
+            raise EnrollError("face deletion confirmation is required")
+        self._check_available()
+        users = FaceUserMap(self.settings.biometrics.home)
+        pid = self._target(users, profile_id)
+        self._profile_id = pid
+        self._clear_link_timer()
+        self._candidate = None
+        self._state = {"operation": "delete", "name": users.get_name(pid) or "", "profile_id": pid,
+                       "stage": "deleting", "error": ""}
+        self.on_change()
+        self._task = asyncio.ensure_future(self._delete())
+        return self._task
+
+    async def _delete(self) -> None:
+        cfg = self.settings.biometrics
+        users = FaceUserMap(cfg.home)
+        pid = self._profile_id
+        try:
+            uid = users.get(pid)
+            if uid and users.is_linked(uid):
+                users.drop(pid)
+            elif uid:
+                removed = await asyncio.to_thread(self.client.remove_user, uid)
+                if not removed:
+                    self._set(stage="failed", error="The camera could not delete this face. Try again.")
+                    return
+                users.drop(pid)
+            self._set(stage="done", error="")
+        except asyncio.CancelledError:
+            raise
+        except Exception as e:
+            log.exception("face deletion failed")
+            self._set(stage="failed", error=str(e) or type(e).__name__)
+
     def cancel(self) -> None:
         self.client.cancel()
+        self._clear_link_timer()
+        self._candidate = None
         task, self._task = self._task, None
         if task is not None and not task.done():
             task.cancel()
         self._state = None
+        hub = getattr(self.client, "hub", None)
+        if hub is not None:
+            hub.reset()
         self.on_change()

@@ -94,12 +94,20 @@ typedef struct {
     struct { bool active; char text[128]; char kind[12]; } toast;
     /* state.phone: the demo phone notification carrying the one-time code (null after 5 min) */
     struct { bool active; char title[32], text[160], code[16]; } phone;
-    /* PROPOSED (not yet served): state.enroll, see ENROLL_CONTRACT.md. Zeroed and re-parsed per snapshot. */
+    /* Voice and face enrollment state, zeroed and re-parsed per snapshot. */
     struct {
         bool active; char stage[12];   /* ready | recording | analyzing | done | failed */
         int take, total, kept; char prompt[160], error[128];
         struct { float duration_s, snr_db, clipping_pct; bool outlier, ok; } q[6]; int n_q;
     } enroll;
+    struct { bool enrolled, linked; char name[48]; } face_id;
+    struct {
+        int n, max; char selected_id[48];
+        struct { char id[48], name[48], role[12]; bool linked; } items[5];
+    } face_profiles;
+    struct {
+        bool active; char operation[12], stage[16], name[48], error[128];
+    } enroll_face;
     struct { bool available; char version[24]; char highlights[UI_HIGHLIGHTS_MAX][96]; int n; } update;
 } ui_state_t;
 

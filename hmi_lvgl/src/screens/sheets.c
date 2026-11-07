@@ -292,6 +292,7 @@ static void brackets_place(void)
 static void pv_frame(void *ud)
 {
     (void)ud;
+    enroll_preview_frame();
     if(!s_pv_img) {      /* the first frame of a scan arrived before the sheet showed the camera: rebuild it */
         if(preview_frames() == 1 && ui_state()->shop.auth_stage == UI_AUTH_FACE) { s_co_gen++; app_refresh_async(); }
         return;
@@ -668,5 +669,5 @@ void sheets_update(const ui_state_t *s)
         }
     }
     else { s_co_valid = false; s_ring = NULL; s_pv_img = s_pv_icon = NULL; }
-    if(!co || !strcmp(s->shop.face_state, "none")) preview_clear();
+    if((!co || !strcmp(s->shop.face_state, "none")) && !s->enroll_face.active) preview_clear();
 }

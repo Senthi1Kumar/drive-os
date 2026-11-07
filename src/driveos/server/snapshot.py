@@ -302,7 +302,8 @@ def _phone(nova: Nova) -> dict[str, Any] | None:
 
 def build_state(nova: Nova, view: dict[str, Any], *, level: float, toast: dict[str, str] | None,
                 update: dict[str, Any], enroll: dict[str, Any] | None = None,
-                enroll_face: dict[str, Any] | None = None) -> dict[str, Any]:
+                enroll_face: dict[str, Any] | None = None, face_id: dict[str, Any] | None = None,
+                face_profiles: dict[str, Any] | None = None) -> dict[str, Any]:
     vo = nova.voice
     vs = nova.vstate
     vshop = view["shop"]
@@ -334,4 +335,6 @@ def build_state(nova: Nova, view: dict[str, Any], *, level: float, toast: dict[s
         "phone": _phone(nova),
         "enroll": enroll,
         "enroll_face": enroll_face,
+        "face_id": face_id or {"enrolled": False, "name": "", "linked": False},
+        "face_profiles": face_profiles or {"items": [], "selected_id": "", "max": 5},
     }

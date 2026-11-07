@@ -243,3 +243,34 @@ def test_enroll_face_cli_consent_and_delete(settings, capsys):
     assert FaceUserMap(settings.biometrics.home).get(settings.biometrics.driver_id) is None
     FakeSdk.devices = []
     assert enroll_face(a, settings, client=F455Client(sdk=FakeSdk())) == 1
+
+
+def test_face_profile_metadata_selection_and_voice_rules(tmp_path):
+    users = FaceUserMap(tmp_path)
+    assert users.voice_approval_allowed("driver1")
+    users.set("driver1", "alice_1")
+    users.set_name("driver1", "Alice")
+    assert users.selected_id() == "driver1" and users.role("driver1") == "driver"
+    assert users.profiles() == [{"id": "driver1", "name": "Alice", "role": "driver", "linked": False}]
+
+    users.set("profile2", "bob_2")
+    users.set_name("profile2", "Bob")
+    users.set_role("profile2", "passenger")
+    users.select("profile2")
+    assert users.selected_id() == "profile2" and users.role("profile2") == "passenger"
+    assert users.profile_for_user("bob_2") == "profile2"
+    assert not users.voice_approval_allowed("driver1")
+    users.drop("profile2")
+    assert users.selected_id() == "driver1" and users.voice_approval_allowed("driver1")
+
+
+def test_f455_expected_user_follows_selected_profile(tmp_path):
+    users = FaceUserMap(tmp_path)
+    users.set("driver1", "alice_1")
+    users.set("profile2", "bob_2")
+    users.select("profile2")
+    r = F455Rung(F455Client(sdk=FakeSdk()), lambda: users.get(users.selected_id()), 1.0)
+    FakeAuth.script = (St.Success, "bob_2")
+    assert r.authenticate().matched
+    users.select("driver1")
+    assert not r.authenticate().matched and r.last.status == "OtherUser"

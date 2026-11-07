@@ -220,8 +220,10 @@ class UiServer:
         face = svc.face.state() if svc else None
         if enroll is not None and face is not None:
             enroll = {**enroll, "face": face}
+        face_id = svc.face.status() if svc else None
+        face_profiles = svc.face.profiles_state() if svc else None
         return build_state(self.nova, view, level=self.level, toast=self._toast, update=self.update, enroll=enroll,
-                           enroll_face=face)
+                           enroll_face=face, face_id=face_id, face_profiles=face_profiles)
 
     def _track_events(self, state: dict[str, Any]) -> None:
         stage = state["shop"]["checkout"]["auth"]["stage"]

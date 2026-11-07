@@ -443,11 +443,32 @@ def test_scan_works_when_the_preview_cannot_start():
     assert "preview_stop" not in EVENTS and hub.snapshot()["preview"] is False
 
 
-def test_enrolment_does_not_start_a_preview():
+def test_enrolment_starts_and_stops_preview():
+    c, hub = client()
+
+    def enroll(auth, **kw):
+        EVENTS.append("enroll")
+        kw["on_result"](St.Success)
+
+    FakeAuth.enroll = enroll
+    assert c.enroll("carol_3", 1.0).matched
+    assert EVENTS == ["preview_start", "enroll", "preview_stop"]
+    assert hub.snapshot()["preview"] is False
+
+
+def test_enrolment_works_without_preview_support():
+    c, hub = client(NoPreviewSdk())
+    FakeAuth.enroll = lambda self, **kw: kw["on_result"](St.Success)
+    assert c.enroll("carol_3", 1.0).matched
+    assert "preview_start" not in EVENTS and hub.snapshot()["preview"] is False
+
+
+def test_enrolment_works_when_preview_cannot_start():
+    FakePreview.fail_start = True
     c, hub = client()
     FakeAuth.enroll = lambda self, **kw: kw["on_result"](St.Success)
-    c.enroll("carol_3", 1.0)
-    assert "preview_start" not in EVENTS
+    assert c.enroll("carol_3", 1.0).matched
+    assert "preview_stop" not in EVENTS and hub.snapshot()["preview"] is False
 
 
 def test_face_rect_is_mapped_into_the_frame_header():

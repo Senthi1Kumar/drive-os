@@ -246,23 +246,157 @@ async def test_missing_speaker_model_fails_with_error(rig):
 
 # ------------------------------------------------------------------ face enrollment (F455) + simulated outcomes
 class _FaceClient:
-    def __init__(self, present=True, status="Success"):
+    def __init__(self, present=True, status="Success", auth_user_id="existing_1", remove_result=True, block=False):
+        import threading
+
         self.present, self.status, self.removed, self.cancelled = present, status, [], 0
+        self.auth_user_id, self.remove_result = auth_user_id, remove_result
+        self._gate = threading.Event() if block else None
 
     def device_present(self):
         return self.present
 
     def enroll(self, user_id, timeout_s=30.0):
         from driveos.biometrics.f455 import F455Result
+        if self._gate is not None:
+            self._gate.wait(5)
         ok = self.status == "Success"
         return F455Result(matched=ok, user_id=user_id if ok else None, status=self.status)
 
+    def authenticate(self, timeout_s=10.0):
+        from driveos.biometrics.f455 import F455Result
+        ok = self.auth_user_id is not None
+        return F455Result(matched=ok, user_id=self.auth_user_id if ok else None, status="Success" if ok else "Timeout")
+
     def remove_user(self, uid):
         self.removed.append(uid)
-        return True
+        return self.remove_result
 
     def cancel(self):
         self.cancelled += 1
+        if self._gate is not None:
+            self._gate.set()
+
+
+async def test_face_id_status_default_and_persisted(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    assert rig.state["face_id"] == {"enrolled": False, "name": "", "linked": False}
+    users = FaceUserMap(settings.biometrics.home)
+    users.link(settings.biometrics.driver_id, "aibox_1")
+    users.set_name(settings.biometrics.driver_id, "Sam")
+    rig.backend.server.mark_dirty()
+    await rig.wait(lambda: rig.state["face_id"]["enrolled"], what="persisted face status")
+    assert rig.state["face_id"] == {"enrolled": True, "name": "Sam", "linked": True}
+
+
+async def test_face_reenroll_removes_only_owned_old_template(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    client = _FaceClient()
+    rig.backend.server.commands.enroll.face.client = client
+    users.set(settings.biometrics.driver_id, "owned_old")
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "done", what="owned replacement")
+    assert client.removed == ["owned_old"]
+
+    users.link(settings.biometrics.driver_id, "aibox_old")
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "done", what="linked replacement")
+    assert client.removed == ["owned_old"]
+
+
+async def test_face_duplicate_requires_confirmed_link(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    client = _FaceClient(status="DuplicateFaceprints")
+    rig.backend.server.commands.enroll.face.client = client
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "link_confirm", what="link confirmation")
+    users = FaceUserMap(settings.biometrics.home)
+    assert users.get(settings.biometrics.driver_id) is None
+    assert "user_id" not in rig.state["enroll_face"]
+    assert (await _cmd(rig, "enroll_face_link", confirm=False))["ok"] is False
+    assert (await _cmd(rig, "enroll_face_link", confirm=True))["ok"] is True
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "done", what="linked")
+    assert users.get(settings.biometrics.driver_id) == "existing_1"
+    assert users.is_linked("existing_1") and client.removed == []
+
+
+async def test_face_duplicate_cancel_and_expiry_preserve_mapping(rig, settings, monkeypatch):
+    from driveos.biometrics.f455 import FaceUserMap
+    from driveos.server import enroll as enroll_module
+
+    monkeypatch.setattr(enroll_module, "FACE_LINK_TTL_S", 0.1)
+    rig.backend.server.commands.enroll.face.client = _FaceClient(status="DuplicateFaceprints")
+    users = FaceUserMap(settings.biometrics.home)
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "link_confirm", what="link cancel")
+    await rig.cmd("enroll_face_cancel")
+    await rig.wait(lambda: rig.state["enroll_face"] is None, what="link cancelled")
+    assert users.get(settings.biometrics.driver_id) is None
+
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "failed", what="link expiry")
+    assert "timed out" in rig.state["enroll_face"]["error"]
+    assert users.get(settings.biometrics.driver_id) is None
+
+
+async def test_face_delete_owned_and_confirmation(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.set(settings.biometrics.driver_id, "owned_1")
+    client = _FaceClient()
+    rig.backend.server.commands.enroll.face.client = client
+    assert (await _cmd(rig, "enroll_face_delete", confirm=False))["ok"] is False
+    assert users.get(settings.biometrics.driver_id) == "owned_1" and client.removed == []
+    assert (await _cmd(rig, "enroll_face_delete", confirm=True))["ok"] is True
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "done", what="deleted")
+    assert client.removed == ["owned_1"] and users.get(settings.biometrics.driver_id) is None
+    assert rig.state["enroll_face"]["operation"] == "delete"
+
+
+async def test_face_delete_linked_only_unlinks(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.link(settings.biometrics.driver_id, "aibox_1")
+    client = _FaceClient()
+    rig.backend.server.commands.enroll.face.client = client
+    await _cmd(rig, "enroll_face_delete", confirm=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "done", what="unlinked")
+    assert client.removed == [] and users.get(settings.biometrics.driver_id) is None
+
+
+async def test_face_delete_failure_preserves_mapping(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.set(settings.biometrics.driver_id, "owned_1")
+    client = _FaceClient(remove_result=False)
+    rig.backend.server.commands.enroll.face.client = client
+    await _cmd(rig, "enroll_face_delete", confirm=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "failed", what="delete failure")
+    assert users.get(settings.biometrics.driver_id) == "owned_1"
+
+
+async def test_face_enrollment_busy_guards(rig):
+    client = _FaceClient(block=True)
+    rig.backend.server.commands.enroll.face.client = client
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "capturing", what="face capturing")
+    assert (await _cmd(rig, "enroll_start", name="Sam", consent=True))["ok"] is False
+    assert rig.backend.services.nova.capture_busy() is True
+    await rig.cmd("enroll_face_cancel")
+
+    await _ready(rig)
+    assert (await _cmd(rig, "enroll_face_start", name="Sam", consent=True))["ok"] is False
+    await rig.cmd("enroll_cancel")
+    rig.backend.services.nova.shop.checkout = object()
+    assert (await _cmd(rig, "enroll_face_start", name="Sam", consent=True))["ok"] is False
+    rig.backend.services.nova.shop.checkout = None
 
 
 async def test_enroll_face_requires_consent(rig):
@@ -307,3 +441,151 @@ async def test_sim_outcome_sets_scripted_outcome(rig, settings):
     assert v.outcomes["face"] == "spoof" and v.rung.outcome == "spoof"
     assert (await _cmd(rig, "sim_outcome", modality="iris", outcome="spoof"))["ok"] is False
     assert (await _cmd(rig, "sim_outcome", modality="voice", outcome="maybe"))["ok"] is False
+
+
+async def test_face_enrollment_finishes_preview_hub(rig):
+    from driveos.biometrics.preview import PreviewHub
+
+    hub = PreviewHub()
+    client = _FaceClient()
+    client.hub = hub
+    rig.backend.server.commands.enroll.face.client = client
+    hub.begin_scan()
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "done", what="preview done")
+    assert hub.snapshot()["face_state"] == "verified" and hub.snapshot()["face_name"] == "Sam"
+
+    client.status = "Timeout"
+    hub.begin_scan()
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "failed", what="preview failed")
+    assert hub.snapshot()["face_state"] == "failed"
+
+
+async def test_face_enrollment_cancel_resets_preview_hub(rig):
+    from driveos.biometrics.preview import PreviewHub
+
+    hub = PreviewHub()
+    client = _FaceClient(block=True)
+    client.hub = hub
+    rig.backend.server.commands.enroll.face.client = client
+    hub.begin_scan()
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "capturing", what="preview capturing")
+    await rig.cmd("enroll_face_cancel")
+    await rig.wait(lambda: rig.state["enroll_face"] is None, what="preview cancelled")
+    assert hub.snapshot()["face_state"] == "none"
+
+
+async def test_face_duplicate_of_owned_mapping_stays_owned(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.set(settings.biometrics.driver_id, "existing_1")
+    client = _FaceClient(status="DuplicateFaceprints", auth_user_id="existing_1")
+    rig.backend.server.commands.enroll.face.client = client
+    await _cmd(rig, "enroll_face_start", name="Sam", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "done", what="owned duplicate")
+    assert users.get(settings.biometrics.driver_id) == "existing_1"
+    assert not users.is_linked("existing_1") and client.removed == []
+
+
+async def test_checkout_and_auth_rejected_during_enrollment(rig):
+    nova = rig.backend.services.nova
+    nova.capture_busy = lambda: True
+    await nova.checkout()
+    assert "enrollment" in nova.voice.text
+    nova.shop.checkout = object()
+    await nova.choose_auth("face")
+    assert "enrollment" in nova.voice.text
+    nova.shop.checkout = None
+
+
+async def test_face_profile_add_edit_select_and_limit(rig, settings):
+    assert rig.state["face_profiles"] == {"items": [], "selected_id": "", "max": 5}
+    rig.backend.server.commands.enroll.face.client = _FaceClient()
+    ack = await _cmd(rig, "enroll_face_start", profile_id="new", name="Sam", role="driver", consent=True)
+    assert ack["ok"] is True
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "done", what="profile added")
+    first = rig.state["face_profiles"]["items"][0]
+    assert first["name"] == "Sam" and first["role"] == "driver" and not first["linked"]
+    assert rig.state["face_profiles"]["selected_id"] == first["id"]
+
+    assert (await _cmd(rig, "face_profile_edit", profile_id=first["id"], name="Sam", role="passenger"))["ok"] is True
+    await rig.wait(lambda: rig.state["face_profiles"]["items"][0]["role"] == "passenger", what="role edited")
+    assert (await _cmd(rig, "face_profile_edit", profile_id=first["id"], name="", role="driver"))["ok"] is False
+    assert (await _cmd(rig, "face_profile_edit", profile_id=first["id"], name="Sam", role="owner"))["ok"] is False
+
+    from driveos.biometrics.f455 import FaceUserMap
+    users = FaceUserMap(settings.biometrics.home)
+    for i in range(2, 6):
+        users.set(f"profile{i}", f"user_{i}")
+        users.set_name(f"profile{i}", f"User {i}")
+    ack = await _cmd(rig, "enroll_face_start", profile_id="new", name="Sixth", role="driver", consent=True)
+    assert ack["ok"] is False and "five" in ack["error"]
+
+
+async def test_face_profile_duplicate_of_other_profile_fails(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.set("driver1", "existing_1")
+    users.set_name("driver1", "Existing")
+    rig.backend.server.commands.enroll.face.client = _FaceClient(status="DuplicateFaceprints", auth_user_id="existing_1")
+    await _cmd(rig, "enroll_face_start", profile_id="new", name="Other", role="passenger", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "failed", what="profile conflict")
+    assert "another DriveOS profile" in rig.state["enroll_face"]["error"]
+    assert len(users.profiles()) == 1
+
+
+async def test_face_profile_select_edit_blocked_during_operation(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.set("driver1", "existing_1")
+    users.set("profile2", "existing_2")
+    client = _FaceClient(block=True)
+    rig.backend.server.commands.enroll.face.client = client
+    await _cmd(rig, "enroll_face_start", profile_id="driver1", name="Sam", role="driver", consent=True)
+    await rig.wait(lambda: (rig.state["enroll_face"] or {}).get("stage") == "capturing", what="profile busy")
+    assert (await _cmd(rig, "face_profile_select", profile_id="profile2"))["ok"] is False
+    assert (await _cmd(rig, "face_profile_edit", profile_id="profile2", name="Bob", role="driver"))["ok"] is False
+    await rig.cmd("enroll_face_cancel")
+
+
+async def test_selected_passenger_cannot_checkout(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.set("passenger1", "person_1")
+    users.set_role("passenger1", "passenger")
+    users.select("passenger1")
+    nova = rig.backend.services.nova
+    await nova.checkout()
+    assert "driver" in nova.voice.text and nova.shop.checkout is None
+
+
+async def test_face_profile_name_only_edit_preserves_role(rig, settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.set("passenger1", "person_1")
+    users.set_name("passenger1", "Bob")
+    users.set_role("passenger1", "passenger")
+    assert (await _cmd(rig, "face_profile_edit", profile_id="passenger1", name="Robert"))["ok"] is True
+    assert users.role("passenger1") == "passenger"
+
+
+async def test_face_profile_store_rejects_corrupt_file(settings):
+    from driveos.biometrics.f455 import FaceUserMap
+
+    users = FaceUserMap(settings.biometrics.home)
+    users.path.parent.mkdir(parents=True, exist_ok=True)
+    users.path.write_text("{broken")
+    try:
+        users.set("driver1", "new_1")
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("corrupt profile store was overwritten")
+    assert users.path.read_text() == "{broken"

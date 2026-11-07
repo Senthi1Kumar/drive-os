@@ -215,18 +215,18 @@ class F455Client:
                 timer = threading.Timer(timeout_s, expire)
                 timer.daemon = True
                 timer.start()
-                if op == "enroll":
-                    auth.enroll(user_id=user_id, on_result=on_result, on_hint=on_hint)
-                else:
-                    self.hub.begin_scan()
-                    view = SdkPreview(self.sdk(), self._device, self.hub) if self.hub.enabled else None
-                    if view is not None and not view.start():
-                        view = None
-                    try:
+                self.hub.begin_scan()
+                view = SdkPreview(self.sdk(), self._device, self.hub) if self.hub.enabled else None
+                if view is not None and not view.start():
+                    view = None
+                try:
+                    if op == "enroll":
+                        auth.enroll(user_id=user_id, on_result=on_result, on_hint=on_hint)
+                    else:
                         auth.authenticate(on_result=on_result, on_hint=on_hint, on_faces=on_faces)
-                    finally:
-                        if view is not None:
-                            view.stop()
+                finally:
+                    if view is not None:
+                        view.stop()
         except F455Unavailable as e:
             log.info("F455 unavailable: %s", e)
             res.status, res.available = "Unavailable", False
@@ -359,8 +359,10 @@ class FaceUserMap:
         import json
         try:
             return dict(json.loads(self.path.read_text()))
-        except (OSError, ValueError):
+        except FileNotFoundError:
             return {}
+        except (OSError, ValueError, AttributeError) as e:
+            raise ValueError(f"cannot read the face profile store: {self.path}") from e
 
     _NAMES = "_names"
 
@@ -396,12 +398,17 @@ class FaceUserMap:
         m = self._read()
         names = m.get(self._NAMES)
         dropped_name = isinstance(names, dict) and names.pop(driver_id, None) is not None
-        if m.pop(driver_id, None) is not None or dropped_name:
+        roles = m.get(self._ROLES)
+        dropped_role = isinstance(roles, dict) and roles.pop(driver_id, None) is not None
+        selected = m.pop(self._SELECTED, None) if m.get(self._SELECTED) == driver_id else None
+        if m.pop(driver_id, None) is not None or dropped_name or dropped_role or selected is not None:
             write_private_text(self.path, json.dumps(m))
 
     # Linked ids were enrolled by someone else (e.g. the AI Box) and adopted here; DriveOS never deletes them
     # from the camera, it only unlinks them.
     _LINKED = "_linked"
+    _ROLES = "_roles"
+    _SELECTED = "_selected"
 
     def _linked(self) -> list[str]:
         import json
@@ -419,6 +426,54 @@ class FaceUserMap:
 
     def is_linked(self, user_id: str) -> bool:
         return user_id in self._linked()
+
+    def profiles(self) -> list[dict[str, Any]]:
+        m = self._read()
+        names = m.get(self._NAMES) if isinstance(m.get(self._NAMES), dict) else {}
+        roles = m.get(self._ROLES) if isinstance(m.get(self._ROLES), dict) else {}
+        return [{"id": key, "name": names.get(key, ""), "role": roles.get(key, "driver"),
+                 "linked": bool(isinstance(uid, str) and self.is_linked(uid))}
+                for key, uid in m.items() if not key.startswith("_") and isinstance(uid, str)]
+
+    def role(self, profile_id: str) -> str:
+        roles = self._read().get(self._ROLES)
+        value = roles.get(profile_id) if isinstance(roles, dict) else None
+        return value if value in ("driver", "passenger") else "driver"
+
+    def set_role(self, profile_id: str, role: str) -> None:
+        import json
+        if role not in ("driver", "passenger"):
+            raise ValueError("role must be driver or passenger")
+        m = self._read()
+        roles = m.get(self._ROLES)
+        m[self._ROLES] = {**(roles if isinstance(roles, dict) else {}), profile_id: role}
+        ensure_private_dir(self.path.parent)
+        write_private_text(self.path, json.dumps(m))
+
+    def selected_id(self, fallback: str = "driver1") -> str:
+        profiles = [p["id"] for p in self.profiles()]
+        selected = self._read().get(self._SELECTED)
+        if selected in profiles:
+            return selected
+        if fallback in profiles:
+            return fallback
+        return profiles[0] if profiles else ""
+
+    def select(self, profile_id: str) -> None:
+        import json
+        if profile_id not in [p["id"] for p in self.profiles()]:
+            raise ValueError("unknown face profile")
+        m = self._read()
+        m[self._SELECTED] = profile_id
+        ensure_private_dir(self.path.parent)
+        write_private_text(self.path, json.dumps(m))
+
+    def profile_for_user(self, user_id: str) -> str | None:
+        return next((p["id"] for p in self.profiles() if self.get(p["id"]) == user_id), None)
+
+    def voice_approval_allowed(self, default_profile: str) -> bool:
+        profiles = self.profiles()
+        return not profiles or self.selected_id(default_profile) == default_profile
 
 
 _ID_STEM = re.compile(r"^(?P<stem>[A-Za-z][A-Za-z0-9_-]*?)_[0-9a-f]{6}$")

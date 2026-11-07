@@ -20,7 +20,8 @@ typedef struct {
 static void usage(const char *a)
 {
     fprintf(stderr,
-            "usage: %s [--url ws://127.0.0.1:8790/v1/ui] [--fixture state.json] [--screen home|agent|shop|nav|about]\n"
+            "usage: %s [--url ws://127.0.0.1:8790/v1/ui] [--fixture state.json]\n"
+            "          [--screen home|agent|shop|nav|about|enroll|face|face-consent|face-delete|face-add|face-edit]\n"
             "          [--screenshot out.png [--shot-after MS]] [--backend auto|sdl|drm|headless] [--fullscreen] [--size WxH]\n"
             "          [--drm-dev /dev/dri/card0] [--touch-dev /dev/input/event0] [--quit-after SEC] [--version]\n"
             "  --fixture loads a state snapshot instead of connecting; --screenshot renders off-screen (headless) and exits.\n",

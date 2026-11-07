@@ -10,6 +10,14 @@ static lv_obj_t *s_version, *s_upd_icon, *s_upd_title, *s_upd_sub, *s_upd_chip, 
 static void voice_id_cb(lv_event_t *e)
 {
     (void)e;
+    enroll_open_voice();
+    app_show(SCR_ENROLL);
+}
+
+static void face_id_cb(lv_event_t *e)
+{
+    (void)e;
+    enroll_open_face();
     app_show(SCR_ENROLL);
 }
 
@@ -60,6 +68,11 @@ void about_build(lv_obj_t *slot)
     lv_obj_set_width(vid, 520);
     lv_obj_set_style_max_width(vid, lv_pct(100), 0);
     lv_obj_add_event_cb(vid, voice_id_cb, LV_EVENT_CLICKED, NULL);
+
+    lv_obj_t *fid = dos_btn(col, DOS_BTN_DEFAULT, false, DOS_IC_SCAN_FACE, "Face ID");
+    lv_obj_set_width(fid, 520);
+    lv_obj_set_style_max_width(fid, lv_pct(100), 0);
+    lv_obj_add_event_cb(fid, face_id_cb, LV_EVENT_CLICKED, NULL);
 
     lv_obj_t *foot = dos_box(col, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_style_pad_row(foot, 4, 0);

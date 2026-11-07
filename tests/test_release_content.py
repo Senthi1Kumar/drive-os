@@ -13,19 +13,36 @@ def _read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def test_release_is_1_0_2_everywhere():
-    assert 'version = "1.0.2"' in _read(ROOT / "pyproject.toml")
-    assert '__version__ = "1.0.2"' in _read(ROOT / "src/driveos/__init__.py")
+def test_release_is_1_1_0_everywhere():
+    assert 'version = "1.1.0"' in _read(ROOT / "pyproject.toml")
+    assert '__version__ = "1.1.0"' in _read(ROOT / "src/driveos/__init__.py")
     export = ROOT / ".release/export.sh"
     if export.is_file():
-        assert "RELEASE_VERSION:-1.0.2" in _read(export)
-    assert "version-1.0.2-" in _read(OVERLAY / "README.md")
+        assert "RELEASE_VERSION:-1.1.0" in _read(export)
+    assert "version-1.1.0-" in _read(OVERLAY / "README.md")
+    assert "## 1.1.0 — Face ID settings" in _read(OVERLAY / "CHANGELOG.md")
     assert "## 1.0.2 — audio and cart fixes" in _read(OVERLAY / "CHANGELOG.md")
     assert "## 1.0.1 — AppImage runtime and desktop fixes" in _read(OVERLAY / "CHANGELOG.md")
     assert "## 1.0.0 — initial release" in _read(OVERLAY / "CHANGELOG.md")
     container = _read(ROOT / "src/driveos/container.py")
     assert "from . import __version__" in container
     assert 'f"DriveOS/{__version__} (in-car demo)"' in container
+
+
+def test_face_id_settings_release_content():
+    changelog = _read(OVERLAY / "CHANGELOG.md")
+    assert "# DriveOS v1.1.0 Release Notes" in changelog
+    assert "Release Date: 2026.11.07" in changelog
+    assert "### Enroll and manage Face ID in Settings" in changelog
+    assert "### Manage up to five face profiles" in changelog
+    assert "Settings → Face ID" in _read(OVERLAY / "README.md")
+    install = _read(OVERLAY / "INSTALL.md")
+    assert "Settings → Face ID" in install
+    assert "up to five" in install and "selected driver" in install
+    assert "Add user" in install and "Edit" in install
+    assert "~/.local/share/drive-os/f455_users.json" in install
+    assert "rsid_py" in install and "dialout" in install and "explicit consent" in install
+    assert "face_idle:face" in _read(ROOT / "packaging/appimage/AppRun")
 
 
 def test_env_example_has_exactly_three_blank_service_keys():

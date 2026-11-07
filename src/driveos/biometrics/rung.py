@@ -131,10 +131,11 @@ def build_rung(cfg, driver_name: str | None) -> FaceRung:
             users = FaceUserMap(cfg.home)
 
             def user_id() -> str | None:
-                return cfg.face_user_id or users.get(cfg.driver_id)
+                return cfg.face_user_id or users.get(users.selected_id(cfg.driver_id))
 
             def display_name() -> str | None:
-                return driver_display_name(cfg.home, cfg.driver_id, user_id()) or driver_name
+                selected = users.selected_id(cfg.driver_id)
+                return driver_display_name(cfg.home, selected, user_id()) or driver_name
 
             HUB.configure(enabled=cfg.preview, fps=cfg.preview_fps, size=cfg.preview_size, mirror=cfg.preview_mirror)
             return F455Rung(client, user_id, cfg.face_timeout_s, display_name=display_name)

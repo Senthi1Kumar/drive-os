@@ -163,8 +163,15 @@ class VoiceFirstVerifier:
     def _fail(self, detail: str) -> AuthResult:
         return AuthResult(AuthTier.T2_STRONG, self.name, False, detail=detail)
 
+    def _voice_profile_allowed(self) -> bool:
+        from .f455 import FaceUserMap
+
+        return FaceUserMap(self.cfg.home).voice_approval_allowed(self.cfg.driver_id)
+
     # main ----------------------------------------------------------------------
     async def verify(self, timeout: float) -> AuthResult:
+        if not self._voice_profile_allowed():
+            return self._fail("Voice ID belongs to the original profile. Use Face ID or a code.")
         self._loop = asyncio.get_running_loop()
         self._cancel = asyncio.Event()
         self._task = asyncio.current_task()
@@ -344,6 +351,9 @@ class FaceFirstVerifier(VoiceFirstVerifier):
         f = cls(voice.cfg, rung=voice.rung, seam=voice.seam, owner=voice)
         f.host = voice.host
         return f
+
+    def _voice_profile_allowed(self) -> bool:
+        return True
 
     @property
     def available(self) -> bool:
